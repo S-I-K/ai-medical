@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./common/img/favicon.svg" type="image/svg+xml">
+    
+    <title>AI 의료통역교육</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./main/css/main.css">
+    <link rel="stylesheet" href="./common/css/common.css">
+    <link rel="stylesheet" href="./common/css/header.css">
+    <link rel="stylesheet" href="./common/css/footer.css">
+
+    <!-- font -->
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+
+    <!-- js -->
+    <script src="./main/js/main.js" defer></script>
+    <script src="./common/js/jquery-3.7.1.min.js"></script>
+    <script src="./common/js/lenis.min.js"></script>
+    <script src="./common/js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <div class="container">
+                <!-- logo-box -->
+                <div class="logo-box">
+                    <a href="#">
+                        <img src="./common/img/logo-kr.svg" alt="">
+                    </a>
+                </div>
+
+                <!-- login-info-box -->
+                <div class="login-info-box">
+                    <span class="email">
+                        <!-- 로그인 이후에 추가 됨 -->
+                        guestid002@kohi.co.kr
+                    </span>
+                    <a href="#" class="logout">
+                        <span>
+                            <!-- 로그인 이후에 추가 됨 -->
+                            로그아웃
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- login-content-section -->
+        <section class="login-content-section">
+            <div class="container">
+                <!-- section-title-box -->
+                <div class="section-title-box">
+                    <div class="logo-box">
+                        <img src="./common/img/logo-en.svg" alt="">
+                    </div>
+
+                    <div class="title-box">
+                        <span>
+                            로그인
+                        </span>
+                    </div>
+                </div>
+
+                <!-- login-form-box -->
+                <div class="login-form-box">
+                    <!-- form -->
+                    <form id="loginForm" onsubmit="return handleLogin(event)">
+                        <div class="form-group">
+                            <label for="email">
+                                이메일
+                            </label>
+                            <input type="email" id="email" placeholder="이메일을 입력해 주세요" required />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">
+                                비밀번호
+                            </label>
+                            <input type="password" id="password" placeholder="비밀번호를 입력해 주세요" required />
+                            <button type="button" id="togglePassword" onclick="togglePasswordVisibility()">
+                                visible
+                            </button>
+                        </div>
+                        
+                        <p id="errorMessage" class="error-message" style="">
+                            * 이메일 혹은 비밀번호가 일치하지 않습니다.
+                        </p>
+                        
+                        <button type="submit" class="login">
+                            <span>
+                                로그인
+                            </span>
+                        </button>
+                    </form>
+
+                    <!-- join-btn-box -->
+                    <div class="join-btn-box">
+                        <div class="guide-text-box">
+                            <span>
+                                계정이 없으신가요?
+                            </span>
+                        </div>
+
+                        <div class="join-btn">
+                            <span>
+                                회원가입
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="forget-pw-btn-box">
+                        <a href="#">
+                            <span>
+                                비밀번호를 잊으셨나요?
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <div class="container">
+                footer
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

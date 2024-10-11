@@ -1,0 +1,63 @@
+/* variable */
+$color-main: #CB3029;
+$color-sub: #F18D2C;
+$color-black: #2a2a2a;
+$font-kr: 'SUIT Variable', sans-serif;;
+$font-en: "Archivo", sans-serif;
+
+
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .container {
+        width: 100%;
+        padding: 30px 40px;
+        // border: 1px solid red;
+        align-items: center;
+        justify-content: space-between;
+        .logo-box {
+            width: 200px;
+            min-width: 200px;
+            display: flex;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .login-info-box {
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            span.email {
+                font-family: $font-en;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1;
+                color: $color-black;
+                margin-bottom: 6px;
+            }
+            a.logout {
+                span {
+                    font-family: $font-kr;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1;
+                    letter-spacing: -.25px;
+                    color: #aeaeae;
+                }
+            }
+        }
+    }
+}
