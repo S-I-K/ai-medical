@@ -22,6 +22,9 @@
     <!-- js -->
     <script src="./main/js/main.js" defer></script>
     <script src="./common/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script src="./common/js/lenis.min.js"></script>
     <script src="./common/js/common.js"></script>
 </head>
@@ -33,7 +36,7 @@
                 <!-- logo-box -->
                 <div class="logo-box">
                     <a href="#">
-                        <img src="./common/img/logo-kr.svg" alt="">
+                        <img src="./common/img/logo-kr-white.svg" alt="">
                     </a>
                 </div>
 
@@ -53,86 +56,151 @@
             </div>
         </header>
 
-        <!-- login-content-section -->
-        <section class="login-content-section">
+        <!-- qa-content-wrap -->
+        <section class="qa-content-wrap">
+            <!-- bg-area -->
+            <div class="bg-area">
+                <!-- left -->
+                <div class="ob-box left">
+                    <svg width="2687" height="2855" viewBox="0 0 2687 2855" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1031.97 607.067C966.018 738.216 888.462 832.07 790.937 939.094C669.448 1072.51 525.778 1191.08 394.36 1314.03C120.026 1570.72 -100.553 1845.75 47.5967 2312.54C245.4 2935.53 1183.9 3029.11 1912.94 2551.36C2253.87 2360.41 2539.48 1985.8 2644.78 1611.08C2750.08 1235.72 2644.13 781.282 2452.54 451.574C2292.78 176.647 2051.86 1.40329 1733.86 4.93407e-05C1732.73 4.93407e-05 1731.59 4.93407e-05 1730.46 4.93407e-05C1337.77 4.93407e-05 1194.91 283.565 1031.97 607.067Z" fill=""/>
+                    </svg>
+                </div>
+
+                <!-- right -->
+                <div class="ob-box right">
+                    <svg width="1665" height="1738" viewBox="0 0 1665 1738" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M173.285 199.288C31.4497 368.433 -29.591 727.286 14.4492 936.854C75.3283 1225.11 259.8 1472.89 522.368 1607.55C853.48 1777.07 1206.29 1798.61 1481.65 1561.78C1858.96 1236.88 1580.52 871.657 1282.39 650.592C1151.94 553.553 1100.83 380.145 1015.18 237.77C978.8 177.323 936.109 122.326 878.468 81.362C800.319 25.6101 706.841 0.458336 611.69 0.458336C446.431 0.458336 276.261 76.3426 173.285 199.288Z" fill=""/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- container -->
             <div class="container">
+                <!-- character-img-box -->
+                <div class="character-img-box">
+                    <img src="./main/img/QA-character.png" alt="">
+                </div>
+
                 <!-- section-title-box -->
                 <div class="section-title-box">
-                    <div class="logo-box">
-                        <img src="./common/img/logo-en.svg" alt="">
-                    </div>
+                    <h2 class="title">
+                        주로 외국인 환자와 어떤 상황에서 소통하시나요 ?
+                    </h2>
+                </div>
 
-                    <div class="title-box">
-                        <span>
-                            로그인
-                        </span>
+                <!-- question-list-box -->
+                <div class="question-list-area">
+                    <!-- 01 -->
+                    <div class="list-box">
+                        <a class='button-box' href="#">
+                            <div class="list-title">
+                                <span>
+                                    의료 통역
+                                </span>
+                            </div>
+                            
+                            <div class="list-icon-box">
+                                <img src="" alt="아이콘">
+                            </div>
+
+                            <div class="list-sub-title">
+                                <span>
+                                    의료진과 환자의 대화 통역
+                                </span>
+                            </div>
+                        </a>
+
+                        <div class="desc-box">
+                            <p>
+                                의료진과 환자의 대화를 중간에서 통역하는 경우<br/>
+                                (코디네이터, 의료통역사 등)
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 02 -->
+                    <div class="list-box">
+                        <a class='button-box' href="#">
+                            <div class="list-title">
+                                <span>
+                                    국제 간호
+                                </span>
+                            </div>
+                            
+                            <div class="list-icon-box">
+                                <img src="" alt="아이콘">
+                            </div>
+
+                            <div class="list-sub-title">
+                                <span>
+                                    외국인 환자를 간호하며 소통
+                                </span>
+                            </div>
+                        </a>
+
+                        <div class="desc-box">
+                            <p>
+                                의료진과 환자의 대화를 중간에서 통역하는 경우<br/>
+                                (코디네이터, 의료통역사 등)
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 03 -->
+                    <div class="list-box">
+                        <a class='button-box' href="#">
+                            <div class="list-title">
+                                <span>
+                                    의료 서비스
+                                </span>
+                            </div>
+                            
+                            <div class="list-icon-box">
+                                <img src="" alt="아이콘">
+                            </div>
+
+                            <div class="list-sub-title">
+                                <span>
+                                    외국인 환자의 문의내용 답변
+                                </span>
+                            </div>
+                        </a>
+
+                        <div class="desc-box">
+                            <p>
+                                의료진과 환자의 대화를 중간에서 통역하는 경우<br/>
+                                (코디네이터, 의료통역사 등)
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- login-form-box -->
-                <div class="login-form-box">
-                    <!-- form -->
-                    <form id="loginForm" onsubmit="return handleLogin(event)">
-                        <div class="form-group">
-                            <label for="email">
-                                이메일
-                            </label>
-                            <input type="email" id="email" placeholder="이메일을 입력해 주세요" required />
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="password">
-                                비밀번호
-                            </label>
-                            <input type="password" id="password" placeholder="비밀번호를 입력해 주세요" required />
-                            <button type="button" id="togglePassword" onclick="togglePasswordVisibility()">
-                                visible
-                            </button>
-                        </div>
-                        
-                        <p id="errorMessage" class="error-message" style="">
-                            * 이메일 혹은 비밀번호가 일치하지 않습니다.
-                        </p>
-                        
-                        <button type="submit" class="login">
+                <!-- page-movement-button-area -->
+                <div class="page-movement-button-area">
+                    <!-- prev-button-box -->
+                    <div class="button-box prev">
+                        <a href="#">
+                            <div class="icon-box">
+                                <img src="./common/img/icon-arrow-button.svg" alt="">
+                            </div>
                             <span>
-                                로그인
+                                이전으로
                             </span>
-                        </button>
-                    </form>
-
-                    <!-- join-btn-box -->
-                    <div class="join-btn-box">
-                        <div class="guide-text-box">
-                            <span>
-                                계정이 없으신가요?
-                            </span>
-                        </div>
-
-                        <div class="join-btn">
-                            <span>
-                                회원가입
-                            </span>
-                        </div>
+                        </a>
                     </div>
-
-                    <div class="forget-pw-btn-box">
+                    <!-- next-button-box -->
+                    <div class="button-box next">
                         <a href="#">
                             <span>
-                                비밀번호를 잊으셨나요?
+                                다음으로
                             </span>
+                            <div class="icon-box">
+                                <img src="./common/img/icon-arrow-button.svg" alt="">
+                            </div>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- footer -->
-        <footer>
-            <div class="container">
-                footer
-            </div>
-        </footer>
     </div>
 </body>
 </html>

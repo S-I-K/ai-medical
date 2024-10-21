@@ -1,215 +1,194 @@
 /* variable */
 #wrap {
-  padding-top: 180px;
   /* section.login-content-section */
 }
-#wrap section.login-content-section .container {
+#wrap section.qa-content-wrap {
+  position: relative;
+  padding-top: 180px;
+}
+#wrap section.qa-content-wrap .bg-area {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+#wrap section.qa-content-wrap .bg-area .ob-box {
+  position: absolute;
+}
+#wrap section.qa-content-wrap .bg-area .ob-box.left {
+  right: 8%;
+}
+#wrap section.qa-content-wrap .bg-area .ob-box.left svg path {
+  fill: #DC6468;
+}
+#wrap section.qa-content-wrap .bg-area .ob-box.right {
+  left: 62%;
+  top: -20px;
+}
+#wrap section.qa-content-wrap .bg-area .ob-box.right svg path {
+  fill: #FDD458;
+}
+#wrap section.qa-content-wrap .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#wrap section.login-content-section .container .section-title-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 42px;
-}
-#wrap section.login-content-section .container .section-title-box .logo-box {
-  width: 120px;
+#wrap section.qa-content-wrap .container .character-img-box {
+  width: 260px;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 42px;
 }
-#wrap section.login-content-section .container .section-title-box .logo-box img {
+#wrap section.qa-content-wrap .container .character-img-box img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#wrap section.login-content-section .container .section-title-box .title-box span {
-  font-family: "SUIT Variable", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: 0px;
-  color: #CB3029;
+#wrap section.qa-content-wrap .container .section-title-box {
+  margin-bottom: 60px;
 }
-#wrap section.login-content-section .container .login-form-box {
-  width: 100%;
-  max-width: 464px;
-}
-#wrap section.login-content-section .container .login-form-box form {
-  margin-bottom: 18px;
-}
-#wrap section.login-content-section .container .login-form-box form .form-group {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 14px;
-}
-#wrap section.login-content-section .container .login-form-box form .form-group label {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
-          clip-path: polygon(0 0, 0 0, 0 0);
-}
-#wrap section.login-content-section .container .login-form-box form .form-group input {
-  width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 18px 20px;
-  outline: none;
-  font-family: "Archivo", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1;
-  color: #2a2a2a;
-}
-#wrap section.login-content-section .container .login-form-box form .form-group input:focus {
-  border: 1px solid #F18D2C;
-}
-#wrap section.login-content-section .container .login-form-box form .form-group input::-moz-placeholder {
-  font-family: "SUIT Variable", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  letter-spacing: -0.8px;
-}
-#wrap section.login-content-section .container .login-form-box form .form-group input::placeholder {
-  font-family: "SUIT Variable", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  letter-spacing: -0.8px;
-}
-#wrap section.login-content-section .container .login-form-box form .form-group button {
-  position: absolute;
-  right: 20px;
-  opacity: 0.4;
-  transition: opacity 0.4s ease;
-  cursor: pointer;
-  font-family: "Archivo", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1;
-  color: #2a2a2a;
-  text-decoration: underline;
-}
-#wrap section.login-content-section .container .login-form-box form .form-group button:hover {
-  opacity: 1;
-}
-#wrap section.login-content-section .container .login-form-box form .form-group:nth-child(1) {
-  margin-bottom: 8px;
-}
-#wrap section.login-content-section .container .login-form-box form p.error-message {
+#wrap section.qa-content-wrap .container .section-title-box h2.title {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 28px;
   line-height: 1;
-  letter-spacing: -0.25px;
-  color: #FF2D2D;
-  padding-left: 20px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  margin-bottom: 52px;
-}
-#wrap section.login-content-section .container .login-form-box form button.login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 18px 0;
-  border-radius: 300px;
-  background: #aeaeae;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: background 0.4s ease;
-}
-#wrap section.login-content-section .container .login-form-box form button.login span {
-  font-family: "SUIT Variable", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1;
-  letter-spacing: -0.25px;
+  letter-spacing: -1.2px;
   color: #fff;
   position: relative;
-  z-index: 2;
-}
-#wrap section.login-content-section .container .login-form-box form button.login:hover {
-  background: #979797;
-}
-#wrap section.login-content-section .container .login-form-box .join-btn-box {
-  margin-bottom: 48px;
-}
-#wrap section.login-content-section .container .login-form-box .join-btn-box .guide-text-box {
-  position: relative;
-  margin-bottom: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#wrap section.login-content-section .container .login-form-box .join-btn-box .guide-text-box span {
-  position: relative;
-  font-family: "SUIT Variable", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: -0.25;
-  color: #aeaeae;
-  display: block;
-  background: #fff;
-  padding: 0 14px;
-}
-#wrap section.login-content-section .container .login-form-box .join-btn-box .guide-text-box::before {
+#wrap section.qa-content-wrap .container .section-title-box h2.title::before {
   content: "";
   display: block;
-  width: 100%;
-  height: 1px;
-  background: #ddd;
+  width: 3px;
+  height: 100%;
+  background: #FF7F00;
   position: absolute;
+  left: -15px;
 }
-#wrap section.login-content-section .container .login-form-box .join-btn-box .join-btn {
+#wrap section.qa-content-wrap .container .question-list-area {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 18px 0;
-  border-radius: 300px;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  cursor: pointer;
-  transition: border 0.4s ease;
+  margin-bottom: 80px;
 }
-#wrap section.login-content-section .container .login-form-box .join-btn-box .join-btn span {
+#wrap section.qa-content-wrap .container .question-list-area .list-box {
+  width: calc(33.3333333333% - 24px);
+  margin: 0 12px;
+}
+#wrap section.qa-content-wrap .container .question-list-area .list-box a.button-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 30px 0;
+  background: #fff;
+  margin-bottom: 24px;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 0 0px rgba(255, 255, 255, 0) inset;
+}
+#wrap section.qa-content-wrap .container .question-list-area .list-box a.button-box .list-title span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  color: #2a2a2a;
+}
+#wrap section.qa-content-wrap .container .question-list-area .list-box a.button-box .list-icon-box {
+  margin: 32px 0 32px;
+  width: 100px;
+  height: 100px;
+  border-radius: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+#wrap section.qa-content-wrap .container .question-list-area .list-box a.button-box .list-icon-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#wrap section.qa-content-wrap .container .question-list-area .list-box a.button-box .list-sub-title span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+}
+#wrap section.qa-content-wrap .container .question-list-area .list-box a.button-box:hover {
+  background: #FD8D4E;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+}
+#wrap section.qa-content-wrap .container .question-list-area .list-box .desc-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrap section.qa-content-wrap .container .question-list-area .list-box .desc-box p {
+  text-align: center;
   font-family: "SUIT Variable", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.5;
   letter-spacing: -0.25px;
-  color: #2a2a2a;
-  position: relative;
-  z-index: 2;
+  color: #fff;
 }
-#wrap section.login-content-section .container .login-form-box .join-btn-box .join-btn:hover {
-  border: 1px solid #aeaeae;
+#wrap section.qa-content-wrap .container .page-movement-button-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-#wrap section.login-content-section .container .login-form-box .forget-pw-btn-box a {
+#wrap section.qa-content-wrap .container .page-movement-button-area .button-box {
+  display: flex;
+}
+#wrap section.qa-content-wrap .container .page-movement-button-area .button-box a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 43px;
+  border-radius: 300px;
+  background: #B70002;
+}
+#wrap section.qa-content-wrap .container .page-movement-button-area .button-box a .icon-box {
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#wrap section.login-content-section .container .login-form-box .forget-pw-btn-box a span {
+#wrap section.qa-content-wrap .container .page-movement-button-area .button-box a .icon-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#wrap section.qa-content-wrap .container .page-movement-button-area .button-box a span {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1;
-  letter-spacing: -0.25px;
-  color: #2a2a2a;
-  text-decoration: underline;
+  letter-spacing: -0.8px;
+  color: #fff;
+}
+#wrap section.qa-content-wrap .container .page-movement-button-area .button-box.prev a .icon-box {
+  margin-right: 8px;
+}
+#wrap section.qa-content-wrap .container .page-movement-button-area .button-box.next a .icon-box {
+  margin-left: 8px;
+  rotate: 180deg;
 }

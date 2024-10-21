@@ -1,6 +1,10 @@
 /* variable */
-$color-main: #CB3029;
-$color-sub: #F18D2C;
+$color-01: #E60000;
+$color-02: #B70002;
+$color-03: #FFE401;
+$color-04: #FF7F00;
+$color-05: #FF3300;
+$color-06: #FD8D4E;
 $color-black: #2a2a2a;
 $color-dark-gray: #aeaeae;
 $color-light-gray: #ddd;
@@ -60,6 +64,7 @@ section {
     width: 1440px;
     height: 100%;
     display: flex;
+    position: relative;
 }
 #wrap {
     width: 100%;

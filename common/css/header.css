@@ -5,6 +5,7 @@ header {
   align-items: center;
   justify-content: center;
   position: fixed;
+  z-index: 99;
   top: 0;
   left: 0;
 }
