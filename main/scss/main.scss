@@ -17,6 +17,7 @@ $font-en: "Archivo", sans-serif;
         position: relative;
         // height: 100vh;
         padding-top: 180px;
+        padding-bottom: 180px;
         .bg-area {
             top: 0;
             width: 100%;
@@ -99,12 +100,20 @@ $font-en: "Archivo", sans-serif;
                 }
             }
 
-            .question-list-area {
+            .section-title-box.moment {
+                // display: none;
+            }
+            .section-title-box.language {
+                display: none;
+            }
+
+            .question-list-area.moment {
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 80px;
+                // display: none;
                 .list-box {
                     width: calc(100% / 3 - 24px);
                     margin: 0 12px;
@@ -118,7 +127,6 @@ $font-en: "Archivo", sans-serif;
                         background: #fff;
                         margin-bottom: 24px;
                         transition: all .4s ease;
-                        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0) inset;
                         .list-title {
                             span {
                                 font-family: $font-kr;
@@ -158,7 +166,8 @@ $font-en: "Archivo", sans-serif;
                     }
                     a.button-box:hover {
                         background: $color-06;
-                        box-shadow: 0 0 0 1px rgba(255, 255, 255, .8) inset;
+                        box-shadow: 0px 8px 16px rgba(73, 26, 0, .4);
+                        translate: 0px -10px;
                     }
 
                     .desc-box {
@@ -174,6 +183,47 @@ $font-en: "Archivo", sans-serif;
                             letter-spacing: -.25px;
                             color: #fff;
                         }
+                    }
+                }
+            }
+
+            .question-list-area.language {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin-bottom: 80px;
+                display: none;
+                .list-box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: calc(100% / 4 - 24px);
+                    margin: 12px 12px;
+                    a.button-box {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        padding: 38px 0;
+                        border-radius: 12px;
+                        background: #fff;
+                        transition: all .4s ease;
+                        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0) inset;
+                        span {
+                            font-family: $font-kr;
+                            font-weight: 600;
+                            font-size: 24px;
+                            line-height: 1;
+                            letter-spacing: -.8px;
+                            color: $color-black;
+                        }
+                    }
+                    a.button-box:hover {
+                        background: $color-06;
+                        box-shadow: 0px 8px 16px rgba(73, 26, 0, .4);
+                        translate: 0px -10px;
                     }
                 }
             }
@@ -197,6 +247,7 @@ $font-en: "Archivo", sans-serif;
                             display: flex;
                             align-items: center;
                             justify-content: center;
+                            transition: all .4s ease;
                             img {
                                 width: 100%;
                                 height: 100%;
@@ -225,6 +276,12 @@ $font-en: "Archivo", sans-serif;
     
                         }
                     }
+                    a:hover {
+                        .icon-box {
+                            translate: -10px 0;
+                            opacity: 0;
+                        }
+                    }
                 }
                 .button-box.next {
                     a {
@@ -237,6 +294,12 @@ $font-en: "Archivo", sans-serif;
                         }
                         span {
     
+                        }
+                    }
+                    a:hover {
+                        .icon-box {
+                            translate: 10px 0;
+                            opacity: 0;
                         }
                     }
                 }
