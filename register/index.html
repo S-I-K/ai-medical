@@ -8,7 +8,7 @@
     <title>AI 의료통역교육</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/register.css">
     <link rel="stylesheet" href="../common/css/common.css">
     <link rel="stylesheet" href="../common/css/header.css">
     <link rel="stylesheet" href="../common/css/footer.css">
@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
 
     <!-- js -->
-    <script src="./js/login.js" defer></script>
+    <script src="./js/register.js" defer></script>
     <script src="../common/js/jquery-3.7.1.min.js"></script>
     <script src="../common/js/lenis.min.js"></script>
     <script src="../common/js/common.js"></script>
@@ -54,7 +54,7 @@
         </header>
 
         <!-- login-content-section -->
-        <section class="login-content-section">
+        <section class="register-content-section">
             <div class="container">
                 <!-- section-title-box -->
                 <div class="section-title-box">
@@ -64,75 +64,45 @@
 
                     <div class="title-box">
                         <span>
-                            로그인
+                            회원가입
                         </span>
                     </div>
                 </div>
 
                 <!-- login-form-box -->
-                <div class="login-form-box">
-                    <!-- form -->
-                    <form id="loginForm" onsubmit="return handleLogin(event)">
-                        <div class="form-group">
-                            <label for="email">
-                                이메일
-                            </label>
-                            <input type="email" id="email" placeholder="이메일을 입력해 주세요" required />
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="password">
-                                비밀번호
-                            </label>
-                            <input type="password" id="password" placeholder="비밀번호를 입력해 주세요" required />
-                            <button type="button" id="togglePassword" onclick="togglePasswordVisibility()">
-                                visible
-                            </button>
-                        </div>
-                        
-                        <p id="errorMessage" class="error-message" style="">
-                            * 이메일 혹은 비밀번호가 일치하지 않습니다.
-                        </p>
-                        
-                        <button type="submit" class="login">
-                            <span>
-                                로그인
-                            </span>
-                        </button>
-                    </form>
-
-                    <!-- join-btn-box -->
-                    <div class="join-btn-box">
-                        <div class="guide-text-box">
-                            <span>
-                                계정이 없으신가요?
-                            </span>
+                <div class="register-form-box">
+                    <div class="">
+                        <h1 id="title"></h1>
+                        <!-- 이메일 입력 -->
+                        <div id="email-section">
+                            <input type="email" id="email" placeholder="이메일을 입력하세요" required>
+                            <button id="edit-email-btn" style="display: none;">수정</button>
+                            <p id="email-error" class="error-msg"></p>
                         </div>
 
-                        <div class="join-btn">
-                            <span>
-                                회원가입
-                            </span>
+                        <!-- 비밀번호 입력 (초기에 숨김 처리) -->
+                        <div id="password-section" style="display: none;">
+                            <input type="password" id="password" placeholder="비밀번호를 입력하세요" minlength="8" required>
+                            <button id="toggle-password">보이기</button>
+                            <p id="password-error" class="error-msg"></p>
                         </div>
-                    </div>
 
-                    <div class="forget-pw-btn-box">
-                        <a href="#">
-                            <span>
-                                비밀번호를 잊으셨나요?
-                            </span>
-                        </a>
+                        <!-- 체크박스들 -->
+                        <div id="checkbox-section" style="display: none;">
+                            <label><input type="checkbox" id="news-subscription"> 의료통역 학습 소식과 맞춤형 강의 추천을 받아보고 싶습니다</label><br>
+                            <label><input type="checkbox" id="over-14"> 만 14세 이상입니다.</label>
+                        </div>
+
+                        <!-- 버튼 -->
+                        <button id="next-btn">다음</button>
+                        <button id="create-account-btn" style="display: none;">계정 생성</button>
+
+                        <!-- 이미 계정이 있습니까? -->
+                        <p><a href="#">이미 계정이 있으신가요?</a></p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- footer -->
-        <footer>
-            <div class="container">
-                footer
-            </div>
-        </footer>
     </div>
 </body>
 </html>
