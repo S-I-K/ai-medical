@@ -131,6 +131,7 @@
   font-size: 20px;
   line-height: 1;
   letter-spacing: -0.8px;
+  color: #2a2a2a;
 }
 #wrap section.qa-content-wrap .container .question-list-area.moment .list-box a.button-box:hover {
   background: #FD8D4E;
