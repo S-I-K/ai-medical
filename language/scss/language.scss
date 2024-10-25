@@ -100,62 +100,39 @@ $font-en: "Archivo", sans-serif;
                 }
             }
 
-            .question-list-area.moment {
+            .question-list-area.language {
                 width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
+                flex-wrap: wrap;
                 margin-bottom: 80px;
                 // display: none;
                 .list-box {
-                    width: calc(100% / 3 - 24px);
-                    margin: 0 12px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: calc(100% / 4 - 24px);
+                    margin: 12px 12px;
                     a.button-box {
                         display: flex;
-                        flex-direction: column;
                         align-items: center;
                         justify-content: center;
+                        width: 100%;
+                        padding: 32px 0;
                         border-radius: 12px;
-                        padding: 30px 0;
                         background: #fff;
-                        margin-bottom: 24px;
                         transition: all .4s ease;
-                        .list-title {
-                            span {
-                                font-family: $font-kr;
-                                font-weight: 600;
-                                font-size: 24px;
-                                line-height: 1;
-                                letter-spacing: -.8px;
-                                color: $color-black;
-                            }
-                        }
-
-                        .list-icon-box {
-                            margin: 32px 0 32px;
-                            width: 100px;
-                            height: 100px;
-                            border-radius: 300px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            background: #F8F8F8;
-                            img {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                                display: none;
-                            }
-                        }
-
-                        .list-sub-title {
-                            span {
-                                font-family: $font-kr;
-                                font-weight: 400;
-                                font-size: 20px;
-                                line-height: 1;
-                                letter-spacing: -.8px;
-                            }
+                        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0) inset;
+                        span {
+                            font-family: $font-kr;
+                            font-weight: 600;
+                            font-size: 24px;
+                            line-height: 1.5;
+                            letter-spacing: -.8px;
+                            color: $color-black;
+                            white-space: pre-line;
+                            text-align: center;
                         }
                     }
                     a.button-box:hover {
@@ -167,21 +144,6 @@ $font-en: "Archivo", sans-serif;
                         background: $color-06;
                         box-shadow: 0px 8px 16px rgba(73, 26, 0, .4);
                         translate: 0px -10px;
-                    }
-
-                    .desc-box {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        p {
-                            text-align: center;
-                            font-family: $font-kr;
-                            font-weight: 500;
-                            font-size: 20px;
-                            line-height: 1.5;
-                            letter-spacing: -.8px;
-                            color: $color-black;
-                        }
                     }
                 }
             }

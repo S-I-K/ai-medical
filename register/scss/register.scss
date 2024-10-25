@@ -24,7 +24,7 @@ $font-en: "Archivo", sans-serif;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-bottom: 42px;
+                margin-bottom: 62px;
 
                 .logo-box {
                     width: 120px;
@@ -53,9 +53,35 @@ $font-en: "Archivo", sans-serif;
             }
 
             .register-form-box {
-                // border: 1px solid red;
+                border: 1px solid red;
                 width: 100%;
                 max-width: 464px;
+
+                /* .user-name-box */
+                .user-name-box {
+                    margin-bottom: 42px;
+                    span {
+                        font-size: 18px;
+                        line-height: 1;
+                        color: $color-black;
+                    }
+                    span.user-name {
+                        font-family: $font-en;
+                        font-weight: 500;
+                    }
+                    span.welcome-message {
+                        font-family: $font-kr;
+                        font-weight: 400;
+                        letter-spacing: -.8px;
+                    }
+                }
+
+                /* #email-section */
+                #email-section {
+                    input {
+                        
+                    }
+                }
             }
         }
     }

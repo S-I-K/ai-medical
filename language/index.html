@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./common/img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../common/img/favicon.svg" type="image/svg+xml">
     
     <title>AI 의료통역교육</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="./main/css/main.css">
-    <link rel="stylesheet" href="./common/css/common.css">
-    <link rel="stylesheet" href="./common/css/header.css">
-    <link rel="stylesheet" href="./common/css/footer.css">
+    <link rel="stylesheet" href="./css/language.css">
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="../common/css/header.css">
+    <link rel="stylesheet" href="../common/css/footer.css">
 
     <!-- font -->
     <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
@@ -20,13 +20,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
 
     <!-- js -->
-    <script src="./main/js/main.js" defer></script>
-    <script src="./common/js/jquery-3.7.1.min.js"></script>
+    <script src="../main/js/main.js" defer></script>
+    <script src="../common/js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-    <script src="./common/js/lenis.min.js"></script>
-    <script src="./common/js/common.js"></script>
+    <script src="../common/js/lenis.min.js"></script>
+    <script src="../common/js/common.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -36,7 +36,7 @@
                 <!-- logo-box -->
                 <div class="logo-box">
                     <a href="#">
-                        <img src="./common/img/logo-kr-white.svg" alt="">
+                        <img src="../common/img/logo-kr-white.svg" alt="">
                     </a>
                 </div>
 
@@ -79,108 +79,76 @@
             <div class="container">
                 <!-- character-img-box -->
                 <div class="character-img-box">
-                    <img src="./main/img/QA-character.png" alt="">
+                    <img src="../main/img/QA-character.png" alt="">
                 </div>
 
-                <!-- Q: 주로 외국인 환자와 어떤 상황에서 소통하시나요? -->
+                <!-- Q: 어떤 언어권 환자와 소통하기 어려우신가요? -->
                 <!-- section-title-box -->
-                <div class="section-title-box moment">
+                <div class="section-title-box language">
                     <h2 class="title">
-                        주로 외국인 환자와 어떤 상황에서 소통하시나요?
+                        어떤 언어권 환자와 소통하기 어려우신가요?
                     </h2>
                 </div>
-                <!-- question-list-box.moment -->
-                <div class="question-list-area moment">
+                <!-- question-list-box.language -->
+                <div class="question-list-area language">
                     <!-- 01 -->
                     <div class="list-box">
-                        <a class='button-box active' href="#">
-                            <div class="list-title">
-                                <span>
-                                    의료 통역
-                                </span>
-                            </div>
-                            
-                            <div class="list-icon-box">
-                                <img src="" alt="아이콘">
-                            </div>
-
-                            <div class="list-sub-title">
-                                <span>
-                                    의료진과 환자의 대화 통역
-                                </span>
-                            </div>
+                        <a href="#" class="button-box active">
+                            <span>영어
+                            </span>
                         </a>
-
-                        <div class="desc-box">
-                            <p>
-                                의료진과 환자의 대화를 중간에서 통역하는 경우<br/>
-                                (코디네이터, 의료통역사 등)
-                            </p>
-                        </div>
                     </div>
                     <!-- 02 -->
                     <div class="list-box">
-                        <a class='button-box' href="#">
-                            <div class="list-title">
-                                <span>
-                                    국제 간호
-                                </span>
-                            </div>
-                            
-                            <div class="list-icon-box">
-                                <img src="" alt="아이콘">
-                            </div>
-
-                            <div class="list-sub-title">
-                                <span>
-                                    외국인 환자를 간호하며 소통
-                                </span>
-                            </div>
+                        <a href="#" class="button-box">
+                            <span>일본어
+                            </span>
                         </a>
-
-                        <div class="desc-box">
-                            <p>
-                                의료진과 환자의 대화를 중간에서 통역하는 경우<br/>
-                                (코디네이터, 의료통역사 등)
-                            </p>
-                        </div>
                     </div>
                     <!-- 03 -->
                     <div class="list-box">
-                        <a class='button-box' href="#">
-                            <div class="list-title">
-                                <span>
-                                    접수처 / QA
-                                </span>
-                            </div>
-                            
-                            <div class="list-icon-box">
-                                <img src="" alt="아이콘">
-                            </div>
-
-                            <div class="list-sub-title">
-                                <span>
-                                    외국인 환자 문의 답변
-                                </span>
-                            </div>
+                        <a href="#" class="button-box">
+                            <span>중국어
+                            </span>
                         </a>
-
-                        <div class="desc-box">
-                            <p>
-                                AI 외국인 환제에게 의료관련 문의를 받고 대답하는 학습<br/>
-                                (병원 접수처, 의료상담인력 등)
-                            </p>
-                        </div>
+                    </div>
+                    <!-- 04 -->
+                    <div class="list-box">
+                        <a href="#" class="button-box">
+                            <span>러시아어
+                            </span>
+                        </a>
+                    </div>
+                    <!-- 05 -->
+                    <div class="list-box">
+                        <a href="#" class="button-box">
+                            <span>몽골어
+                            </span>
+                        </a>
+                    </div>
+                    <!-- 06 -->
+                    <div class="list-box">
+                        <a href="#" class="button-box">
+                            <span>아랍어
+                            </span>
+                        </a>
+                    </div>
+                    <!-- 07 -->
+                    <div class="list-box">
+                        <a href="#" class="button-box">
+                            <span>베트남어
+                            </span>
+                        </a>
                     </div>
                 </div>
 
                 <!-- page-movement-button-area -->
                 <div class="page-movement-button-area">
                     <!-- prev-button-box -->
-                    <div class="button-box prev hidden">
-                        <a href="javascript:void(0);">
+                    <div class="button-box prev">
+                        <a href="../index.html">
                             <div class="icon-box">
-                                <img src="./common/img/icon-arrow-button.svg" alt="">
+                                <img src="../common/img/icon-arrow-button.svg" alt="">
                             </div>
                             <span>
                                 이전으로
@@ -189,12 +157,12 @@
                     </div>
                     <!-- next-button-box -->
                     <div class="button-box next">
-                        <a href="./language/index.html">
+                        <a href="../scenario/index.html">
                             <span>
                                 다음으로
                             </span>
                             <div class="icon-box">
-                                <img src="./common/img/icon-arrow-button.svg" alt="">
+                                <img src="../common/img/icon-arrow-button.svg" alt="">
                             </div>
                         </a>
                     </div>
