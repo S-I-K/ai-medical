@@ -1,0 +1,83 @@
+/* variable */
+$color-01: #E60000;
+$color-02: #B70002;
+$color-03: #FFE401;
+$color-04: #FF7F00;
+$color-05: #FF3300;
+$color-06: #FD8D4E;
+$color-black: #2a2a2a;
+$color-dark-gray: #aeaeae;
+$color-light-gray: #ddd;
+$font-kr: 'SUIT Variable', sans-serif;;
+$font-en: "Archivo", sans-serif;
+
+#wrap {
+    /* section.login-content-section */
+    section.qa-content-wrap {
+        position: relative;
+        min-height: 100vh;
+        padding-top: 180px;
+        padding-bottom: 100px;
+        .bg-area {
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            overflow: hidden;
+            pointer-events: none;
+            .ob-box {
+                position: absolute;
+                svg {
+                    path {
+
+                    }
+                }
+            }
+            .ob-box.left {
+                right: 8%;
+                svg {
+                    path {
+                        fill: #DC6468;
+                    }
+                }
+            }
+            .ob-box.right {
+                left: 62%;
+                top: -20px;
+                svg {
+                    path {
+                        fill: #FDD458;
+                    }
+                }
+            }
+        }
+
+        .container {
+            // border: 1px solid red;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* loading-img-box */
+            .loading-img-box {
+                width: 420px;
+                height: 420px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid transparent;
+                border-image: linear-gradient(45deg, $color-02, $color-03);
+                border-image-slice: 1;
+                border-radius: 300px;
+                padding: 110px 110px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

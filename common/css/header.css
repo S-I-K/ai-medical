@@ -48,9 +48,5 @@ header .container .login-info-box a.logout span {
   font-size: 16px;
   line-height: 1;
   letter-spacing: -0.25px;
-  color: #aeaeae;
-}
-
-header#qa-header .container .login-info-box a.logout span {
   color: #2a2a2a;
 }

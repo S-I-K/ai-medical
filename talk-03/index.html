@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./common/img/favicon.svg" type="image/svg+xml">
+        
+        <title>AI 의료통역교육</title>
+    
+        <!-- css -->
+        <link rel="stylesheet" href="./css/talk-03.css">
+        <link rel="stylesheet" href="../common/css/common.css">
+        <link rel="stylesheet" href="../common/css/header.css">
+        <link rel="stylesheet" href="../common/css/footer.css">
+
+        <!-- font -->
+        <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+    
+        <!-- js -->
+        <script src="./js/talk-03.js" defer></script>
+        <script src="../common/js/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+        <script src="../common/js/lenis.min.js"></script>
+        <script src="../common/js/common.js"></script>
+    </head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="">
+            <div class="container">
+                <!-- logo-box -->
+                <div class="logo-box">
+                    <a href="#">
+                        <img src="../common/img/logo-kr.svg" alt="">
+                    </a>
+                </div>
+
+                <!-- login-info-box -->
+                <div class="login-info-box">
+                    <span class="email">
+                        <!-- 로그인 이후에 추가 됨 -->
+                        guestid002@kohi.co.kr
+                    </span>
+                    <a href="#" class="logout">
+                        <span>
+                            <!-- 로그인 이후에 추가 됨 -->
+                            로그아웃
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- talk-03-content-wrap -->
+        <section class="talk-03-content-wrap">
+            <!-- bg-area -->
+            <div class="bg-area">
+                <!-- left -->
+                <div class="ob-box left">
+                    <svg width="2687" height="2855" viewBox="0 0 2687 2855" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1031.97 607.067C966.018 738.216 888.462 832.07 790.937 939.094C669.448 1072.51 525.778 1191.08 394.36 1314.03C120.026 1570.72 -100.553 1845.75 47.5967 2312.54C245.4 2935.53 1183.9 3029.11 1912.94 2551.36C2253.87 2360.41 2539.48 1985.8 2644.78 1611.08C2750.08 1235.72 2644.13 781.282 2452.54 451.574C2292.78 176.647 2051.86 1.40329 1733.86 4.93407e-05C1732.73 4.93407e-05 1731.59 4.93407e-05 1730.46 4.93407e-05C1337.77 4.93407e-05 1194.91 283.565 1031.97 607.067Z" fill=""/>
+                    </svg>
+                </div>
+
+                <!-- right -->
+                <div class="ob-box right">
+                    <svg width="1665" height="1738" viewBox="0 0 1665 1738" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M173.285 199.288C31.4497 368.433 -29.591 727.286 14.4492 936.854C75.3283 1225.11 259.8 1472.89 522.368 1607.55C853.48 1777.07 1206.29 1798.61 1481.65 1561.78C1858.96 1236.88 1580.52 871.657 1282.39 650.592C1151.94 553.553 1100.83 380.145 1015.18 237.77C978.8 177.323 936.109 122.326 878.468 81.362C800.319 25.6101 706.841 0.458336 611.69 0.458336C446.431 0.458336 276.261 76.3426 173.285 199.288Z" fill=""/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- container -->
+            <div class="container">
+                <!-- message-content-box -->
+                <div class="message-content-box docter">
+                    <!-- profile-img-box -->
+                    <div class="profile-img-box">
+                        <div class="border">
+                            <img src="./img/people-img01.png" alt="의사">
+                        </div>
+                    </div>
+
+                    <!-- message-text-box -->
+                    <div class="message-text-box">
+                        <!-- 01 -->
+                        <!-- text-box -->
+                        <p class="text-box">
+                            <!-- message -->
+                            <span class="message kr">
+                                어디가 불편해서 오셨나요?
+                            </span>
+                        </p>
+                        <!-- 02 -->
+                        <!-- text-box -->
+                        <p class="text-box trans">
+                            <!-- message -->
+                            <span class="message kr">
+                                3개월 전부터 통증이 있었습니다.
+                            </span>
+                        </p>
+                        <!-- 03 -->
+                        <!-- text-box -->
+                        <p class="text-box">
+                            <!-- message -->
+                            <span class="message kr">
+                                몸이 어디가 불편하실까요?
+                            </span>
+                        </p>
+                        <!-- 04 -->
+                        <!-- text-box -->
+                        <p class="text-box current trans">
+                            <!-- message -->
+                            <span class="message kr">
+                                하복부에서 쥐어짜는 듯한 통증이 있습니다.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <!-- message-content-box -->
+                <div class="message-content-box patient">
+                    <!-- profile-img-box -->
+                    <div class="profile-img-box">
+                        <div class="border">
+                            <img src="./img/people-img02.png" alt="의사">
+                        </div>
+                    </div>
+
+                    <!-- message-text-box -->
+                    <div class="message-text-box">
+                        <!-- 01 -->
+                        <!-- text-box -->
+                        <p class="text-box trans">
+                            <!-- message -->
+                            <span class="message en">
+                                The service is unkind
+                            </span>
+                        </p>
+                        <!-- 02 -->
+                        <!-- text-box -->
+                        <p class="text-box">
+                            <!-- message -->
+                            <span class="message en">
+                                3 months ago I've been having a pain
+                            </span>
+                        </p>
+                        <!-- 03 -->
+                        <!-- text-box -->
+                        <p class="text-box trans">
+                            <!-- message -->
+                            <span class="message en">
+                                which part do you feel sick about
+                            </span>
+                        </p>
+                        <!-- 04 -->
+                        <!-- text-box -->
+                        <p class="text-box current">
+                            <!-- message -->
+                            <span class="message en">
+                                I've been having a gripping pain in my lower stomach
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <!-- message-content-box -->
+                <div class="message-content-box trans">
+                    <!-- message-title-box -->
+                    <div class="message-kind-box">
+                        <span class="kind">
+                            통역
+                        </span>
+                    </div>
+
+                    <!-- message-text-box -->
+                    <div class="message-text-box">
+                        <!-- 01 -->
+                        <!-- text-box -->
+                        <p class="text-box">
+                            <!-- message -->
+                            <span class="message en">
+                                I've been having a gripping pain in my lower stomach
+                            </span>
+                        </p>
+                        <!-- 02 -->
+                        <!-- text-box -->
+                        <p class="text-box trans current">
+                            <!-- message -->
+                            <span class="message kr">
+                                하복부에서 쥐어짜는 듯한 통증이 있습니다.
+                            </span>
+                        </p>
+                    </div>
+
+                    <!-- speak-text-box- -->
+                    <div class="speak-text-box">
+                        <div class="button-box sst">
+                            <img src="./img/icon-mic.svg" alt="">
+                        </div>
+                        <p class="text-box">
+                            <span class="message kr">
+                                하복부에서 쥐어짜는 듯한 통증이 있습니다.
+                            </span>
+                        </p>
+                        <div class="button-box send">
+                            <img src="./img/icon-arrow-up.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+@charset "UTF-8";
+/* variable */
+#wrap {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 180px;
+  padding-bottom: 100px;
+}
+#wrap section.talk-03-content-wrap {
+  /* .bg-area */
+  /* .container */
+}
+#wrap section.talk-03-content-wrap .bg-area {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+#wrap section.talk-03-content-wrap .bg-area .ob-box {
+  position: absolute;
+}
+#wrap section.talk-03-content-wrap .bg-area .ob-box.left {
+  right: 8%;
+}
+#wrap section.talk-03-content-wrap .bg-area .ob-box.left svg path {
+  fill: #DC6468;
+}
+#wrap section.talk-03-content-wrap .bg-area .ob-box.right {
+  left: 62%;
+  top: -20px;
+}
+#wrap section.talk-03-content-wrap .bg-area .ob-box.right svg path {
+  fill: #FDD458;
+}
+#wrap section.talk-03-content-wrap .container {
+  flex-wrap: wrap;
+  /* message-content-box */
+  /* 의사 메세지 박스 */
+  /* 환자 메세지 박스 */
+  /* 통역 메세지 박스 */
+}
+#wrap section.talk-03-content-wrap .container .message-content-box {
+  background: #fff;
+  width: calc(50% - 24px);
+  height: auto;
+  margin: 20px 12px;
+  padding: 40px 14px 40px 40px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  /* profile-img-box */
+  /* message-kind-box */
+}
+#wrap section.talk-03-content-wrap .container .message-content-box .profile-img-box {
+  background: #fff;
+  padding: 0 20px;
+  position: absolute;
+  top: 0%;
+  translate: 0 -50%;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box .profile-img-box .border {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 300px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box .profile-img-box .border img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box .message-kind-box {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  translate: 0 -50%;
+  background: #fff;
+  padding: 0 10px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box .message-kind-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #aeaeae;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box .message-text-box {
+  width: 100%;
+  height: 300px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box .message-text-box p.text-box span.message {
+  font-size: 28px;
+  line-height: 1.5;
+  color: #aeaeae;
+  word-break: keep-all;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box .message-text-box p.text-box span.message.kr {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box .message-text-box p.text-box span.message.en {
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box .message-text-box p.text-box:not(:last-child) {
+  margin-bottom: 24px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box .message-text-box p.text-box.trans {
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 20px 20px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box .message-text-box p.text-box.current span.message {
+  color: #2a2a2a;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.docter {
+  padding-top: 60px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.patient {
+  padding-top: 60px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans {
+  border: 1px solid #E60000;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .message-kind-box span.kind {
+  color: #E60000;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .message-text-box {
+  height: auto;
+  margin-bottom: 120px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .button-box {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #aeaeae;
+  border-radius: 300px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .button-box img {
+  width: 100%;
+  height: 100%;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box p.text-box span.message {
+  font-size: 28px;
+  line-height: 1.5;
+  color: #2a2a2a;
+  text-align: left;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box p.text-box span.message.kr {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box p.text-box span.message.en {
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+}

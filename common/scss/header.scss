@@ -62,27 +62,6 @@ header {
                     font-size: 16px;
                     line-height: 1;
                     letter-spacing: -.25px;
-                    color: #aeaeae;
-                }
-            }
-        }
-    }
-}
-
-header#qa-header {
-    .container {
-        .logo-box {
-            a {
-                img {
-                }
-            }
-        }
-
-        .login-info-box {
-            span.email {
-            }
-            a.logout {
-                span {
                     color: $color-black;
                 }
             }
