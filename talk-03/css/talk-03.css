@@ -1,5 +1,42 @@
 @charset "UTF-8";
 /* variable */
+.tooltip:hover .tooltip-box {
+  translate: 0 0;
+  opacity: 1;
+}
+.tooltip:hover .tooltip-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #fff;
+}
+
+.tooltip .tooltip-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 14px 24px;
+  border-radius: 4px;
+  top: calc(100% + 8px);
+  background: rgba(42, 42, 42, 0.8);
+  opacity: 0;
+  translate: 0 -4px;
+  transition: all 0.4s ease;
+}
+.tooltip .tooltip-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #fff;
+}
+
 #wrap {
   position: relative;
   min-height: 100vh;
@@ -17,7 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   pointer-events: none;
 }
@@ -43,6 +80,7 @@
   /* 의사 메세지 박스 */
   /* 환자 메세지 박스 */
   /* 통역 메세지 박스 */
+  /* AI에게 질문하기 */
 }
 #wrap section.talk-03-content-wrap .container .message-content-box {
   background: #fff;
@@ -54,7 +92,7 @@
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   position: relative;
   /* profile-img-box */
@@ -108,6 +146,7 @@
   padding-right: 20px;
 }
 #wrap section.talk-03-content-wrap .container .message-content-box .message-text-box p.text-box span.message {
+  display: flex;
   font-size: 28px;
   line-height: 1.5;
   color: #aeaeae;
@@ -147,44 +186,143 @@
   color: #E60000;
 }
 #wrap section.talk-03-content-wrap .container .message-content-box.trans .message-text-box {
-  height: auto;
-  margin-bottom: 120px;
+  height: 260px;
+  margin-bottom: 60px;
 }
 #wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box {
   display: flex;
-  align-items: center;
+  width: 100%;
+  padding-right: 20px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border {
+  display: flex;
+  align-items: flex-end;
   justify-content: center;
   width: 100%;
-  padding: 20px 10px 20px;
+  padding: 20px 20px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 300px;
 }
-#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .button-box {
-  width: 42px;
-  height: 42px;
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border .button-box {
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #aeaeae;
   border-radius: 300px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  position: relative;
 }
-#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .button-box img {
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border .button-box img {
   width: 100%;
   height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box p.text-box span.message {
-  font-size: 28px;
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border .button-box:hover {
+  background: rgba(42, 42, 42, 0.8);
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border p.text-box {
+  flex: 2;
+  margin: 0 20px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border p.text-box span.message {
+  font-size: 24px;
   line-height: 1.5;
   color: #2a2a2a;
   text-align: left;
 }
-#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box p.text-box span.message.kr {
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border p.text-box span.message.kr {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 500;
   letter-spacing: -0.8px;
 }
-#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box p.text-box span.message.en {
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border p.text-box span.message.en {
   font-family: "Archivo", sans-serif;
   font-weight: 400;
   letter-spacing: 0px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai {
+  transition: border 0.4s ease;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai .message-kind-box span.kind {
+  transition: color 0.4s ease;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai .message-text-box {
+  height: 260px;
+  margin-bottom: 60px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai .question-box {
+  width: 100%;
+  display: flex;
+  padding-right: 20px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai .question-box .border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 20px;
+  border: 1px solid #ddd;
+  border-radius: 300px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai .question-box .border .input-box {
+  flex: 2;
+  margin-right: 30px;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai .question-box .border .input-box input {
+  outline: none;
+  border: none;
+  display: flex;
+  width: 100%;
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.8px;
+  color: #2a2a2a;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai .question-box .border .input-box input::-moz-placeholder {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.8px;
+  color: #ddd;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai .question-box .border .input-box input::placeholder {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.8px;
+  color: #ddd;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai .question-box .border .button-box {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #aeaeae;
+  border-radius: 300px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai .question-box .border .button-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai .question-box .border .button-box:hover {
+  background: rgba(42, 42, 42, 0.8);
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai:hover {
+  border: 1px solid #2a2a2a;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.ai:hover .message-kind-box span.kind {
+  color: #2a2a2a;
 }

@@ -77,7 +77,7 @@
 
             <!-- container -->
             <div class="container">
-                <!-- message-content-box -->
+                <!-- message-content-box:의사 -->
                 <div class="message-content-box docter">
                     <!-- profile-img-box -->
                     <div class="profile-img-box">
@@ -122,7 +122,8 @@
                         </p>
                     </div>
                 </div>
-                <!-- message-content-box -->
+
+                <!-- message-content-box:환자 -->
                 <div class="message-content-box patient">
                     <!-- profile-img-box -->
                     <div class="profile-img-box">
@@ -167,7 +168,8 @@
                         </p>
                     </div>
                 </div>
-                <!-- message-content-box -->
+
+                <!-- message-content-box:통역 -->
                 <div class="message-content-box trans">
                     <!-- message-title-box -->
                     <div class="message-kind-box">
@@ -198,16 +200,66 @@
 
                     <!-- speak-text-box- -->
                     <div class="speak-text-box">
-                        <div class="button-box sst">
-                            <img src="./img/icon-mic.svg" alt="">
+                        <div class="border">
+                            <div class="button-box sst tooltip">
+                                <img src="./img/icon-mic.svg" alt="">
+                                <div class="tooltip-box">
+                                    <span>
+                                        눌러서 말하기
+                                    </span>
+                                </div>
+                            </div>
+                            <p class="text-box">
+                                <span class="message kr">
+                                    하복부에서 쥐어짜는 듯한 통증이 있습니다.
+                                </span>
+                            </p>
+                            <div class="button-box send">
+                                <img src="./img/icon-arrow-up.svg" alt="">
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- message-content-box:AI에게 질문하기 -->
+                <div class="message-content-box ai">
+                    <!-- message-title-box -->
+                    <div class="message-kind-box">
+                        <span class="kind">
+                            AI에게 질문하기
+                        </span>
+                    </div>
+
+                    <!-- message-text-box -->
+                    <div class="message-text-box">
+                        <!-- 01 -->
+                        <!-- text-box -->
                         <p class="text-box">
+                            <!-- message -->
                             <span class="message kr">
-                                하복부에서 쥐어짜는 듯한 통증이 있습니다.
+                                하복부를 영어로 뭐라고 말해?
                             </span>
                         </p>
-                        <div class="button-box send">
-                            <img src="./img/icon-arrow-up.svg" alt="">
+                        <!-- 02 -->
+                        <!-- text-box -->
+                        <p class="text-box trans current">
+                            <!-- message -->
+                            <span class="message kr">
+                                "하복부"는 영어로 "lower abdomen" 또는 "lower abdominal area"라고 해요.
+                            </span>
+                        </p>
+                    </div>
+
+                    <!-- question-box -->
+                    <div class="question-box">
+                        <div class="border">
+                            <div class="input-box">
+                                <input type="text" placeholder="학습 중 궁금한 내용이 있다면 AI에게 질문해보세요.">
+                            </div>
+
+                            <div class="button-box send">
+                                <img src="./img/icon-arrow-up.svg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>

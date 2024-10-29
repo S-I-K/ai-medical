@@ -11,6 +11,51 @@ $color-light-gray: #ddd;
 $font-kr: 'SUIT Variable', sans-serif;;
 $font-en: "Archivo", sans-serif;
 
+.tooltip:hover {
+    .tooltip-box {
+        translate: 0 0;
+        opacity: 1;
+        span {
+            font-family: $font-kr;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1;
+            letter-spacing: -.25px;
+            color: #fff;
+        }
+    }
+}
+
+.tooltip {
+    .tooltip-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: max-content;
+        padding: 14px 24px;
+        // border: 1px solid red;
+        border-radius: 4px;
+        top: calc(100% + 8px);
+        background: rgba(42, 42, 42, .8);
+        opacity: 0;
+        translate: 0 -4px;
+        transition: all .4s ease;
+        span {
+            font-family: $font-kr;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1;
+            letter-spacing: -.25px;
+            color: #fff;
+        }
+    }
+}
+
+
+
+
+
 #wrap {
     position: relative;
     min-height: 100vh;
@@ -26,7 +71,7 @@ $font-en: "Archivo", sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: absolute;
+            position: fixed;
             overflow: hidden;
             pointer-events: none;
             .ob-box {
@@ -71,7 +116,7 @@ $font-en: "Archivo", sans-serif;
                 border-radius: 12px;
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
                 justify-content: flex-start;
                 position: relative;
 
@@ -127,6 +172,7 @@ $font-en: "Archivo", sans-serif;
                     padding-right: 20px;
                     p.text-box {
                         span.message {
+                            display: flex;
                             font-size: 28px;
                             line-height: 1.5;
                             color: $color-dark-gray;
@@ -176,8 +222,8 @@ $font-en: "Archivo", sans-serif;
                     }
                 }
                 .message-text-box {
-                    height: auto;
-                    margin-bottom: 120px;
+                    height: 260px;
+                    margin-bottom: 60px;
                     p.text-box {
                         span.message {
                         }
@@ -198,53 +244,165 @@ $font-en: "Archivo", sans-serif;
 
                 .speak-text-box {
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
                     width: 100%;
-                    padding: 20px 10px 20px;
-                    border: 1px solid $color-light-gray;
-                    border-radius: 8px;
-                    .button-box {
-                        width: 42px;
-                        height: 42px;
+                    padding-right: 20px;
+                    .border {
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: center;
+                        width: 100%;
+                        padding: 20px 20px;
+                        border: 1px solid $color-light-gray;
+                        border-radius: 300px;
+                        .button-box {
+                            width: 36px;
+                            height: 36px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: $color-dark-gray;
+                            border-radius: 300px;
+                            cursor: pointer;
+                            transition: background .4s ease;
+                            position: relative;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                        .button-box:hover {
+                            background: rgba(42, 42, 42, .8);
+                        }
+                        .button-box.sst {
+                            img {
+    
+                            }
+                        }
+                        .button-box.send {
+                            img {
+    
+                            }
+                        }
+    
+                        p.text-box {
+                            flex: 2;
+                            margin: 0 20px;
+                            span.message {
+                                font-size: 24px;
+                                line-height: 1.5;
+                                color: $color-black;
+                                text-align: left;
+                                // word-break: keep-all;
+                            }
+                            span.message.kr {
+                                font-family: $font-kr;
+                                font-weight: 500;
+                                letter-spacing: -.8px;
+                            }
+                            span.message.en {
+                                font-family: $font-en;
+                                font-weight: 400;
+                                letter-spacing: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+            /* AI에게 질문하기 */
+            .message-content-box.ai {
+                transition: border .4s ease;
+                .message-kind-box {
+                    span.kind {
+                        transition: color .4s ease;
+                    }
+                }
+                .message-text-box {
+                    height: 260px;
+                    margin-bottom: 60px;
+                    p.text-box {
+                        span.message {
+                        }
+                        span.message.kr {
+                        }
+                        span.message.en {
+                        }
+                    }
+                    p.text-box:not(:last-child) {
+                    }
+                    p.text-box.trans {
+                    }
+                    p.text-box.current {
+                        span.message {
+                        }
+                    }
+                }
+
+                .question-box {
+                    width: 100%;
+                    display: flex;
+                    padding-right: 20px;
+                    .border {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        background: $color-dark-gray;
+                        width: 100%;
+                        padding: 20px 20px;
+                        border: 1px solid $color-light-gray;
                         border-radius: 300px;
-                        img {
-                            width: 100%;
-                            height: 100%;
+                        .input-box {
+                            flex: 2;
+                            margin-right: 30px;
+                            // border: 1px solid red;
+                            input {
+                                outline: none;
+                                border: none;
+                                display: flex;
+                                width: 100%;
+                                font-family: $font-kr;
+                                font-weight: 500;
+                                font-size: 24px;
+                                line-height: 1.5;
+                                letter-spacing: -.8px;
+                                color: $color-black;
+                            }
+                            input::placeholder {
+                                font-family: $font-kr;
+                                font-weight: 500;
+                                font-size: 24px;
+                                line-height: 1.5;
+                                letter-spacing: -.8px;
+                                color: $color-light-gray;
+                            }
+                        }
+    
+                        .button-box {
+                            width: 36px;
+                            height: 36px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: $color-dark-gray;
+                            border-radius: 300px;
+                            cursor: pointer;
+                            transition: background .4s ease;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                        .button-box:hover {
+                            background: rgba(42, 42, 42, .8);
                         }
                     }
-                    .button-box.sst {
-                        img {
-
-                        }
-                    }
-                    .button-box.send {
-                        img {
-
-                        }
-                    }
-
-                    p.text-box {
-                        span.message {
-                            font-size: 28px;
-                            line-height: 1.5;
-                            color: $color-black;
-                            text-align: left;
-                        }
-                        span.message.kr {
-                            font-family: $font-kr;
-                            font-weight: 500;
-                            letter-spacing: -.8px;
-                        }
-                        span.message.en {
-                            font-family: $font-en;
-                            font-weight: 400;
-                            letter-spacing: 0px;
-                        }
+                }
+            }
+            .message-content-box.ai:hover {
+                border: 1px solid $color-black;
+                .message-kind-box {
+                    span.kind {
+                        color: $color-black;
                     }
                 }
             }
