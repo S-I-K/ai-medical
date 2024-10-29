@@ -61,46 +61,46 @@ $font-en: "Archivo", sans-serif;
     min-height: 100vh;
     padding-top: 180px;
     padding-bottom: 100px;
-    
-    section.talk-03-content-wrap {
-        /* .bg-area */
-        .bg-area {
-            top: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: fixed;
-            overflow: hidden;
-            pointer-events: none;
-            .ob-box {
-                position: absolute;
-                svg {
-                    path {
-    
-                    }
-                }
-            }
-            .ob-box.left {
-                right: 8%;
-                svg {
-                    path {
-                        fill: #DC6468;
-                    }
-                }
-            }
-            .ob-box.right {
-                left: 62%;
-                top: -20px;
-                svg {
-                    path {
-                        fill: #FDD458;
-                    }
+
+    /* .bg-area */
+    .bg-area {
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        overflow: hidden;
+        pointer-events: none;
+        .ob-box {
+            position: absolute;
+            svg {
+                path {
+
                 }
             }
         }
-
+        .ob-box.left {
+            right: 8%;
+            svg {
+                path {
+                    fill: #DC6468;
+                }
+            }
+        }
+        .ob-box.right {
+            left: 62%;
+            top: -20px;
+            svg {
+                path {
+                    fill: #FDD458;
+                }
+            }
+        }
+    }
+    
+    section.talk-03-content-wrap {
         /* .container */
         .container {
             flex-wrap: wrap;
@@ -181,7 +181,7 @@ $font-en: "Archivo", sans-serif;
                         span.message.kr {
                             font-family: $font-kr;
                             font-weight: 500;
-                            letter-spacing: -.8px;
+                            letter-spacing: -.25px;
                         }
                         span.message.en {
                             font-family: $font-en;
@@ -209,10 +209,12 @@ $font-en: "Archivo", sans-serif;
             .message-content-box.docter {
                 padding-top: 60px;
             }
+
             /* 환자 메세지 박스 */
             .message-content-box.patient {
                 padding-top: 60px;
             }
+
             /* 통역 메세지 박스 */
             .message-content-box.trans {
                 border: 1px solid $color-01;
@@ -309,8 +311,9 @@ $font-en: "Archivo", sans-serif;
                     }
                 }
             }
+
             /* AI에게 질문하기 */
-            .message-content-box.ai {
+            .message-content-box.ai-question {
                 transition: border .4s ease;
                 .message-kind-box {
                     span.kind {
@@ -348,7 +351,7 @@ $font-en: "Archivo", sans-serif;
                         justify-content: center;
                         width: 100%;
                         padding: 20px 20px;
-                        border: 1px solid $color-light-gray;
+                        // border: 1px solid $color-light-gray;
                         border-radius: 300px;
                         .input-box {
                             flex: 2;
@@ -398,11 +401,84 @@ $font-en: "Archivo", sans-serif;
                     }
                 }
             }
-            .message-content-box.ai:hover {
+            .message-content-box.ai-question:hover {
                 border: 1px solid $color-black;
                 .message-kind-box {
                     span.kind {
                         color: $color-black;
+                    }
+                }
+            }
+
+            /* AI 해설 */
+            .message-content-box.ai-script {
+                width: 100%;
+                .message-kind-box {
+                    span.kind {
+                        transition: color .4s ease;
+                    }
+                }
+                .message-text-box {
+                    height: auto;
+                    p.text-box {
+                        span.message {
+                            font-size: 24px;
+                        }
+                        span.message.kr {
+                        }
+                        span.message.en {
+                        }
+                    }
+                    p.text-box:not(:last-child) {
+                    }
+                    p.text-box.trans {
+                    }
+                    p.text-box.current {
+                        span.message {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.paging-button-content-wrap {
+        padding-top: 60px;
+        .container {
+            .paging-button-box {
+                // border: 1px solid red;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .button-area {
+                    width: 220px;
+                    display: flex;
+                    a {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 30px 0;
+                        border: 1px solid $color-light-gray;
+                        border-radius: 12px;
+                        transition: border .4s ease;
+                        span {
+                            font-family: $font-kr;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 1;
+                            letter-spacing: -.25px;
+                            color: $color-dark-gray;
+                            transition: color .4s ease;
+                        }
+                    }
+
+                    a:hover {
+                        border: 1px solid $color-black;
+                        span {
+                            color: $color-black;
+                        }
                     }
                 }
             }

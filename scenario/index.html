@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
 
     <!-- js -->
-    <script src="../main/js/main.js" defer></script>
+    <script src="./js/scenario.js" defer></script>
     <script src="../common/js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -56,25 +56,25 @@
             </div>
         </header>
 
-        <!-- qa-content-wrap -->
-        <section class="qa-content-wrap">
-            <!-- bg-area -->
-            <div class="bg-area">
-                <!-- left -->
-                <div class="ob-box left">
-                    <svg width="2687" height="2855" viewBox="0 0 2687 2855" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1031.97 607.067C966.018 738.216 888.462 832.07 790.937 939.094C669.448 1072.51 525.778 1191.08 394.36 1314.03C120.026 1570.72 -100.553 1845.75 47.5967 2312.54C245.4 2935.53 1183.9 3029.11 1912.94 2551.36C2253.87 2360.41 2539.48 1985.8 2644.78 1611.08C2750.08 1235.72 2644.13 781.282 2452.54 451.574C2292.78 176.647 2051.86 1.40329 1733.86 4.93407e-05C1732.73 4.93407e-05 1731.59 4.93407e-05 1730.46 4.93407e-05C1337.77 4.93407e-05 1194.91 283.565 1031.97 607.067Z" fill=""/>
-                    </svg>
-                </div>
-
-                <!-- right -->
-                <div class="ob-box right">
-                    <svg width="1665" height="1738" viewBox="0 0 1665 1738" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M173.285 199.288C31.4497 368.433 -29.591 727.286 14.4492 936.854C75.3283 1225.11 259.8 1472.89 522.368 1607.55C853.48 1777.07 1206.29 1798.61 1481.65 1561.78C1858.96 1236.88 1580.52 871.657 1282.39 650.592C1151.94 553.553 1100.83 380.145 1015.18 237.77C978.8 177.323 936.109 122.326 878.468 81.362C800.319 25.6101 706.841 0.458336 611.69 0.458336C446.431 0.458336 276.261 76.3426 173.285 199.288Z" fill=""/>
-                    </svg>
-                </div>
+        <!-- bg-area -->
+        <div class="bg-area">
+            <!-- left -->
+            <div class="ob-box left">
+                <svg width="2687" height="2855" viewBox="0 0 2687 2855" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1031.97 607.067C966.018 738.216 888.462 832.07 790.937 939.094C669.448 1072.51 525.778 1191.08 394.36 1314.03C120.026 1570.72 -100.553 1845.75 47.5967 2312.54C245.4 2935.53 1183.9 3029.11 1912.94 2551.36C2253.87 2360.41 2539.48 1985.8 2644.78 1611.08C2750.08 1235.72 2644.13 781.282 2452.54 451.574C2292.78 176.647 2051.86 1.40329 1733.86 4.93407e-05C1732.73 4.93407e-05 1731.59 4.93407e-05 1730.46 4.93407e-05C1337.77 4.93407e-05 1194.91 283.565 1031.97 607.067Z" fill=""/>
+                </svg>
             </div>
 
+            <!-- right -->
+            <div class="ob-box right">
+                <svg width="1665" height="1738" viewBox="0 0 1665 1738" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M173.285 199.288C31.4497 368.433 -29.591 727.286 14.4492 936.854C75.3283 1225.11 259.8 1472.89 522.368 1607.55C853.48 1777.07 1206.29 1798.61 1481.65 1561.78C1858.96 1236.88 1580.52 871.657 1282.39 650.592C1151.94 553.553 1100.83 380.145 1015.18 237.77C978.8 177.323 936.109 122.326 878.468 81.362C800.319 25.6101 706.841 0.458336 611.69 0.458336C446.431 0.458336 276.261 76.3426 173.285 199.288Z" fill=""/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- qa-content-wrap -->
+        <section class="qa-content-wrap">
             <!-- container -->
             <div class="container">
                 <!-- character-img-box -->
@@ -84,7 +84,7 @@
 
                 <!-- Q: 시나리오 -->
                 <!-- section-title-box -->
-                <div class="section-title-box language">
+                <div class="section-title-box scenario">
                     <h2 class="title">
                         시나리오 학습을 하고 싶으신가요,<br/>
                         다양한 상황을 통해 학습하고 싶으신가요?
@@ -157,12 +157,17 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- page-movement-button-area -->
-                <div class="page-movement-button-area">
-                    <!-- prev-button-box -->
-                    <div class="button-box prev">
-                        <a href="../language/index.html">
+        <!-- paging-button-content-wrap -->
+        <section class="paging-button-content-wrap">
+            <div class="container">
+                <!-- paging-button-box -->
+                <div class="paging-button-box">
+                    <!-- prev -->
+                    <div class="button-area prev">
+                        <a href="../mode/">
                             <div class="icon-box">
                                 <img src="../common/img/icon-arrow-button.svg" alt="">
                             </div>
@@ -171,9 +176,10 @@
                             </span>
                         </a>
                     </div>
-                    <!-- next-button-box -->
-                    <div class="button-box next">
-                        <a href="../">
+
+                    <!-- next -->
+                    <div class="button-area next">
+                        <a href="../talk-03/">
                             <span>
                                 학습시작
                             </span>

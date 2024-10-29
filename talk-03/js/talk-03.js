@@ -18,7 +18,7 @@ $(()=>{
 
 
     /* QA 콘텐츠 인트로 애니메이션 */
-    gsap.fromTo('section.talk-03-content-wrap .container', {
+    gsap.fromTo('section', {
         opacity: 0,
     },{
         opacity: 1,
