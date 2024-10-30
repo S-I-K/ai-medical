@@ -1,0 +1,80 @@
+/* variable */
+$color-01: #E60000;
+$color-02: #B70002;
+$color-03: #FFE401;
+$color-04: #FF7F00;
+$color-05: #FF3300;
+$color-06: #FD8D4E;
+$color-black: #2a2a2a;
+$color-dark-gray: #aeaeae;
+$color-light-gray: #ddd;
+$font-kr: 'SUIT Variable', sans-serif;;
+$font-en: "Archivo", sans-serif;
+
+.loading-screen-box.qa {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: opacity .4s ease;
+    opacity: 0;
+    .container {
+        bottom: 1px solid red;
+        justify-content: center;
+        align-items: center;
+        .character-img-area {
+            width: 410px;
+            height: 410px;
+            padding: 100px 100px;
+            border-radius: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            .border {
+                position: absolute;
+                background: linear-gradient(45deg ,#DC6468, #FDD458);
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 300px;
+                animation: border-rotate 1.4s linear infinite;
+                .circle {
+                    width: 92%;
+                    height: 92%;
+                    background: #fff;
+                    border-radius: 300px;
+                }
+            }
+            .img-box {
+                position: relative;
+                z-index: 2;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+.loading-screen-box.visible {
+    opacity: 1;
+}
+
+@keyframes border-rotate {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}

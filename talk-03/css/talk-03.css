@@ -182,6 +182,7 @@
 }
 #wrap section.talk-03-content-wrap .container .message-content-box.trans {
   border: 1px solid #E60000;
+  z-index: 11;
 }
 #wrap section.talk-03-content-wrap .container .message-content-box.trans .message-kind-box span.kind {
   color: #E60000;
@@ -281,7 +282,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 1.5;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.25px;
   color: #2a2a2a;
 }
 #wrap section.talk-03-content-wrap .container .message-content-box.ai-question .question-box .border .input-box input::-moz-placeholder {

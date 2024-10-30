@@ -1,196 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../common/img/favicon.svg" type="image/svg+xml">
-    
-    <title>AI 의료통역교육</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../common/img/favicon.svg" type="image/svg+xml">
+        
+        <title>AI 의료통역교육</title>
 
-    <!-- css -->
-    <link rel="stylesheet" href="./css/scenario.css">
-    <link rel="stylesheet" href="../common/css/common.css">
-    <link rel="stylesheet" href="../common/css/header.css">
-    <link rel="stylesheet" href="../common/css/footer.css">
+        <!-- css -->
+        <link rel="stylesheet" href="./css/scenario.css">
+        <link rel="stylesheet" href="../loading/css/loading.css">
+        <link rel="stylesheet" href="../common/css/common.css">
+        <link rel="stylesheet" href="../common/css/header.css">
+        <link rel="stylesheet" href="../common/css/footer.css">
 
-    <!-- font -->
-    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+        <!-- font -->
+        <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
 
-    <!-- js -->
-    <script src="./js/scenario.js" defer></script>
-    <script src="../common/js/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-    <script src="../common/js/lenis.min.js"></script>
-    <script src="../common/js/common.js"></script>
-</head>
-<body>
-    <div id="wrap">
-        <!-- header -->
-        <header id="qa-header">
-            <div class="container">
-                <!-- logo-box -->
-                <div class="logo-box">
-                    <a href="#">
-                        <img src="../common/img/logo-kr-white.svg" alt="">
-                    </a>
-                </div>
+        <!-- js -->
+        <script src="./js/scenario.js" defer></script>
+        <script src="../loading/js/loading.js" defer></script>
+        <script src="../common/js/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+        <script src="../common/js/lenis.min.js"></script>
+        <script src="../common/js/common.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            <header id="qa-header">
+                <div class="container">
+                    <!-- logo-box -->
+                    <div class="logo-box">
+                        <a href="#">
+                            <img src="../common/img/logo-kr-white.svg" alt="">
+                        </a>
+                    </div>
 
-                <!-- login-info-box -->
-                <div class="login-info-box">
-                    <span class="email">
-                        <!-- 로그인 이후에 추가 됨 -->
-                        guestid002@kohi.co.kr
-                    </span>
-                    <a href="#" class="logout">
-                        <span>
+                    <!-- login-info-box -->
+                    <div class="login-info-box">
+                        <span class="email">
                             <!-- 로그인 이후에 추가 됨 -->
-                            로그아웃
+                            guestid002@kohi.co.kr
                         </span>
-                    </a>
+                        <a href="#" class="logout">
+                            <span>
+                                <!-- 로그인 이후에 추가 됨 -->
+                                로그아웃
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- bg-area -->
+            <div class="bg-area">
+                <!-- left -->
+                <div class="ob-box left">
+                    <svg width="2687" height="2855" viewBox="0 0 2687 2855" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1031.97 607.067C966.018 738.216 888.462 832.07 790.937 939.094C669.448 1072.51 525.778 1191.08 394.36 1314.03C120.026 1570.72 -100.553 1845.75 47.5967 2312.54C245.4 2935.53 1183.9 3029.11 1912.94 2551.36C2253.87 2360.41 2539.48 1985.8 2644.78 1611.08C2750.08 1235.72 2644.13 781.282 2452.54 451.574C2292.78 176.647 2051.86 1.40329 1733.86 4.93407e-05C1732.73 4.93407e-05 1731.59 4.93407e-05 1730.46 4.93407e-05C1337.77 4.93407e-05 1194.91 283.565 1031.97 607.067Z" fill=""/>
+                    </svg>
+                </div>
+
+                <!-- right -->
+                <div class="ob-box right">
+                    <svg width="1665" height="1738" viewBox="0 0 1665 1738" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M173.285 199.288C31.4497 368.433 -29.591 727.286 14.4492 936.854C75.3283 1225.11 259.8 1472.89 522.368 1607.55C853.48 1777.07 1206.29 1798.61 1481.65 1561.78C1858.96 1236.88 1580.52 871.657 1282.39 650.592C1151.94 553.553 1100.83 380.145 1015.18 237.77C978.8 177.323 936.109 122.326 878.468 81.362C800.319 25.6101 706.841 0.458336 611.69 0.458336C446.431 0.458336 276.261 76.3426 173.285 199.288Z" fill=""/>
+                    </svg>
                 </div>
             </div>
-        </header>
 
-        <!-- bg-area -->
-        <div class="bg-area">
-            <!-- left -->
-            <div class="ob-box left">
-                <svg width="2687" height="2855" viewBox="0 0 2687 2855" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1031.97 607.067C966.018 738.216 888.462 832.07 790.937 939.094C669.448 1072.51 525.778 1191.08 394.36 1314.03C120.026 1570.72 -100.553 1845.75 47.5967 2312.54C245.4 2935.53 1183.9 3029.11 1912.94 2551.36C2253.87 2360.41 2539.48 1985.8 2644.78 1611.08C2750.08 1235.72 2644.13 781.282 2452.54 451.574C2292.78 176.647 2051.86 1.40329 1733.86 4.93407e-05C1732.73 4.93407e-05 1731.59 4.93407e-05 1730.46 4.93407e-05C1337.77 4.93407e-05 1194.91 283.565 1031.97 607.067Z" fill=""/>
-                </svg>
+            <!-- loading-screen-box -->
+            <div class="loading-screen-box qa">
+                <div class="container">
+                    <div class="character-img-area">
+                        <div class="border">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="img-box">
+                            <img src="../loading/img/qa-loading-img.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- right -->
-            <div class="ob-box right">
-                <svg width="1665" height="1738" viewBox="0 0 1665 1738" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M173.285 199.288C31.4497 368.433 -29.591 727.286 14.4492 936.854C75.3283 1225.11 259.8 1472.89 522.368 1607.55C853.48 1777.07 1206.29 1798.61 1481.65 1561.78C1858.96 1236.88 1580.52 871.657 1282.39 650.592C1151.94 553.553 1100.83 380.145 1015.18 237.77C978.8 177.323 936.109 122.326 878.468 81.362C800.319 25.6101 706.841 0.458336 611.69 0.458336C446.431 0.458336 276.261 76.3426 173.285 199.288Z" fill=""/>
-                </svg>
-            </div>
+            <!-- qa-content-wrap -->
+            <section class="qa-content-wrap">
+                <!-- container -->
+                <div class="container">
+                    <!-- character-img-box -->
+                    <div class="character-img-box">
+                        <img src="../main/img/QA-character.png" alt="">
+                    </div>
+
+                    <!-- Q: 시나리오 -->
+                    <!-- section-title-box -->
+                    <div class="section-title-box scenario">
+                        <h2 class="title">
+                            시나리오 학습을 하고 싶으신가요,<br/>
+                            다양한 상황을 통해 학습하고 싶으신가요?
+                        </h2>
+                    </div>
+                    <!-- question-list-box.language -->
+                    <div class="question-list-area scenario">
+                        <!-- 01 -->
+                        <div class="list-box">
+                            <a href="#" class="button-box active">
+                                <span>국제간호
+                                    퇴원
+                                </span>
+                            </a>
+                        </div>
+                        <!-- 02 -->
+                        <div class="list-box">
+                            <a href="#" class="button-box">
+                                <span>국제간호
+                                    대장내시경
+                                </span>
+                            </a>
+                        </div>
+                        <!-- 03 -->
+                        <div class="list-box">
+                            <a href="#" class="button-box">
+                                <span>국제간호
+                                    간이식
+                                </span>
+                            </a>
+                        </div>
+                        <!-- 04 -->
+                        <div class="list-box">
+                            <a href="#" class="button-box">
+                                <span>의료통역
+                                    간암
+                                </span>
+                            </a>
+                        </div>
+                        <!-- 05 -->
+                        <div class="list-box">
+                            <a href="#" class="button-box">
+                                <span>의료통역
+                                    간경화
+                                </span>
+                            </a>
+                        </div>
+                        <!-- 06 -->
+                        <div class="list-box">
+                            <a href="#" class="button-box">
+                                <span>의료통역
+                                    산부인과
+                                </span>
+                            </a>
+                        </div>
+                        <!-- 07 -->
+                        <div class="list-box">
+                            <a href="#" class="button-box">
+                                <span>의료통역
+                                    소아과
+                                </span>
+                            </a>
+                        </div>
+                        <!-- 08 -->
+                        <div class="list-box">
+                            <a href="#" class="button-box">
+                                <span>의료통역
+                                    정형외과
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- paging-button-content-wrap -->
+            <section class="paging-button-content-wrap">
+                <div class="container">
+                    <!-- paging-button-box -->
+                    <div class="paging-button-box">
+                        <!-- prev -->
+                        <div class="button-area prev">
+                            <a href="../mode/">
+                                <div class="icon-box">
+                                    <img src="../common/img/icon-arrow-button.svg" alt="">
+                                </div>
+                                <span>
+                                    이전으로
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- next -->
+                        <div class="button-area next">
+                            <a href="../talk-03/">
+                                <span>
+                                    학습시작
+                                </span>
+                                <div class="icon-box">
+                                    <img src="../common/img/icon-arrow-button.svg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <!-- qa-content-wrap -->
-        <section class="qa-content-wrap">
-            <!-- container -->
-            <div class="container">
-                <!-- character-img-box -->
-                <div class="character-img-box">
-                    <img src="../main/img/QA-character.png" alt="">
-                </div>
-
-                <!-- Q: 시나리오 -->
-                <!-- section-title-box -->
-                <div class="section-title-box scenario">
-                    <h2 class="title">
-                        시나리오 학습을 하고 싶으신가요,<br/>
-                        다양한 상황을 통해 학습하고 싶으신가요?
-                    </h2>
-                </div>
-                <!-- question-list-box.language -->
-                <div class="question-list-area scenario">
-                    <!-- 01 -->
-                    <div class="list-box">
-                        <a href="#" class="button-box active">
-                            <span>국제간호
-                                퇴원
-                            </span>
-                        </a>
-                    </div>
-                    <!-- 02 -->
-                    <div class="list-box">
-                        <a href="#" class="button-box">
-                            <span>국제간호
-                                대장내시경
-                            </span>
-                        </a>
-                    </div>
-                    <!-- 03 -->
-                    <div class="list-box">
-                        <a href="#" class="button-box">
-                            <span>국제간호
-                                간이식
-                            </span>
-                        </a>
-                    </div>
-                    <!-- 04 -->
-                    <div class="list-box">
-                        <a href="#" class="button-box">
-                            <span>의료통역
-                                간암
-                            </span>
-                        </a>
-                    </div>
-                    <!-- 05 -->
-                    <div class="list-box">
-                        <a href="#" class="button-box">
-                            <span>의료통역
-                                간경화
-                            </span>
-                        </a>
-                    </div>
-                    <!-- 06 -->
-                    <div class="list-box">
-                        <a href="#" class="button-box">
-                            <span>의료통역
-                                산부인과
-                            </span>
-                        </a>
-                    </div>
-                    <!-- 07 -->
-                    <div class="list-box">
-                        <a href="#" class="button-box">
-                            <span>의료통역
-                                소아과
-                            </span>
-                        </a>
-                    </div>
-                    <!-- 08 -->
-                    <div class="list-box">
-                        <a href="#" class="button-box">
-                            <span>의료통역
-                                정형외과
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- paging-button-content-wrap -->
-        <section class="paging-button-content-wrap">
-            <div class="container">
-                <!-- paging-button-box -->
-                <div class="paging-button-box">
-                    <!-- prev -->
-                    <div class="button-area prev">
-                        <a href="../mode/">
-                            <div class="icon-box">
-                                <img src="../common/img/icon-arrow-button.svg" alt="">
-                            </div>
-                            <span>
-                                이전으로
-                            </span>
-                        </a>
-                    </div>
-
-                    <!-- next -->
-                    <div class="button-area next">
-                        <a href="../talk-03/">
-                            <span>
-                                학습시작
-                            </span>
-                            <div class="icon-box">
-                                <img src="../common/img/icon-arrow-button.svg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</body>
+    </body>
 </html>
