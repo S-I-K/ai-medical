@@ -1,0 +1,288 @@
+/* variable */
+$color-01: #E60000;
+$color-02: #B70002;
+$color-03: #FFE401;
+$color-04: #FF7F00;
+$color-05: #FF3300;
+$color-06: #FD8D4E;
+$color-black: #2a2a2a;
+$color-dark-gray: #aeaeae;
+$color-light-gray: #ddd;
+$font-kr: 'SUIT Variable', sans-serif;;
+$font-en: "Archivo", sans-serif;
+
+.tooltip:hover {
+    .tooltip-box {
+        translate: 0 0;
+        opacity: 1;
+        span {
+            font-family: $font-kr;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1;
+            letter-spacing: -.25px;
+            color: #fff;
+        }
+    }
+}
+
+.tooltip {
+    .tooltip-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: max-content;
+        padding: 14px 24px;
+        // border: 1px solid red;
+        border-radius: 4px;
+        top: calc(100% + 8px);
+        background: rgba(42, 42, 42, .8);
+        opacity: 0;
+        translate: 0 -4px;
+        transition: all .4s ease;
+        span {
+            font-family: $font-kr;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1;
+            letter-spacing: -.25px;
+            color: #fff;
+        }
+    }
+}
+
+
+
+
+
+#wrap {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 180px;
+    padding-bottom: 100px;
+    
+    section.result-content-wrap {
+        /* .container */
+        .container {
+            border: 1px solid red;
+            .result-content-box {
+                // border: 1px solid red;
+                width: calc(100% / 2 - 24px);
+                margin: 20px 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 40px 40px;
+                background: #fff;
+                border: 1px solid $color-light-gray;
+                border-radius: 12px;
+                position: relative;
+                > .kind-box {
+                    position: absolute;
+                    left: 30px;
+                    top: 0;
+                    translate: 0 -50%;
+                    background: #fff;
+                    padding: 0 10px;
+                    span {
+                        font-family: $font-kr;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 1;
+                        letter-spacing: -.25px;
+                        color: $color-dark-gray;
+                    }
+                }
+            }
+
+            /* 전체 정답률 */
+            .result-content-box.value {
+                padding: 0;
+                border: none;
+                .list-box {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 40px 40px;
+                    background: #fff;
+                    border: 1px solid $color-light-gray;
+                    border-radius: 12px;
+                    position: relative;
+                }
+                .list-box.progress {
+                    .kind-box {
+                        position: absolute;
+                        left: 30px;
+                        top: 0;
+                        translate: 0 -50%;
+                        background: #fff;
+                        padding: 0 10px;
+                        span {
+                            font-family: $font-kr;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 1;
+                            letter-spacing: -.25px;
+                            color: $color-dark-gray;
+                        }
+                    }
+                    .numb-box {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 14px;
+                        span {
+                            font-family: $font-en;
+                            font-weight: 500;
+                            font-size: 42px;
+                            line-height: 1;
+                        }
+                        span.good {
+                            color: $color-dark-gray;
+                        }
+                        span.bad {
+                            color: #eee;
+                        }
+                    }
+
+                    .progress-box {
+                        width: 100%;
+                        height: 32px;
+                        background: #eee;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        border-radius: 300px;
+                        overflow: hidden;
+                        .bar {
+                            width: 60%;
+                            height: 100%;
+                            background: $color-dark-gray;
+                            border-radius: 300px;
+                        }
+                    }
+                }
+                .list-box.progress:not(:last-child) {
+                    margin-bottom: 14px;
+                }
+
+                /* 자세한 통계 */
+                .list-box.detail {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .detail-box {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;;
+                        .detail-data-box {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .name {
+                                min-width: 125px;
+                                display: flex;
+                                justify-content: flex-start;
+                                span {
+                                    font-family: $font-kr;
+                                    font-weight: 500;
+                                    font-size: 28px;
+                                    line-height: 1;
+                                    letter-spacing: -.8px;
+                                    color: #999;
+                                }
+                            }
+                            .percent {
+                                display: flex;
+                                span {
+                                    font-family: $font-en;
+                                    font-weight: 500;
+                                    font-size: 28px;
+                                    line-height: 1;
+                                    color: $color-black;
+                                }
+                            }
+                            .more-btn-box {
+                                min-width: 125px;
+                                display: flex;
+                                justify-content: flex-end;
+                                .icon-box {
+                                    width: 28px;
+                                    height: 28px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border-radius: 300px;
+                                    background: $color-dark-gray;
+                                    cursor: pointer;
+                                    transition: background .4s ease;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: contain;
+                                    }
+                                }
+                                .icon-box:hover {
+                                    background: rgba(42, 42, 42, .8);
+                                }
+                            }
+                        }
+                    }
+                    .detail-box:not(:last-child) {
+                        margin-bottom: 42px;
+                    }
+                }
+            }
+        }
+    }
+
+    section.paging-button-content-wrap {
+        padding-top: 60px;
+        .container {
+            .paging-button-box {
+                // border: 1px solid red;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .button-area {
+                    width: 220px;
+                    display: flex;
+                    a {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 30px 0;
+                        border: 1px solid $color-light-gray;
+                        border-radius: 12px;
+                        transition: border .4s ease;
+                        span {
+                            font-family: $font-kr;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 1;
+                            letter-spacing: -.25px;
+                            color: $color-dark-gray;
+                            transition: color .4s ease;
+                        }
+                    }
+
+                    a:hover {
+                        border: 1px solid $color-black;
+                        span {
+                            color: $color-black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../common/img/favicon.svg" type="image/svg+xml">
+        
+        <title>AI 의료통역교육</title>
+    
+        <!-- css -->
+        <link rel="stylesheet" href="./css/result.css">
+        <link rel="stylesheet" href="../common/css/common.css">
+        <link rel="stylesheet" href="../common/css/header.css">
+        <link rel="stylesheet" href="../common/css/footer.css">
+
+        <!-- font -->
+        <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+    
+        <!-- js -->
+        <script src="./js/result.js" defer></script>
+        <script src="../common/js/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+        <script src="../common/js/lenis.min.js"></script>
+        <script src="../common/js/common.js"></script>
+    </head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="">
+            <div class="container">
+                <!-- logo-box -->
+                <div class="logo-box">
+                    <a href="#">
+                        <img src="../common/img/logo-kr.svg" alt="">
+                    </a>
+                </div>
+
+                <!-- login-info-box -->
+                <div class="login-info-box">
+                    <span class="email">
+                        <!-- 로그인 이후에 추가 됨 -->
+                        guestid002@kohi.co.kr
+                    </span>
+                    <a href="#" class="logout">
+                        <span>
+                            <!-- 로그인 이후에 추가 됨 -->
+                            로그아웃
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- result-content-wrap -->
+        <section class="result-content-wrap">
+            <!-- container -->
+            <div class="container">
+                <!-- 전체 정답률 및 통계값 -->
+                <div class="result-content-box value">
+                    <!--list-box -->
+                    <div class="list-box progress">
+                        <!-- kind-box -->
+                        <div class="kind-box">
+                            <span>
+                                전체 정답률
+                            </span>
+                        </div>
+                        <!-- numb-box -->
+                        <div class="numb-box">
+                            <span class="good">
+                                0%
+                            </span>
+                            <span class="bad">
+                                0%
+                            </span>
+                        </div>
+                        <!-- progress-box -->
+                        <div class="progress-box">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+
+                    <!-- list-box -->
+                    <div class="list-box detail">
+                        <!-- 01: 통역 정확도 -->
+                        <div class="detail-box">
+                            <div class="detail-data-box">
+                                <div class="name">
+                                    <span>
+                                        통역 정확도
+                                    </span>
+                                </div>
+                                <div class="percent">
+                                    <span>
+                                        91.7%
+                                    </span>
+                                </div>
+                                <div class="more-btn-box">
+                                    <div class="icon-box">
+                                        <img src="../common/img/icon-arrow-down.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="detail-text-box">
+                            </div>
+                            -->
+                        </div>
+                        <!-- 02: 유창성 -->
+                        <div class="detail-box">
+                            <div class="detail-data-box">
+                                <div class="name">
+                                    <span>
+                                        유창성
+                                    </span>
+                                </div>
+                                <div class="percent">
+                                    <span>
+                                        88.7%
+                                    </span>
+                                </div>
+                                <div class="more-btn-box">
+                                    <div class="icon-box">
+                                        <img src="../common/img/icon-arrow-down.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="detail-text-box">
+                            </div>
+                            -->
+                        </div>
+                        <!-- 03: 유창성 -->
+                        <div class="detail-box">
+                            <div class="detail-data-box">
+                                <div class="name">
+                                    <span>
+                                        유창성
+                                    </span>
+                                </div>
+                                <div class="percent">
+                                    <span>
+                                        88.7%
+                                    </span>
+                                </div>
+                                <div class="more-btn-box">
+                                    <div class="icon-box">
+                                        <img src="../common/img/icon-arrow-down.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="detail-text-box">
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 02 -->
+                <div class="result-content-box chart">
+                    <div class="kind-box">
+                        <span class="kind">
+                            문제별 유사도
+                        </span>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+
+        <!-- paging-button-content-wrap -->
+        <section class="paging-button-content-wrap">
+            <div class="container">
+                <!-- paging-button-box -->
+                <div class="paging-button-box">
+                    <!-- prev -->
+                    <div class="button-area prev">
+                        <a href="#">
+                            <span>
+                                이전
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- end -->
+                    <div class="button-area end">
+                        <a href="#">
+                            <span>
+                                학습 종료
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- next -->
+                    <div class="button-area next">
+                        <a href="#">
+                            <span>
+                                다음
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -64,6 +64,34 @@ section {
 #wrap {
   width: 100%;
   position: relative;
+  /* .bg-area */
+}
+#wrap .bg-area {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  overflow: hidden;
+  pointer-events: none;
+}
+#wrap .bg-area .ob-box {
+  position: absolute;
+}
+#wrap .bg-area .ob-box.left {
+  right: 8%;
+}
+#wrap .bg-area .ob-box.left svg path {
+  fill: #DC6468;
+}
+#wrap .bg-area .ob-box.right {
+  left: 62%;
+  top: -20px;
+}
+#wrap .bg-area .ob-box.right svg path {
+  fill: #FDD458;
 }
 
 .hidden {
@@ -104,4 +132,70 @@ section {
   line-height: 1;
   letter-spacing: -1.4px;
   color: #fff;
+}
+
+section.paging-button-content-wrap.qa .container .paging-button-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* 기본 */
+  /* 이전 버튼 */
+  /* 다음 버튼 */
+  /* 학습시작 버튼 */
+  /* 버튼 숨기기 클래스 */
+}
+section.paging-button-content-wrap.qa .container .paging-button-box .button-area a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 43px;
+  border-radius: 300px;
+  background: #B70002;
+}
+section.paging-button-content-wrap.qa .container .paging-button-box .button-area a span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  color: #fff;
+}
+section.paging-button-content-wrap.qa .container .paging-button-box .button-area a .icon-box {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+section.paging-button-content-wrap.qa .container .paging-button-box .button-area a .icon-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section.paging-button-content-wrap.qa .container .paging-button-box .button-area.prev a .icon-box {
+  margin-right: 8px;
+}
+section.paging-button-content-wrap.qa .container .paging-button-box .button-area.prev a:hover .icon-box {
+  translate: -10px 0;
+  opacity: 0;
+}
+section.paging-button-content-wrap.qa .container .paging-button-box .button-area.next a .icon-box {
+  margin-left: 8px;
+  rotate: 180deg;
+}
+section.paging-button-content-wrap.qa .container .paging-button-box .button-area.next a:hover .icon-box {
+  translate: 10px 0;
+  opacity: 0;
+}
+section.paging-button-content-wrap.qa .container .paging-button-box .button-area.next.start a:hover .icon-box {
+  rotate: 135deg;
+  translate: unset;
+  opacity: unset;
+}
+section.paging-button-content-wrap.qa .container .paging-button-box .button-area.hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }

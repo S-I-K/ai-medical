@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/* variable */
+.tooltip:hover .tooltip-box {
+  translate: 0 0;
+  opacity: 1;
+}
+.tooltip:hover .tooltip-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #fff;
+}
+
+.tooltip .tooltip-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 14px 24px;
+  border-radius: 4px;
+  top: calc(100% + 8px);
+  background: rgba(42, 42, 42, 0.8);
+  opacity: 0;
+  translate: 0 -4px;
+  transition: all 0.4s ease;
+}
+.tooltip .tooltip-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #fff;
+}
+
+#wrap {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 180px;
+  padding-bottom: 100px;
+}
+#wrap section.result-content-wrap {
+  /* .container */
+}
+#wrap section.result-content-wrap .container {
+  border: 1px solid red;
+  /* 전체 정답률 */
+}
+#wrap section.result-content-wrap .container .result-content-box {
+  width: calc(50% - 24px);
+  margin: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  position: relative;
+}
+#wrap section.result-content-wrap .container .result-content-box > .kind-box {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  translate: 0 -50%;
+  background: #fff;
+  padding: 0 10px;
+}
+#wrap section.result-content-wrap .container .result-content-box > .kind-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #aeaeae;
+}
+#wrap section.result-content-wrap .container .result-content-box.value {
+  padding: 0;
+  border: none;
+  /* 자세한 통계 */
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  position: relative;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.progress .kind-box {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  translate: 0 -50%;
+  background: #fff;
+  padding: 0 10px;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.progress .kind-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #aeaeae;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.progress .numb-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.progress .numb-box span {
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.progress .numb-box span.good {
+  color: #aeaeae;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.progress .numb-box span.bad {
+  color: #eee;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.progress .progress-box {
+  width: 100%;
+  height: 32px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 300px;
+  overflow: hidden;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.progress .progress-box .bar {
+  width: 60%;
+  height: 100%;
+  background: #aeaeae;
+  border-radius: 300px;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.progress:not(:last-child) {
+  margin-bottom: 14px;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.detail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.detail .detail-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.detail .detail-box .detail-data-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.detail .detail-box .detail-data-box .name {
+  min-width: 125px;
+  display: flex;
+  justify-content: flex-start;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.detail .detail-box .detail-data-box .name span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  color: #999;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.detail .detail-box .detail-data-box .percent {
+  display: flex;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.detail .detail-box .detail-data-box .percent span {
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1;
+  color: #2a2a2a;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.detail .detail-box .detail-data-box .more-btn-box {
+  min-width: 125px;
+  display: flex;
+  justify-content: flex-end;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.detail .detail-box .detail-data-box .more-btn-box .icon-box {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 300px;
+  background: #aeaeae;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.detail .detail-box .detail-data-box .more-btn-box .icon-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.detail .detail-box .detail-data-box .more-btn-box .icon-box:hover {
+  background: rgba(42, 42, 42, 0.8);
+}
+#wrap section.result-content-wrap .container .result-content-box.value .list-box.detail .detail-box:not(:last-child) {
+  margin-bottom: 42px;
+}
+#wrap section.paging-button-content-wrap {
+  padding-top: 60px;
+}
+#wrap section.paging-button-content-wrap .container .paging-button-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#wrap section.paging-button-content-wrap .container .paging-button-box .button-area {
+  width: 220px;
+  display: flex;
+}
+#wrap section.paging-button-content-wrap .container .paging-button-box .button-area a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  transition: border 0.4s ease;
+}
+#wrap section.paging-button-content-wrap .container .paging-button-box .button-area a span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #aeaeae;
+  transition: color 0.4s ease;
+}
+#wrap section.paging-button-content-wrap .container .paging-button-box .button-area a:hover {
+  border: 1px solid #2a2a2a;
+}
+#wrap section.paging-button-content-wrap .container .paging-button-box .button-area a:hover span {
+  color: #2a2a2a;
+}
