@@ -65,7 +65,8 @@ $font-en: "Archivo", sans-serif;
     section.result-content-wrap {
         /* .container */
         .container {
-            border: 1px solid red;
+            // border: 1px solid red;
+            flex-wrap: wrap;
             .result-content-box {
                 // border: 1px solid red;
                 width: calc(100% / 2 - 24px);
@@ -240,49 +241,36 @@ $font-en: "Archivo", sans-serif;
                     }
                 }
             }
-        }
-    }
 
-    section.paging-button-content-wrap {
-        padding-top: 60px;
-        .container {
-            .paging-button-box {
-                // border: 1px solid red;
+            /* 문제별 유사도 */
+            .result-content-box.chart {
+
+            }
+
+            /* AI 종합 평가 */
+            .result-content-box.ai {
                 width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                .button-area {
-                    width: 220px;
-                    display: flex;
-                    a {
+                .ai-text-box {
+                    width: 100%;
+                    p {
                         width: 100%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        padding: 30px 0;
-                        border: 1px solid $color-light-gray;
-                        border-radius: 12px;
-                        transition: border .4s ease;
                         span {
+                            display: flex;
                             font-family: $font-kr;
                             font-weight: 500;
-                            font-size: 20px;
-                            line-height: 1;
+                            font-size: 24px;
+                            line-height: 1.5;
                             letter-spacing: -.25px;
                             color: $color-dark-gray;
-                            transition: color .4s ease;
-                        }
-                    }
-
-                    a:hover {
-                        border: 1px solid $color-black;
-                        span {
-                            color: $color-black;
                         }
                     }
                 }
             }
         }
     }
+
+    /*
+        section.paging-button-content-wrap
+        common.scss에 통합됨.
+    */
 }

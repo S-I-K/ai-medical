@@ -443,46 +443,8 @@ $font-en: "Archivo", sans-serif;
         }
     }
 
-    section.paging-button-content-wrap {
-        padding-top: 60px;
-        .container {
-            .paging-button-box {
-                // border: 1px solid red;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                .button-area {
-                    width: 220px;
-                    display: flex;
-                    a {
-                        width: 100%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        padding: 30px 0;
-                        border: 1px solid $color-light-gray;
-                        border-radius: 12px;
-                        transition: border .4s ease;
-                        span {
-                            font-family: $font-kr;
-                            font-weight: 500;
-                            font-size: 20px;
-                            line-height: 1;
-                            letter-spacing: -.25px;
-                            color: $color-dark-gray;
-                            transition: color .4s ease;
-                        }
-                    }
-
-                    a:hover {
-                        border: 1px solid $color-black;
-                        span {
-                            color: $color-black;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    /*
+        section.paging-button-content-wrap
+        common.scss에 통합됨.
+    */
 }

@@ -199,3 +199,44 @@ section.paging-button-content-wrap.qa .container .paging-button-box .button-area
   opacity: 0;
   pointer-events: none;
 }
+
+section.paging-button-content-wrap.learning {
+  padding-top: 60px;
+}
+section.paging-button-content-wrap.learning .container .paging-button-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section.paging-button-content-wrap.learning .container .paging-button-box .button-area {
+  display: flex;
+}
+section.paging-button-content-wrap.learning .container .paging-button-box .button-area a {
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  transition: border 0.4s ease;
+}
+section.paging-button-content-wrap.learning .container .paging-button-box .button-area a span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #aeaeae;
+  transition: color 0.4s ease;
+}
+section.paging-button-content-wrap.learning .container .paging-button-box .button-area a:not(:last-child) {
+  margin-right: 24px;
+}
+section.paging-button-content-wrap.learning .container .paging-button-box .button-area a:hover {
+  border: 1px solid #2a2a2a;
+}
+section.paging-button-content-wrap.learning .container .paging-button-box .button-area a:hover span {
+  color: #2a2a2a;
+}

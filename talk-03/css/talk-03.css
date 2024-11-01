@@ -43,6 +43,10 @@
   padding-top: 180px;
   padding-bottom: 100px;
   /* .bg-area */
+  /*
+      section.paging-button-content-wrap
+      common.scss에 통합됨.
+  */
 }
 #wrap .bg-area {
   top: 0;
@@ -338,42 +342,4 @@
 }
 #wrap section.talk-03-content-wrap .container .message-content-box.ai-script .message-text-box p.text-box span.message {
   font-size: 24px;
-}
-#wrap section.paging-button-content-wrap {
-  padding-top: 60px;
-}
-#wrap section.paging-button-content-wrap .container .paging-button-box {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#wrap section.paging-button-content-wrap .container .paging-button-box .button-area {
-  width: 220px;
-  display: flex;
-}
-#wrap section.paging-button-content-wrap .container .paging-button-box .button-area a {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 0;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  transition: border 0.4s ease;
-}
-#wrap section.paging-button-content-wrap .container .paging-button-box .button-area a span {
-  font-family: "SUIT Variable", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: -0.25px;
-  color: #aeaeae;
-  transition: color 0.4s ease;
-}
-#wrap section.paging-button-content-wrap .container .paging-button-box .button-area a:hover {
-  border: 1px solid #2a2a2a;
-}
-#wrap section.paging-button-content-wrap .container .paging-button-box .button-area a:hover span {
-  color: #2a2a2a;
 }
