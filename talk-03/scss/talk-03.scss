@@ -27,6 +27,7 @@ $font-en: "Archivo", sans-serif;
 }
 
 .tooltip {
+    position: relative;
     .tooltip-box {
         display: flex;
         align-items: center;
@@ -268,22 +269,40 @@ $font-en: "Archivo", sans-serif;
                             cursor: pointer;
                             transition: background .4s ease;
                             position: relative;
-                            img {
+                            svg {
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
+                                path {
+                                    scale: 1;
+                                    transition: scale .4s ease;
+                                    transform-origin: center center;
+                                }
+                                rect {
+                                    scale: 0;
+                                    transition: scale .4s ease;
+                                    transform-origin: center center;
+                                }
                             }
                         }
                         .button-box:hover {
                             background: rgba(42, 42, 42, .8);
                         }
-                        .button-box.sst {
-                            img {
-    
+                        .button-box.sst.active {
+                            background: $color-01;
+                            svg {
+                                path {
+                                    scale: 0;
+                                    transition: scale .4s ease;
+                                }
+                                rect {
+                                    scale: 1;
+                                    transition: scale .4s ease;
+                                }
                             }
                         }
                         .button-box.send {
-                            img {
+                            svg {
     
                             }
                         }

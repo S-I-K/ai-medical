@@ -106,6 +106,24 @@ $(()=>{
         GSAP.JS
     ============================ */
 
+
+
+
+    /* ============================
+        LEARNING.js
+    ============================ */
+
+    /* 녹음버튼 클릭 시 툴팁 메세지 변경 */
+    $('.button-box.sst').click(function(e){
+        if(!$(this).hasClass('active')) {
+            $(this).addClass('active');
+            $(this).find('.tooltip-box span').html('녹음 중단하기');
+        } else {
+            $(this).removeClass('active');
+            $(this).find('.tooltip-box span').html('녹음 시작하기');
+        }
+    });
+
 });
 
 

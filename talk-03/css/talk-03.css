@@ -13,6 +13,9 @@
   color: #fff;
 }
 
+.tooltip {
+  position: relative;
+}
 .tooltip .tooltip-box {
   display: flex;
   align-items: center;
@@ -221,14 +224,35 @@
   transition: background 0.4s ease;
   position: relative;
 }
-#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border .button-box img {
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border .button-box svg {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border .button-box svg path {
+  scale: 1;
+  transition: scale 0.4s ease;
+  transform-origin: center center;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border .button-box svg rect {
+  scale: 0;
+  transition: scale 0.4s ease;
+  transform-origin: center center;
+}
 #wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border .button-box:hover {
   background: rgba(42, 42, 42, 0.8);
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border .button-box.sst.active {
+  background: #E60000;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border .button-box.sst.active svg path {
+  scale: 0;
+  transition: scale 0.4s ease;
+}
+#wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border .button-box.sst.active svg rect {
+  scale: 1;
+  transition: scale 0.4s ease;
 }
 #wrap section.talk-03-content-wrap .container .message-content-box.trans .speak-text-box .border p.text-box {
   flex: 2;
