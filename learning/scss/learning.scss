@@ -206,6 +206,10 @@ $font-en: "Archivo", sans-serif;
                 }
             }
 
+            .message-content-box.free-talk {
+                width: 100%;
+            }
+
             /* 의사 메세지 박스 */
             .message-content-box.docter {
                 padding-top: 60px;
@@ -409,7 +413,7 @@ $font-en: "Archivo", sans-serif;
                             border-radius: 300px;
                             cursor: pointer;
                             transition: background .4s ease;
-                            img {
+                            svg {
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;

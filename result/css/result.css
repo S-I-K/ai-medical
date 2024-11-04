@@ -148,7 +148,7 @@
   overflow: hidden;
 }
 #wrap section.result-content-wrap .container .result-content-box.value .list-box.progress .progress-box .bar {
-  width: 60%;
+  width: 0%;
   height: 100%;
   background: #aeaeae;
   border-radius: 300px;

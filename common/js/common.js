@@ -38,14 +38,14 @@ $(()=>{
     /* Q&A: 배경 이미지 밖에서 들어오는. */
     gsap.registerPlugin(ScrollTrigger);
     gsap.fromTo('.bg-area.in .ob-box.left', {
-        x: '-57%',
+        x: '-62%',
     },{
         x: '0%',
         duration: 2,
         ease: "bounce.out",
     });
     gsap.fromTo('.bg-area.in .ob-box.right', {
-        x: '30%',
+        x: '43%',
     },{
         x: '0%',
         duration: 2,
@@ -56,14 +56,14 @@ $(()=>{
     gsap.fromTo('.bg-area.out .ob-box.left', {
         x: '0%',
     },{
-        x: '-66%',
+        x: '-62%',
         duration: 2,
         ease: "bounce.out",
     });
     gsap.fromTo('.bg-area.out .ob-box.right', {
         x: '0%',
     },{
-        x: '44%',
+        x: '43%',
         duration: 2,
         ease: "bounce.out",
     });
@@ -103,9 +103,21 @@ $(()=>{
 
 
     /* ============================
-        GSAP.JS
+        GUIDE.JS
     ============================ */
+    gsap.fromTo('.guide-screen-box', {
+        opacity: 0,
+    },{
+        opacity: 1,
+        duration: .6,
+        delay: 2,
+    });
 
+    setTimeout(function() {
+        $('.guide-screen-box').css({
+            'opacity': '0',
+        })
+    }, 4000);
 
 
 

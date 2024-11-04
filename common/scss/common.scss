@@ -84,7 +84,13 @@ section {
         pointer-events: none;
         .ob-box {
             position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
                 path {
 
                 }
@@ -92,6 +98,7 @@ section {
         }
         .ob-box.left {
             right: 8%;
+            width: 150%;
             svg {
                 path {
                     fill: #DC6468;
@@ -101,6 +108,7 @@ section {
         .ob-box.right {
             left: 62%;
             top: -20px;
+            width: 90%;
             svg {
                 path {
                     fill: #FDD458;
