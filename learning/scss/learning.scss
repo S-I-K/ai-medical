@@ -162,6 +162,10 @@ $font-en: "Archivo", sans-serif;
                         color: $color-dark-gray;
                     }
                 }
+                .message-kind-box.right {
+                    left: auto;
+                    right: 30px;
+                }
 
                 .message-text-box {
                     width: 100%;

@@ -145,6 +145,10 @@
   letter-spacing: -0.25px;
   color: #aeaeae;
 }
+#wrap section.talk-03-content-wrap .container .message-content-box .message-kind-box.right {
+  left: auto;
+  right: 30px;
+}
 #wrap section.talk-03-content-wrap .container .message-content-box .message-text-box {
   width: 100%;
   height: 300px;
