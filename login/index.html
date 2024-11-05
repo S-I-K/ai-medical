@@ -9,6 +9,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="../loading/css/loading.css">
     <link rel="stylesheet" href="../common/css/common.css">
     <link rel="stylesheet" href="../common/css/header.css">
     <link rel="stylesheet" href="../common/css/footer.css">
@@ -22,6 +23,9 @@
     <!-- js -->
     <script src="./js/login.js" defer></script>
     <script src="../common/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script src="../common/js/lenis.min.js"></script>
     <script src="../common/js/common.js"></script>
 </head>
@@ -52,6 +56,40 @@
                 </div>
             </div>
         </header>
+
+        <!-- loading-screen-box -->
+        <div class="loading-screen-box login">
+            <div class="container">
+                <div class="character-img-area">
+                    <div class="border">
+                    </div>
+                    <div class="circle">
+                        <div class="img-box">
+                            <img src="../loading/img/login-loading-img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-comment-box">
+                    <p>
+                        <span class="user-name">Guest002</span>님, 안녕하세요!<br/>
+                        저는 의료통역 학습을 함께 할 <span class="color">'하이'</span>에요!
+                    </p>
+                    <p>
+                        <span class="color">간단한 3가지 질문</span>에 답변해주시면<br/>
+                        '하이'가 학습자님께 알맞은 의료통역 학습 AI를 불러올게요!
+                    </p>
+                </div>
+
+                <div class="button-box">
+                    <a href="../">
+                        <span>
+                            질문시작!
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <!-- login-content-section -->
         <section class="login-content-section">
@@ -94,7 +132,7 @@
                             * 이메일 혹은 비밀번호가 일치하지 않습니다.
                         </p>
                         
-                        <button type="submit" class="login">
+                        <button type="submit" class="login start">
                             <span>
                                 로그인
                             </span>
@@ -126,13 +164,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- footer -->
-        <footer>
-            <div class="container">
-                footer
-            </div>
-        </footer>
     </div>
 </body>
 </html>

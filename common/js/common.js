@@ -84,7 +84,7 @@ $(()=>{
         LOADING.JS
     ============================ */
 
-    /* 로딩 스크린 화면에 나타남 */
+    /* Q&A: 로딩 스크린 화면에 나타남 */
     $('.paging-button-content-wrap.qa .paging-button-box .button-area.next').click(function(e){
         if($(this).hasClass('start')) {
             e.preventDefault();
@@ -93,11 +93,27 @@ $(()=>{
 
             /* n초 뒤에 페이지 이동 */
             setTimeout(function(){
-                window.location.href = '../talk-03/';
+                window.location.href = '../learning/people-03.html';
             }, 4000);
         } else {
         }
     });
+
+    /* LOGIN: 로딩 스크린 화면에 나타남 */
+    $('.login-form-box button.login').click(function(e){
+        if($(this).hasClass('start')) {
+            e.preventDefault();
+            /* 로딩 스크린 클래스 추가 */
+            $('.loading-screen-box').addClass('visible');
+            $('.loading-screen-box').css({
+                'pointer-events': 'inherit',
+            });
+
+        } else {
+        }
+    });
+
+    console.log($('.login-form-box button.login'));
 
 
 
