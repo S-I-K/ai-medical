@@ -132,12 +132,12 @@
 }
 #wrap section.qa-content-wrap .container .question-list-area.mode .list-box a.button-box:hover {
   background: #FD8D4E;
-  box-shadow: 0px 8px 16px rgba(73, 26, 0, 0.4);
+  box-shadow: 0px 4px 8px rgba(39, 5, 6, 0.4);
   translate: 0px -10px;
 }
 #wrap section.qa-content-wrap .container .question-list-area.mode .list-box a.button-box.active {
   background: #FD8D4E;
-  box-shadow: 0px 8px 16px rgba(73, 26, 0, 0.4);
+  box-shadow: 0px 4px 8px rgba(39, 5, 6, 0.4);
   translate: 0px -10px;
 }
 #wrap section.qa-content-wrap .container .question-list-area.mode .list-box .desc-box {
