@@ -31,12 +31,12 @@
 #wrap .bg-area .ob-box.right svg path {
   fill: #FDD458;
 }
-#wrap section.qa-content-wrap {
+#wrap section.qna-content-wrap {
   position: relative;
   padding-top: 180px;
   margin-bottom: 80px;
 }
-#wrap section.qa-content-wrap .container {
+#wrap section.qna-content-wrap .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,7 @@
   /* 학습 방법 선택 */
   /* 시나리오 선택 */
 }
-#wrap section.qa-content-wrap .container .character-img-box {
+#wrap section.qna-content-wrap .container .character-img-box {
   width: 260px;
   height: auto;
   display: flex;
@@ -61,16 +61,16 @@
   justify-content: center;
   margin-bottom: 42px;
 }
-#wrap section.qa-content-wrap .container .character-img-box img {
+#wrap section.qna-content-wrap .container .character-img-box img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#wrap section.qa-content-wrap .container .section-title-box {
+#wrap section.qna-content-wrap .container .section-title-box {
   margin-bottom: 80px;
 }
-#wrap section.qa-content-wrap .container .section-title-box h2.title {
+#wrap section.qna-content-wrap .container .section-title-box h2.title {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 600;
   font-size: 32px;
@@ -82,7 +82,7 @@
   align-items: center;
   justify-content: center;
 }
-#wrap section.qa-content-wrap .container .section-title-box h2.title::before {
+#wrap section.qna-content-wrap .container .section-title-box h2.title::before {
   content: "";
   display: block;
   width: 5px;
@@ -91,17 +91,17 @@
   position: absolute;
   left: -21px;
 }
-#wrap section.qa-content-wrap .container .question-list-area.moment {
+#wrap section.qna-content-wrap .container .question-list-area.moment {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#wrap section.qa-content-wrap .container .question-list-area.moment .list-box {
+#wrap section.qna-content-wrap .container .question-list-area.moment .list-box {
   width: calc(33.3333333333% - 24px);
   margin: 0 12px;
 }
-#wrap section.qa-content-wrap .container .question-list-area.moment .list-box a.button-box {
+#wrap section.qna-content-wrap .container .question-list-area.moment .list-box a.button-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,7 +112,7 @@
   margin-bottom: 24px;
   transition: all 0.4s ease;
 }
-#wrap section.qa-content-wrap .container .question-list-area.moment .list-box a.button-box .list-title span {
+#wrap section.qna-content-wrap .container .question-list-area.moment .list-box a.button-box .list-title span {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 600;
   font-size: 24px;
@@ -120,7 +120,7 @@
   letter-spacing: -0.8px;
   color: #2a2a2a;
 }
-#wrap section.qa-content-wrap .container .question-list-area.moment .list-box a.button-box .list-icon-box {
+#wrap section.qna-content-wrap .container .question-list-area.moment .list-box a.button-box .list-icon-box {
   margin: 32px 0 32px;
   width: 100px;
   height: 100px;
@@ -128,13 +128,13 @@
   align-items: center;
   justify-content: center;
 }
-#wrap section.qa-content-wrap .container .question-list-area.moment .list-box a.button-box .list-icon-box img {
+#wrap section.qna-content-wrap .container .question-list-area.moment .list-box a.button-box .list-icon-box img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#wrap section.qa-content-wrap .container .question-list-area.moment .list-box a.button-box .list-sub-title span {
+#wrap section.qna-content-wrap .container .question-list-area.moment .list-box a.button-box .list-sub-title span {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -142,22 +142,22 @@
   letter-spacing: -0.8px;
   color: #2a2a2a;
 }
-#wrap section.qa-content-wrap .container .question-list-area.moment .list-box a.button-box:hover {
+#wrap section.qna-content-wrap .container .question-list-area.moment .list-box a.button-box:hover {
   background: #FD8D4E;
   box-shadow: 0px 4px 8px rgba(39, 5, 6, 0.4);
   translate: 0px -10px;
 }
-#wrap section.qa-content-wrap .container .question-list-area.moment .list-box a.button-box.active {
+#wrap section.qna-content-wrap .container .question-list-area.moment .list-box a.button-box.active {
   background: #FD8D4E;
   box-shadow: 0px 4px 8px rgba(39, 5, 6, 0.4);
   translate: 0px -10px;
 }
-#wrap section.qa-content-wrap .container .question-list-area.moment .list-box .desc-box {
+#wrap section.qna-content-wrap .container .question-list-area.moment .list-box .desc-box {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#wrap section.qa-content-wrap .container .question-list-area.moment .list-box .desc-box p {
+#wrap section.qna-content-wrap .container .question-list-area.moment .list-box .desc-box p {
   text-align: center;
   font-family: "SUIT Variable", sans-serif;
   font-weight: 500;
@@ -166,21 +166,21 @@
   letter-spacing: -0.8px;
   color: #2a2a2a;
 }
-#wrap section.qa-content-wrap .container .question-list-area.language {
+#wrap section.qna-content-wrap .container .question-list-area.language {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-#wrap section.qa-content-wrap .container .question-list-area.language .list-box {
+#wrap section.qna-content-wrap .container .question-list-area.language .list-box {
   display: flex;
   justify-content: center;
   align-items: center;
   width: calc(25% - 24px);
   margin: 12px 12px;
 }
-#wrap section.qa-content-wrap .container .question-list-area.language .list-box a.button-box {
+#wrap section.qna-content-wrap .container .question-list-area.language .list-box a.button-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,7 +190,7 @@
   background: #fff;
   transition: all 0.4s ease;
 }
-#wrap section.qa-content-wrap .container .question-list-area.language .list-box a.button-box span {
+#wrap section.qna-content-wrap .container .question-list-area.language .list-box a.button-box span {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 600;
   font-size: 24px;
@@ -200,27 +200,27 @@
   white-space: pre-line;
   text-align: center;
 }
-#wrap section.qa-content-wrap .container .question-list-area.language .list-box a.button-box:hover {
+#wrap section.qna-content-wrap .container .question-list-area.language .list-box a.button-box:hover {
   background: #FD8D4E;
   box-shadow: 0px 4px 8px rgba(39, 5, 6, 0.4);
   translate: 0px -10px;
 }
-#wrap section.qa-content-wrap .container .question-list-area.language .list-box a.button-box.active {
+#wrap section.qna-content-wrap .container .question-list-area.language .list-box a.button-box.active {
   background: #FD8D4E;
   box-shadow: 0px 4px 8px rgba(39, 5, 6, 0.4);
   translate: 0px -10px;
 }
-#wrap section.qa-content-wrap .container .question-list-area.mode {
+#wrap section.qna-content-wrap .container .question-list-area.mode {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#wrap section.qa-content-wrap .container .question-list-area.mode .list-box {
+#wrap section.qna-content-wrap .container .question-list-area.mode .list-box {
   width: calc(33.3333333333% - 24px);
   margin: 0 12px;
 }
-#wrap section.qa-content-wrap .container .question-list-area.mode .list-box a.button-box {
+#wrap section.qna-content-wrap .container .question-list-area.mode .list-box a.button-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -231,7 +231,7 @@
   margin-bottom: 24px;
   transition: all 0.4s ease;
 }
-#wrap section.qa-content-wrap .container .question-list-area.mode .list-box a.button-box .list-title span {
+#wrap section.qna-content-wrap .container .question-list-area.mode .list-box a.button-box .list-title span {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 600;
   font-size: 24px;
@@ -239,7 +239,7 @@
   letter-spacing: -0.8px;
   color: #2a2a2a;
 }
-#wrap section.qa-content-wrap .container .question-list-area.mode .list-box a.button-box .list-icon-box {
+#wrap section.qna-content-wrap .container .question-list-area.mode .list-box a.button-box .list-icon-box {
   margin: 32px 0 32px;
   width: 100px;
   height: 100px;
@@ -247,13 +247,13 @@
   align-items: center;
   justify-content: center;
 }
-#wrap section.qa-content-wrap .container .question-list-area.mode .list-box a.button-box .list-icon-box img {
+#wrap section.qna-content-wrap .container .question-list-area.mode .list-box a.button-box .list-icon-box img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#wrap section.qa-content-wrap .container .question-list-area.mode .list-box a.button-box .list-sub-title span {
+#wrap section.qna-content-wrap .container .question-list-area.mode .list-box a.button-box .list-sub-title span {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -261,22 +261,22 @@
   letter-spacing: -0.8px;
   color: #2a2a2a;
 }
-#wrap section.qa-content-wrap .container .question-list-area.mode .list-box a.button-box:hover {
+#wrap section.qna-content-wrap .container .question-list-area.mode .list-box a.button-box:hover {
   background: #FD8D4E;
   box-shadow: 0px 4px 8px rgba(39, 5, 6, 0.4);
   translate: 0px -10px;
 }
-#wrap section.qa-content-wrap .container .question-list-area.mode .list-box a.button-box.active {
+#wrap section.qna-content-wrap .container .question-list-area.mode .list-box a.button-box.active {
   background: #FD8D4E;
   box-shadow: 0px 4px 8px rgba(39, 5, 6, 0.4);
   translate: 0px -10px;
 }
-#wrap section.qa-content-wrap .container .question-list-area.mode .list-box .desc-box {
+#wrap section.qna-content-wrap .container .question-list-area.mode .list-box .desc-box {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#wrap section.qa-content-wrap .container .question-list-area.mode .list-box .desc-box p {
+#wrap section.qna-content-wrap .container .question-list-area.mode .list-box .desc-box p {
   text-align: center;
   font-family: "SUIT Variable", sans-serif;
   font-weight: 500;
@@ -285,21 +285,21 @@
   letter-spacing: -0.8px;
   color: #2a2a2a;
 }
-#wrap section.qa-content-wrap .container .question-list-area.scenario {
+#wrap section.qna-content-wrap .container .question-list-area.scenario {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-#wrap section.qa-content-wrap .container .question-list-area.scenario .list-box {
+#wrap section.qna-content-wrap .container .question-list-area.scenario .list-box {
   display: flex;
   justify-content: center;
   align-items: center;
   width: calc(25% - 24px);
   margin: 12px 12px;
 }
-#wrap section.qa-content-wrap .container .question-list-area.scenario .list-box a.button-box {
+#wrap section.qna-content-wrap .container .question-list-area.scenario .list-box a.button-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -310,7 +310,7 @@
   transition: all 0.4s ease;
   box-shadow: 0 0 0 0px rgba(255, 255, 255, 0) inset;
 }
-#wrap section.qa-content-wrap .container .question-list-area.scenario .list-box a.button-box span {
+#wrap section.qna-content-wrap .container .question-list-area.scenario .list-box a.button-box span {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 600;
   font-size: 24px;
@@ -320,12 +320,12 @@
   white-space: pre-line;
   text-align: center;
 }
-#wrap section.qa-content-wrap .container .question-list-area.scenario .list-box a.button-box:hover {
+#wrap section.qna-content-wrap .container .question-list-area.scenario .list-box a.button-box:hover {
   background: #FD8D4E;
   box-shadow: 0px 4px 8px rgba(39, 5, 6, 0.4);
   translate: 0px -10px;
 }
-#wrap section.qa-content-wrap .container .question-list-area.scenario .list-box a.button-box.active {
+#wrap section.qna-content-wrap .container .question-list-area.scenario .list-box a.button-box.active {
   background: #FD8D4E;
   box-shadow: 0px 4px 8px rgba(39, 5, 6, 0.4);
   translate: 0px -10px;
