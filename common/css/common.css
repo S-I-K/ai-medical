@@ -145,7 +145,7 @@ section {
   color: #fff;
 }
 
-section.paging-button-content-wrap.qa .container .paging-button-box {
+section.paging-button-content-wrap.qna .container .paging-button-box {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -155,7 +155,7 @@ section.paging-button-content-wrap.qa .container .paging-button-box {
   /* 학습시작 버튼 */
   /* 버튼 숨기기 클래스 */
 }
-section.paging-button-content-wrap.qa .container .paging-button-box .button-area a {
+section.paging-button-content-wrap.qna .container .paging-button-box .button-area a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,7 +163,7 @@ section.paging-button-content-wrap.qa .container .paging-button-box .button-area
   border-radius: 300px;
   background: #B70002;
 }
-section.paging-button-content-wrap.qa .container .paging-button-box .button-area a span {
+section.paging-button-content-wrap.qna .container .paging-button-box .button-area a span {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 600;
   font-size: 18px;
@@ -171,7 +171,7 @@ section.paging-button-content-wrap.qa .container .paging-button-box .button-area
   letter-spacing: -0.8px;
   color: #fff;
 }
-section.paging-button-content-wrap.qa .container .paging-button-box .button-area a .icon-box {
+section.paging-button-content-wrap.qna .container .paging-button-box .button-area a .icon-box {
   width: 24px;
   height: 24px;
   display: flex;
@@ -179,33 +179,33 @@ section.paging-button-content-wrap.qa .container .paging-button-box .button-area
   justify-content: center;
   transition: all 0.4s ease;
 }
-section.paging-button-content-wrap.qa .container .paging-button-box .button-area a .icon-box img {
+section.paging-button-content-wrap.qna .container .paging-button-box .button-area a .icon-box img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-section.paging-button-content-wrap.qa .container .paging-button-box .button-area.prev a .icon-box {
+section.paging-button-content-wrap.qna .container .paging-button-box .button-area.prev a .icon-box {
   margin-right: 8px;
 }
-section.paging-button-content-wrap.qa .container .paging-button-box .button-area.prev a:hover .icon-box {
+section.paging-button-content-wrap.qna .container .paging-button-box .button-area.prev a:hover .icon-box {
   translate: -10px 0;
   opacity: 0;
 }
-section.paging-button-content-wrap.qa .container .paging-button-box .button-area.next a .icon-box {
+section.paging-button-content-wrap.qna .container .paging-button-box .button-area.next a .icon-box {
   margin-left: 8px;
   rotate: 180deg;
 }
-section.paging-button-content-wrap.qa .container .paging-button-box .button-area.next a:hover .icon-box {
+section.paging-button-content-wrap.qna .container .paging-button-box .button-area.next a:hover .icon-box {
   translate: 10px 0;
   opacity: 0;
 }
-section.paging-button-content-wrap.qa .container .paging-button-box .button-area.next.start a:hover .icon-box {
+section.paging-button-content-wrap.qna .container .paging-button-box .button-area.next.start a:hover .icon-box {
   rotate: 135deg;
   translate: unset;
   opacity: unset;
 }
-section.paging-button-content-wrap.qa .container .paging-button-box .button-area.hidden {
+section.paging-button-content-wrap.qna .container .paging-button-box .button-area.hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;

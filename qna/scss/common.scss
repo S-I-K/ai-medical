@@ -1,0 +1,383 @@
+/* variable */
+$color-01: #E60000;
+$color-02: #B70002;
+$color-03: #FFE401;
+$color-04: #FF7F00;
+$color-05: #FF3300;
+$color-06: #FD8D4E;
+$color-black: #2a2a2a;
+$color-dark-gray: #aeaeae;
+$color-light-gray: #ddd;
+$font-kr: 'SUIT Variable', sans-serif;;
+$font-en: "Archivo", sans-serif;
+
+#wrap {
+    padding-bottom: 80px;
+
+    /* bg-area */
+    .bg-area {
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        overflow: hidden;
+        pointer-events: none;
+        .ob-box {
+            position: absolute;
+            svg {
+                path {
+
+                }
+            }
+        }
+        .ob-box.left {
+            right: 8%;
+            svg {
+                path {
+                    fill: #DC6468;
+                }
+            }
+        }
+        .ob-box.right {
+            left: 62%;
+            top: -20px;
+            svg {
+                path {
+                    fill: #FDD458;
+                }
+            }
+        }
+    }
+
+    section.qa-content-wrap {
+        position: relative;
+        padding-top: 180px;
+        margin-bottom: 80px;
+
+        .container {
+            // border: 1px solid red;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            /* ============================
+                공통 된 스타일
+            ============================ */
+
+            /* 캐릭터 이미지 */
+            .character-img-box {
+                width: 260px;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 42px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            /* 섹션 타이틀 */
+            .section-title-box {
+                margin-bottom: 80px;
+                h2.title {
+                    font-family: $font-kr;
+                    font-weight: 600;
+                    font-size: 32px;
+                    line-height: 1.5;
+                    letter-spacing: -1.2px;
+                    color: $color-black;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                h2.title::before {
+                    content: '';
+                    display: block;
+                    width: 5px;
+                    height: 60%;
+                    background: $color-02;
+                    position: absolute;
+                    left: - calc(3px + 18px);
+                }
+            }
+
+
+            /* ============================
+                개별 스타일
+            ============================ */
+
+            /* 학습 상황 선택 */
+            .question-list-area.moment {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // display: none;
+                .list-box {
+                    width: calc(100% / 3 - 24px);
+                    margin: 0 12px;
+                    a.button-box {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 12px;
+                        padding: 30px 0;
+                        background: #fff;
+                        margin-bottom: 24px;
+                        transition: all .4s ease;
+                        .list-title {
+                            span {
+                                font-family: $font-kr;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 1;
+                                letter-spacing: -.8px;
+                                color: $color-black;
+                            }
+                        }
+
+                        .list-icon-box {
+                            margin: 32px 0 32px;
+                            width: 100px;
+                            height: 100px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
+
+                        .list-sub-title {
+                            span {
+                                font-family: $font-kr;
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 1;
+                                letter-spacing: -.8px;
+                                color: $color-black;
+                            }
+                        }
+                    }
+                    a.button-box:hover {
+                        background: $color-06;
+                        box-shadow: 0px 4px 8px rgba(39, 5, 6, .4);
+                        translate: 0px -10px;
+                    }
+                    a.button-box.active {
+                        background: $color-06;
+                        box-shadow: 0px 4px 8px rgba(39, 5, 6, .4);
+                        translate: 0px -10px;
+                    }
+
+                    .desc-box {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        p {
+                            text-align: center;
+                            font-family: $font-kr;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 1.5;
+                            letter-spacing: -.8px;
+                            color: $color-black;
+                        }
+                    }
+                }
+            }
+
+            /* 학습 언어 선택 */
+            .question-list-area.language {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                // display: none;
+                .list-box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: calc(100% / 4 - 24px);
+                    margin: 12px 12px;
+                    a.button-box {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        padding: 32px 0;
+                        border-radius: 12px;
+                        background: #fff;
+                        transition: all .4s ease;
+                        span {
+                            font-family: $font-kr;
+                            font-weight: 600;
+                            font-size: 24px;
+                            line-height: 1.5;
+                            letter-spacing: -.8px;
+                            color: $color-black;
+                            white-space: pre-line;
+                            text-align: center;
+                        }
+                    }
+                    a.button-box:hover {
+                        background: $color-06;
+                        box-shadow: 0px 4px 8px rgba(39, 5, 6, .4);
+                        translate: 0px -10px;
+                    }
+                    a.button-box.active {
+                        background: $color-06;
+                        box-shadow: 0px 4px 8px rgba(39, 5, 6, .4);
+                        translate: 0px -10px;
+                    }
+                }
+            }
+
+            /* 학습 방법 선택 */
+            .question-list-area.mode {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // display: none;
+                .list-box {
+                    width: calc(100% / 3 - 24px);
+                    margin: 0 12px;
+                    a.button-box {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 12px;
+                        padding: 30px 0;
+                        background: #fff;
+                        margin-bottom: 24px;
+                        transition: all .4s ease;
+                        .list-title {
+                            span {
+                                font-family: $font-kr;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 1;
+                                letter-spacing: -.8px;
+                                color: $color-black;
+                            }
+                        }
+
+                        .list-icon-box {
+                            margin: 32px 0 32px;
+                            width: 100px;
+                            height: 100px;
+                            // border-radius: 300px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            // background: #F8F8F8;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                                // display: none;
+                            }
+                        }
+
+                        .list-sub-title {
+                            span {
+                                font-family: $font-kr;
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 1;
+                                letter-spacing: -.8px;
+                                color: $color-black;
+                            }
+                        }
+                    }
+                    a.button-box:hover {
+                        background: $color-06;
+                        box-shadow: 0px 4px 8px rgba(39, 5, 6, .4);
+                        translate: 0px -10px;
+                    }
+                    a.button-box.active {
+                        background: $color-06;
+                        box-shadow: 0px 4px 8px rgba(39, 5, 6, .4);
+                        translate: 0px -10px;
+                    }
+
+                    .desc-box {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        p {
+                            text-align: center;
+                            font-family: $font-kr;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 1.5;
+                            letter-spacing: -.8px;
+                            color: $color-black;
+                        }
+                    }
+                }
+            }
+
+            /* 시나리오 선택 */
+            .question-list-area.scenario {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                // display: none;
+                .list-box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: calc(100% / 4 - 24px);
+                    margin: 12px 12px;
+                    a.button-box {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        padding: 32px 0;
+                        border-radius: 12px;
+                        background: #fff;
+                        transition: all .4s ease;
+                        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0) inset;
+                        span {
+                            font-family: $font-kr;
+                            font-weight: 600;
+                            font-size: 24px;
+                            line-height: 1.5;
+                            letter-spacing: -.8px;
+                            color: $color-black;
+                            white-space: pre-line;
+                            text-align: center;
+                        }
+                    }
+                    a.button-box:hover {
+                        background: $color-06;
+                        box-shadow: 0px 4px 8px rgba(39, 5, 6, .4);
+                        translate: 0px -10px;
+                    }
+                    a.button-box.active {
+                        background: $color-06;
+                        box-shadow: 0px 4px 8px rgba(39, 5, 6, .4);
+                        translate: 0px -10px;
+                    }
+                }
+            }
+        }
+    }
+}

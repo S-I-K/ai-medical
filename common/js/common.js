@@ -22,7 +22,7 @@ $(()=>{
     /* Q&A: 페이징 버튼 */
     $('.question-list-area .list-box a.button-box').click(function(e){
         /* paging button */
-        $next_paging_button = $('.paging-button-content-wrap.qa .paging-button-box .button-area.next');
+        $next_paging_button = $('.paging-button-content-wrap.qna .paging-button-box .button-area.next');
         /* paging button text  */
         $next_paging_button_text = $next_paging_button.find('span');
 
@@ -85,7 +85,7 @@ $(()=>{
     ============================ */
 
     /* Q&A: 로딩 스크린 화면에 나타남 */
-    $('.paging-button-content-wrap.qa .paging-button-box .button-area.next').click(function(e){
+    $('.paging-button-content-wrap.qna .paging-button-box .button-area.next').click(function(e){
         if($(this).hasClass('start')) {
             e.preventDefault();
             /* 로딩 스크린 클래스 추가 */
