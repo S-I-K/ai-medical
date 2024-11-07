@@ -117,6 +117,10 @@ section {
   pointer-events: inherit;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 .guide-screen-box {
   opacity: 0;
   width: 100%;

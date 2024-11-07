@@ -128,6 +128,9 @@ section {
     opacity: 1;
     pointer-events: inherit;
 }
+.disabled {
+    pointer-events: none;
+}
 
 .guide-screen-box {
     opacity: 0;
