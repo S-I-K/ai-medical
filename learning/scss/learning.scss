@@ -5,12 +5,28 @@ $color-03: #FFE401;
 $color-04: #FF7F00;
 $color-05: #FF3300;
 $color-06: #FD8D4E;
+$color-border: #0D89E3;
 $color-black: #2a2a2a;
 $color-dark-gray: #aeaeae;
 $color-light-gray: #ddd;
 $font-kr: 'SUIT Variable', sans-serif;;
 $font-en: "Archivo", sans-serif;
 
+@keyframes scale {
+    0% {
+        scale: 1;
+        opacity: 1;
+    }
+    100% {
+        scale: 2;
+        opacity: 0;
+    }
+}
+
+
+
+
+/* 버튼 툴팁 메세지 */
 .tooltip:hover {
     .tooltip-box {
         translate: 0 0;
@@ -25,7 +41,6 @@ $font-en: "Archivo", sans-serif;
         }
     }
 }
-
 .tooltip {
     position: relative;
     .tooltip-box {
@@ -53,13 +68,165 @@ $font-en: "Archivo", sans-serif;
     }
 }
 
+/* 가이드 공통 스타일 */
+.guide {
+    z-index: 11;
+    position: relative;
+    .guide-border {
+        opacity: 1;
+        .guide-text-box {
+            opacity: 1;
+        }
+    }
+}
+.speak-text-box {
+    .border {
+        .button-box::before {
+            content: '';
+            display: flex;
+            width: 100%;
+            height: 100%;
+            border-radius: 300px;
+            background: $color-border;
+            position: absolute;
+            animation: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .4s ease;
+        }
+        .button-box.focus::before {
+            animation: scale 1.4s linear infinite;
+            opacity: 1;
+            pointer-events: inherit;
+        }
+    }
+}
+.guide-border {
+    opacity: 0;
+    transition: opacity .4s ease;
+    pointer-events: inherit;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    border: 2px solid $color-border;
+    border-radius: 12px;
+    width: calc(100% + 60px);
+    height: calc(100% + 60px);
+    bottom: -30px;
+    left: -30px;
+    background: #fff;
+    .guide-text-box {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $color-border;
+        border-radius: 12px;
+        padding: 20px 70px;
+        width: 100%;
+        background: #fff;
+        translate: 0 calc(100% + 20px);
+        p {
+            width: 100%;
+            font-family: $font-kr;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.5;
+            letter-spacing: -.8px;
+            color: $color-dark-gray;
+            text-align: left;
+            word-break: keep-all;
+        }
+        .button-box {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 300px;
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            .icon-box {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: $color-dark-gray;
+                    border-radius: 300px;
+                    transition: background .4s ease;
+                }
+            }
+            .icon-box:hover {
+                svg {
+                    background: rgba(42, 42, 42, .8);
+                }
+            }
+        }
+        .button-box::before {
+            content: '';
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background: #ddd;
+            position: absolute;
+            border-radius: 300px;
+            animation: scale 1.4s linear infinite;
+        }
+    }
+}
 
+.guide.docter,
+.guide.patient {
+    .guide-border {
+        height: calc(100% + 60px + 40px);
+    }
+}
 
+/* 버튼 가이드 스타일 */
+section.paging-button-content-wrap.learning {
+    .container {
+        .paging-button-box {
+            .button-area {
+                a {
+                    span {
+                    }
+                }
+            }
+            .button-area.prev {
+                a {
+                    span {
+                    }
+                }
+            }
+            .button-area.next {
+                a {
+                    span {
+                    }
+                }
+                .guide-border {
+                    .guide-text-box {
+                        width: max-content;
+                        top: 0;
+                        right: 0;
+                        translate: 0 calc(-100% - 20px);
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 #wrap {
     position: relative;
-    min-height: 100vh;
     padding-top: 180px;
     padding-bottom: 100px;
 
@@ -106,229 +273,91 @@ $font-en: "Archivo", sans-serif;
         .container {
             flex-wrap: wrap;
 
-            /* message-content-box */
-            .message-content-box {
-                background: #fff;
+            /* message-content-wrap */
+            .message-content-wrap {
+                display: flex;
                 width: calc(100% / 2 - 24px);
                 height: auto;
                 margin: 20px 12px;
-                padding: 40px 14px 40px 40px;
-                border: 1px solid $color-light-gray;
-                border-radius: 12px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                position: relative;
-
-                /* profile-img-box */
-                .profile-img-box {
-                    background: #fff;
-                    padding: 0 20px;
-                    position: absolute;
-                    top: 0%;
-                    translate: 0 -50%;
-                    .border {
-                        width: 80px;
-                        height: 80px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        padding: 13px;
-                        border: 1px solid $color-light-gray;
-                        border-radius: 300px;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: contain;
-                        }
-                    }
-                }
-
-                /* message-kind-box */
-                .message-kind-box {
-                    position: absolute;
-                    left: 30px;
-                    top: 0;
-                    translate: 0 -50%;
-                    background: #fff;
-                    padding: 0 10px;
-                    span {
-                        font-family: $font-kr;
-                        font-weight: 500;
-                        font-size: 16px;
-                        line-height: 1;
-                        letter-spacing: -.25px;
-                        color: $color-dark-gray;
-                    }
-                }
-                .message-kind-box.right {
-                    left: auto;
-                    right: 30px;
-                }
-
-                .message-text-box {
+                /* message-content-box */
+                .message-content-box {
                     width: 100%;
-                    height: 300px;
-                    overflow: scroll;
+                    background: #fff;
+                    padding: 40px 14px 40px 40px;
+                    border: 1px solid $color-light-gray;
+                    border-radius: 12px;
                     display: flex;
                     flex-direction: column;
-                    // justify-content: flex-end;
-                    padding-right: 20px;
-                    p.text-box {
-                        span.message {
-                            display: flex;
-                            font-size: 28px;
-                            line-height: 1.5;
-                            color: $color-dark-gray;
-                            word-break: keep-all;
-                        }
-                        span.message.kr {
-                            font-family: $font-kr;
-                            font-weight: 500;
-                            letter-spacing: -.25px;
-                        }
-                        span.message.en {
-                            font-family: $font-en;
-                            font-weight: 400;
-                            letter-spacing: 0px;
-                        }
-                    }
-                    p.text-box:not(:last-child) {
-                        margin-bottom: 24px;
-                    }
-                    p.text-box.trans {
-                        background: #f8f8f8;
-                        border-radius: 12px;
-                        padding: 20px 20px;
-                    }
-                    p.text-box.current {
-                        span.message {
-                            color: $color-black;
-                        }
-                    }
-                }
-            }
-
-            .message-content-box.free-talk {
-                width: 100%;
-            }
-
-            /* 의사 메세지 박스 */
-            .message-content-box.docter {
-                padding-top: 60px;
-            }
-
-            /* 환자 메세지 박스 */
-            .message-content-box.patient {
-                padding-top: 60px;
-            }
-
-            /* 통역 메세지 박스 */
-            .message-content-box.trans {
-                border: 1px solid $color-01;
-                z-index: 11;
-                .message-kind-box {
-                    span.kind {
-                        color: $color-01;
-                    }
-                }
-                .message-text-box {
-                    height: 260px;
-                    margin-bottom: 60px;
-                    p.text-box {
-                        span.message {
-                        }
-                        span.message.kr {
-                        }
-                        span.message.en {
-                        }
-                    }
-                    p.text-box:not(:last-child) {
-                    }
-                    p.text-box.trans {
-                    }
-                    p.text-box.current {
-                        span.message {
-                        }
-                    }
-                }
-
-                .speak-text-box {
-                    display: flex;
-                    width: 100%;
-                    padding-right: 20px;
-                    .border {
-                        display: flex;
-                        align-items: flex-end;
-                        justify-content: center;
-                        width: 100%;
-                        padding: 20px 20px;
-                        border: 1px solid $color-light-gray;
-                        border-radius: 300px;
-                        .button-box {
-                            width: 36px;
-                            height: 36px;
+                    align-items: center;
+                    justify-content: flex-start;
+                    position: relative;
+                    z-index: 2;
+                    /* profile-img-box */
+                    .profile-img-box {
+                        background: #fff;
+                        padding: 0 20px;
+                        position: absolute;
+                        top: 0%;
+                        translate: 0 -50%;
+                        .border {
+                            width: 80px;
+                            height: 80px;
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            background: $color-dark-gray;
+                            padding: 13px;
+                            border: 1px solid $color-light-gray;
                             border-radius: 300px;
-                            cursor: pointer;
-                            transition: background .4s ease;
-                            position: relative;
-                            svg {
+                            img {
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                                path {
-                                    scale: 1;
-                                    transition: scale .4s ease;
-                                    transform-origin: center center;
-                                }
-                                rect {
-                                    scale: 0;
-                                    transition: scale .4s ease;
-                                    transform-origin: center center;
-                                }
                             }
                         }
-                        .button-box:hover {
-                            background: rgba(42, 42, 42, .8);
-                        }
-                        .button-box.sst.active {
-                            background: $color-01;
-                            svg {
-                                path {
-                                    scale: 0;
-                                    transition: scale .4s ease;
-                                }
-                                rect {
-                                    scale: 1;
-                                    transition: scale .4s ease;
-                                }
-                            }
-                        }
-                        .button-box.send {
-                            svg {
+                    }
     
-                            }
+                    /* message-kind-box */
+                    .message-kind-box {
+                        position: absolute;
+                        left: 30px;
+                        top: 0;
+                        translate: 0 -50%;
+                        background: #fff;
+                        padding: 0 10px;
+                        span {
+                            font-family: $font-kr;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 1;
+                            letter-spacing: -.25px;
+                            color: $color-dark-gray;
                         }
+                    }
+                    .message-kind-box.right {
+                        left: auto;
+                        right: 30px;
+                    }
     
+                    .message-text-box {
+                        width: 100%;
+                        height: 300px;
+                        overflow: scroll;
+                        display: flex;
+                        flex-direction: column;
+                        // justify-content: flex-end;
+                        padding-right: 20px;
                         p.text-box {
-                            flex: 2;
-                            margin: 0 20px;
                             span.message {
-                                font-size: 24px;
+                                display: flex;
+                                font-size: 28px;
                                 line-height: 1.5;
-                                color: $color-black;
-                                text-align: left;
-                                // word-break: keep-all;
+                                color: $color-dark-gray;
+                                word-break: keep-all;
                             }
                             span.message.kr {
                                 font-family: $font-kr;
                                 font-weight: 500;
-                                letter-spacing: -.8px;
+                                letter-spacing: -.25px;
                             }
                             span.message.en {
                                 font-family: $font-en;
@@ -336,133 +365,291 @@ $font-en: "Archivo", sans-serif;
                                 letter-spacing: 0px;
                             }
                         }
+                        p.text-box:not(:last-child) {
+                            margin-bottom: 24px;
+                        }
+                        p.text-box.trans {
+                            background: #f8f8f8;
+                            border-radius: 12px;
+                            padding: 20px 20px;
+                        }
+                        p.text-box.current {
+                            span.message {
+                                color: $color-black;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .message-content-wrap.free-talk {
+                width: 100%;
+            }
+
+            /* 의사 메세지 박스 */
+            .message-content-wrap.docter {
+                .message-content-box {
+                    padding-top: 60px;
+                }
+            }
+
+            /* 환자 메세지 박스 */
+            .message-content-wrap.patient {
+                .message-content-box {
+                    padding-top: 60px;
+                }
+            }
+
+            /* 통역 메세지 박스 */
+            .message-content-wrap.trans {
+                .message-content-box {
+                    border: 1px solid $color-01;
+                    // z-index: 11;
+                    .message-kind-box {
+                        span.kind {
+                            color: $color-01;
+                        }
+                    }
+                    .message-text-box {
+                        height: 260px;
+                        margin-bottom: 60px;
+                        p.text-box {
+                            span.message {
+                            }
+                            span.message.kr {
+                            }
+                            span.message.en {
+                            }
+                        }
+                        p.text-box:not(:last-child) {
+                        }
+                        p.text-box.trans {
+                        }
+                        p.text-box.current {
+                            span.message {
+                            }
+                        }
+                    }
+    
+                    .speak-text-box {
+                        display: flex;
+                        width: 100%;
+                        padding-right: 20px;
+                        .border {
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+                            width: 100%;
+                            padding: 20px 20px;
+                            border: 1px solid $color-light-gray;
+                            border-radius: 300px;
+                            .button-box {
+                                width: 36px;
+                                height: 36px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                cursor: pointer;
+                                position: relative;
+                                svg {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                    background: $color-dark-gray;
+                                    transition: background .4s ease;
+                                    border-radius: 300px;
+                                    position: relative;
+                                    path {
+                                        scale: 1;
+                                        transition: scale .4s ease;
+                                        transform-origin: center center;
+                                    }
+                                    rect {
+                                        scale: 0;
+                                        transition: scale .4s ease;
+                                        transform-origin: center center;
+                                    }
+                                }
+                            }
+                            .button-box:hover {
+                                svg {
+                                    background: rgba(42, 42, 42, .8);
+                                }
+                            }
+                            .button-box.sst.active {
+                                svg {
+                                    background: $color-01;
+                                    path {
+                                        scale: 0;
+                                        transition: scale .4s ease;
+                                    }
+                                    rect {
+                                        scale: 1;
+                                        transition: scale .4s ease;
+                                    }
+                                }
+                            }
+                            .button-box.send {
+                                svg {
+        
+                                }
+                            }
+        
+                            p.text-box {
+                                flex: 2;
+                                margin: 0 20px;
+                                span.message {
+                                    font-size: 24px;
+                                    line-height: 1.5;
+                                    color: $color-black;
+                                    text-align: left;
+                                    // word-break: keep-all;
+                                }
+                                span.message.kr {
+                                    font-family: $font-kr;
+                                    font-weight: 500;
+                                    letter-spacing: -.8px;
+                                }
+                                span.message.en {
+                                    font-family: $font-en;
+                                    font-weight: 400;
+                                    letter-spacing: 0px;
+                                }
+                            }
+                        }
                     }
                 }
             }
 
             /* AI에게 질문하기 */
-            .message-content-box.ai-question {
-                transition: border .4s ease;
-                .message-kind-box {
-                    span.kind {
-                        transition: color .4s ease;
-                    }
-                }
-                .message-text-box {
-                    height: 260px;
-                    margin-bottom: 60px;
-                    p.text-box {
-                        span.message {
-                        }
-                        span.message.kr {
-                        }
-                        span.message.en {
+            .message-content-wrap.ai-question {
+                .message-content-box {
+                    transition: border .4s ease;
+                    .message-kind-box {
+                        span.kind {
+                            transition: color .4s ease;
                         }
                     }
-                    p.text-box:not(:last-child) {
-                    }
-                    p.text-box.trans {
-                    }
-                    p.text-box.current {
-                        span.message {
-                        }
-                    }
-                }
-
-                .question-box {
-                    width: 100%;
-                    display: flex;
-                    padding-right: 20px;
-                    .border {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 100%;
-                        padding: 20px 20px;
-                        // border: 1px solid $color-light-gray;
-                        border-radius: 300px;
-                        .input-box {
-                            flex: 2;
-                            margin-right: 30px;
-                            // border: 1px solid red;
-                            input {
-                                outline: none;
-                                border: none;
-                                display: flex;
-                                width: 100%;
-                                font-family: $font-kr;
-                                font-weight: 500;
-                                font-size: 24px;
-                                line-height: 1.5;
-                                letter-spacing: -.25px;
-                                color: $color-black;
+                    .message-text-box {
+                        height: 260px;
+                        margin-bottom: 60px;
+                        p.text-box {
+                            span.message {
                             }
-                            input::placeholder {
-                                font-family: $font-kr;
-                                font-weight: 500;
-                                font-size: 24px;
-                                line-height: 1.5;
-                                letter-spacing: -.8px;
-                                color: $color-light-gray;
+                            span.message.kr {
+                            }
+                            span.message.en {
                             }
                         }
+                        p.text-box:not(:last-child) {
+                        }
+                        p.text-box.trans {
+                        }
+                        p.text-box.current {
+                            span.message {
+                            }
+                        }
+                    }
     
-                        .button-box {
-                            width: 36px;
-                            height: 36px;
+                    .question-box {
+                        width: 100%;
+                        display: flex;
+                        padding-right: 20px;
+                        .border {
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            background: $color-dark-gray;
+                            width: 100%;
+                            padding: 20px 20px;
+                            // border: 1px solid $color-light-gray;
                             border-radius: 300px;
-                            cursor: pointer;
-                            transition: background .4s ease;
-                            svg {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: contain;
+                            .input-box {
+                                flex: 2;
+                                margin-right: 30px;
+                                // border: 1px solid red;
+                                input {
+                                    outline: none;
+                                    border: none;
+                                    display: flex;
+                                    width: 100%;
+                                    font-family: $font-kr;
+                                    font-weight: 500;
+                                    font-size: 24px;
+                                    line-height: 1.5;
+                                    letter-spacing: -.25px;
+                                    color: $color-black;
+                                }
+                                input::placeholder {
+                                    font-family: $font-kr;
+                                    font-weight: 500;
+                                    font-size: 24px;
+                                    line-height: 1.5;
+                                    letter-spacing: -.8px;
+                                    color: $color-light-gray;
+                                }
                             }
-                        }
-                        .button-box:hover {
-                            background: rgba(42, 42, 42, .8);
+        
+                            .button-box {
+                                width: 36px;
+                                height: 36px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: $color-dark-gray;
+                                border-radius: 300px;
+                                cursor: pointer;
+                                transition: background .4s ease;
+                                svg {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                            .button-box:hover {
+                                background: rgba(42, 42, 42, .8);
+                            }
                         }
                     }
                 }
             }
-            .message-content-box.ai-question:hover {
-                border: 1px solid $color-black;
-                .message-kind-box {
-                    span.kind {
-                        color: $color-black;
+            .message-content-wrap.ai-question:hover {
+                .message-content-box {
+                    border: 1px solid $color-black;
+                    .message-kind-box {
+                        span.kind {
+                            color: $color-black;
+                        }
                     }
                 }
             }
 
             /* AI 해설 */
-            .message-content-box.ai-script {
+            .message-content-wrap.ai-script {
                 width: 100%;
-                .message-kind-box {
-                    span.kind {
-                        transition: color .4s ease;
-                    }
-                }
-                .message-text-box {
-                    height: auto;
-                    p.text-box {
-                        span.message {
-                            font-size: 24px;
-                        }
-                        span.message.kr {
-                        }
-                        span.message.en {
+                .message-content-box {
+                    .message-kind-box {
+                        span.kind {
+                            transition: color .4s ease;
                         }
                     }
-                    p.text-box:not(:last-child) {
-                    }
-                    p.text-box.trans {
-                    }
-                    p.text-box.current {
-                        span.message {
+                    .message-text-box {
+                        height: auto;
+                        p.text-box {
+                            span.message {
+                                font-size: 24px;
+                            }
+                            span.message.kr {
+                            }
+                            span.message.en {
+                            }
+                        }
+                        p.text-box:not(:last-child) {
+                        }
+                        p.text-box.trans {
+                        }
+                        p.text-box.current {
+                            span.message {
+                            }
                         }
                     }
                 }
