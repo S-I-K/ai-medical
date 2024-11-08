@@ -132,36 +132,6 @@ section {
     pointer-events: none;
 }
 
-.guide-screen-box {
-    opacity: 0;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    background: rgba(0, 0, 0, .7);
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .6s ease;
-    pointer-events: none;
-    overflow: hidden;
-    .container {
-        align-items: center;
-        justify-content: center;
-        .guide-text-box {
-            span {
-                font-family: $font-kr;
-                font-weight: 700;
-                font-size: 42px;
-                line-height: 1;
-                letter-spacing: -1.4px;
-                color: #fff;
-            }
-        }
-    }
-}
-
 
 section.paging-button-content-wrap.qna {
     .container {
