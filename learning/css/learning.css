@@ -87,10 +87,6 @@
 .guide .guide-border {
   opacity: 1;
 }
-.guide .guide-border .guide-text-box {
-  opacity: 1;
-}
-
 .speak-text-box .border .button-box::before {
   content: "";
   display: flex;

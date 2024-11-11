@@ -152,9 +152,11 @@ $(()=>{
         if(!$(this).hasClass('active')) {
             $(this).addClass('active');
             $(this).find('.tooltip-box span').html('녹음 중단하기');
+            $('.guide-text-box > p').html('답변을 다 하셨다면 마이크 버튼을 다시 눌러 녹음을 종료해주세요.');
         } else {
             $(this).removeClass('active');
             $(this).find('.tooltip-box span').html('녹음 시작하기');
+            $('.guide-text-box > p').html('마이크 버튼을 클릭하여 음성으로 통역 메세지를 전달해보세요.');
         }
     });
 
