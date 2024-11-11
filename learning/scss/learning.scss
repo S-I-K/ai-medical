@@ -212,6 +212,7 @@ $font-en: "Archivo", sans-serif;
     }
 }
 
+.guide.free-talk,
 .guide.docter,
 .guide.patient {
     .guide-border {
@@ -297,7 +298,7 @@ section.paging-button-content-wrap.learning {
         }
     }
     
-    section.talk-03-content-wrap {
+    section.learning-content-wrap {
         /* .container */
         .container {
             flex-wrap: wrap;
