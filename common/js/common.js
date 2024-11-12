@@ -152,7 +152,7 @@ $(()=>{
         if(!$(this).hasClass('active')) {
             $(this).addClass('active');
             $(this).find('.tooltip-box span').html('녹음 중단하기');
-            $('.guide-text-box > p').html('답변을 다 하셨다면 마이크 버튼을 다시 눌러 녹음을 종료해주세요.');
+            $('.guide-text-box > p').html('답변이 끝나셨다면 버튼을 다시 눌러 녹음을 종료해주세요.');
         } else {
             $(this).removeClass('active');
             $(this).find('.tooltip-box span').html('녹음 시작하기');
@@ -165,7 +165,7 @@ $(()=>{
 
 
 
-/* 딱딱한 스크롤링 부드럽게 해주시잖아 */
+/* 딱딱한 스크롤링 부드럽게 */
 const lenis = new Lenis();
 lenis.on('scroll', (e) => {
     // console.log(e);
