@@ -123,7 +123,7 @@ $(()=>{
     ============================ */
 
     /* 통역 학습 페이지 가이드 검정 스크린 페이드 */
-    gsap.fromTo('.guide-screen-box', {
+    /* gsap.fromTo('.guide-screen-box', {
         opacity: 0,
     },{
         opacity: 1,
@@ -133,7 +133,7 @@ $(()=>{
             $('.message-content-wrap.trans').addClass("guide");
             $('.message-content-wrap.trans .button-box.sst').addClass("focus");
         }
-    });
+    }); */
 
     /* setTimeout(function() {
         $('.guide-screen-box').css({

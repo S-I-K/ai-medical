@@ -1,0 +1,546 @@
+@charset "UTF-8";
+/* variable */
+@keyframes scale {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 2;
+    opacity: 0;
+  }
+}
+.guide-screen-box {
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s ease;
+  pointer-events: none;
+  overflow: hidden;
+}
+.guide-screen-box .container {
+  align-items: center;
+  justify-content: center;
+}
+.guide-screen-box .container .guide-text-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: -1.4px;
+  color: #fff;
+}
+
+/* 버튼 툴팁 메세지 */
+.tooltip:hover .tooltip-box {
+  translate: 0 0;
+  opacity: 1;
+}
+.tooltip:hover .tooltip-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #fff;
+}
+
+.tooltip {
+  position: relative;
+}
+.tooltip .tooltip-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 14px 24px;
+  border-radius: 4px;
+  top: calc(100% + 8px);
+  background: rgba(42, 42, 42, 0.8);
+  opacity: 0;
+  translate: 0 -4px;
+  transition: all 0.4s ease;
+}
+.tooltip .tooltip-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #fff;
+}
+
+/* 가이드 공통 스타일 */
+.guide {
+  z-index: 11;
+  position: relative;
+}
+.guide .guide-border {
+  opacity: 1;
+}
+.speak-text-box .border .button-box::before {
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 300px;
+  background: #0D89E3;
+  position: absolute;
+  animation: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.speak-text-box .border .button-box.focus::before {
+  animation: scale 1.4s linear infinite;
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+.guide-border {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: inherit;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  border: 2px solid #0D89E3;
+  border-radius: 12px;
+  width: calc(100% + 60px);
+  height: calc(100% + 60px);
+  bottom: -30px;
+  left: -30px;
+  background: #fff;
+}
+.guide-border .guide-text-box {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #0D89E3;
+  border-radius: 12px;
+  padding: 20px 70px;
+  width: 100%;
+  background: #fff;
+  translate: 0 calc(100% + 20px);
+}
+.guide-border .guide-text-box p {
+  width: 100%;
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.8px;
+  color: #aeaeae;
+  text-align: left;
+  word-break: keep-all;
+}
+.guide-border .guide-text-box .button-box {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 300px;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+.guide-border .guide-text-box .button-box .icon-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.guide-border .guide-text-box .button-box .icon-box svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: #aeaeae;
+  border-radius: 300px;
+  transition: background 0.4s ease;
+}
+.guide-border .guide-text-box .button-box .icon-box:hover svg {
+  background: rgba(42, 42, 42, 0.8);
+}
+.guide-border .guide-text-box .button-box::before {
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+  position: absolute;
+  border-radius: 300px;
+  animation: scale 1.4s linear infinite;
+}
+
+.guide.free-talk .guide-border,
+.guide.docter .guide-border,
+.guide.patient .guide-border {
+  height: calc(100% + 60px + 40px);
+}
+
+/* 버튼 가이드 스타일 */
+section.paging-button-content-wrap.learning .container .paging-button-box .button-area.next .guide-border .guide-text-box {
+  width: -moz-max-content;
+  width: max-content;
+  top: 0;
+  right: 0;
+  translate: 0 calc(-100% - 20px);
+}
+
+#wrap {
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 100px;
+  /* .bg-area */
+  /*
+      section.paging-button-content-wrap
+      common.scss에 통합됨.
+  */
+}
+#wrap .bg-area {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  overflow: hidden;
+  pointer-events: none;
+}
+#wrap .bg-area .ob-box {
+  position: absolute;
+}
+#wrap .bg-area .ob-box.left {
+  right: 8%;
+}
+#wrap .bg-area .ob-box.left svg path {
+  fill: #DC6468;
+}
+#wrap .bg-area .ob-box.right {
+  left: 62%;
+  top: -20px;
+}
+#wrap .bg-area .ob-box.right svg path {
+  fill: #FDD458;
+}
+#wrap section.learning-content-wrap {
+  /* .container */
+}
+#wrap section.learning-content-wrap .container {
+  flex-wrap: wrap;
+  /* message-content-wrap */
+  /* 의사 메세지 박스 */
+  /* 환자 메세지 박스 */
+  /* 통역 메세지 박스 */
+  /* AI에게 질문하기 */
+  /* AI 해설 */
+}
+#wrap section.learning-content-wrap .container .message-content-wrap {
+  display: flex;
+  width: calc(50% - 24px);
+  height: auto;
+  margin: 20px 12px;
+  /* message-content-box */
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box {
+  width: 100%;
+  background: #fff;
+  padding: 40px 14px 40px 40px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
+  /* profile-img-box */
+  /* message-kind-box */
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .profile-img-box {
+  background: #fff;
+  padding: 0 20px;
+  position: absolute;
+  top: 0%;
+  translate: 0 -50%;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .profile-img-box .border {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 300px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .profile-img-box .border img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-kind-box {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  translate: 0 -50%;
+  background: #fff;
+  padding: 0 10px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-kind-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #aeaeae;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-kind-box.right {
+  left: auto;
+  right: 30px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-text-box {
+  width: 100%;
+  height: 300px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-text-box p.text-box {
+  padding: 20px 0;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-text-box p.text-box span.message {
+  display: flex;
+  font-size: 26px;
+  line-height: 1.5;
+  color: #aeaeae;
+  word-break: keep-all;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-text-box p.text-box span.message.kr {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.25px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-text-box p.text-box span.message.en {
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-text-box p.text-box:not(:last-child) {
+  margin-bottom: 4px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-text-box p.text-box.trans {
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 20px 20px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-text-box p.text-box.current span.message {
+  color: #2a2a2a;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.free-talk {
+  width: 100%;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.docter .message-content-box {
+  padding-top: 60px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.patient .message-content-box {
+  padding-top: 60px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box {
+  border: 1px solid #E60000;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .message-kind-box span.kind {
+  color: #E60000;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .message-text-box {
+  height: 260px;
+  margin-bottom: 60px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box {
+  display: flex;
+  width: 100%;
+  padding-right: 20px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 20px;
+  border: 1px solid #ddd;
+  border-radius: 300px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: #aeaeae;
+  transition: background 0.4s ease;
+  border-radius: 300px;
+  position: relative;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box svg path {
+  scale: 1;
+  transition: scale 0.4s ease;
+  transform-origin: center center;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box svg rect {
+  scale: 0;
+  transition: scale 0.4s ease;
+  transform-origin: center center;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box:hover svg {
+  background: rgba(42, 42, 42, 0.8);
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box.sst.active svg {
+  background: #E60000;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box.sst.active svg path {
+  scale: 0;
+  transition: scale 0.4s ease;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box.sst.active svg rect {
+  scale: 1;
+  transition: scale 0.4s ease;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box {
+  flex: 2;
+  margin: 0 20px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box span.message {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #2a2a2a;
+  text-align: left;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box span.message.kr {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box span.message.en {
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box {
+  transition: border 0.4s ease;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box .message-kind-box span.kind {
+  transition: color 0.4s ease;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box .message-text-box {
+  height: 260px;
+  margin-bottom: 60px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box .question-box {
+  width: 100%;
+  display: flex;
+  padding-right: 20px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box .question-box .border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 20px;
+  border-radius: 300px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box .question-box .border .input-box {
+  flex: 2;
+  margin-right: 30px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box .question-box .border .input-box input {
+  outline: none;
+  border: none;
+  display: flex;
+  width: 100%;
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.25px;
+  color: #2a2a2a;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box .question-box .border .input-box input::-moz-placeholder {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.8px;
+  color: #ddd;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box .question-box .border .input-box input::placeholder {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.8px;
+  color: #ddd;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box .question-box .border .button-box {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #aeaeae;
+  border-radius: 300px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box .question-box .border .button-box svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box .question-box .border .button-box:hover {
+  background: rgba(42, 42, 42, 0.8);
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question:hover .message-content-box {
+  border: 1px solid #2a2a2a;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-question:hover .message-content-box .message-kind-box span.kind {
+  color: #2a2a2a;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-script {
+  width: 100%;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-script .message-content-box .message-kind-box span.kind {
+  transition: color 0.4s ease;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-script .message-content-box .message-text-box {
+  height: auto;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-script .message-content-box .message-text-box p.text-box span.message {
+  font-size: 24px;
+}
