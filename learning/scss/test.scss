@@ -23,6 +23,7 @@ $font-en: "Archivo", sans-serif;
     }
 }
 
+/* 가이드 스크린 */
 .guide-screen-box {
     opacity: 0;
     width: 100%;
@@ -36,24 +37,7 @@ $font-en: "Archivo", sans-serif;
     justify-content: center;
     transition: all .6s ease;
     pointer-events: none;
-    overflow: hidden;
-    .container {
-        align-items: center;
-        justify-content: center;
-        .guide-text-box {
-            span {
-                font-family: $font-kr;
-                font-weight: 700;
-                font-size: 42px;
-                line-height: 1;
-                letter-spacing: -1.4px;
-                color: #fff;
-            }
-        }
-    }
 }
-
-
 
 /* 버튼 툴팁 메세지 */
 .tooltip:hover {
@@ -116,7 +100,7 @@ $font-en: "Archivo", sans-serif;
             width: 100%;
             height: 100%;
             border-radius: 300px;
-            background: $color-border;
+            background: $color-dark-gray;
             position: absolute;
             animation: none;
             opacity: 0;
@@ -217,6 +201,7 @@ $font-en: "Archivo", sans-serif;
     }
 }
 
+/* 의사, 환자 가이드 스타일 */
 .guide.free-talk,
 .guide.docter,
 .guide.patient {
@@ -253,6 +238,163 @@ section.paging-button-content-wrap.learning {
                         right: 0;
                         translate: 0 calc(-100% - 20px);
                     }
+                }
+            }
+        }
+    }
+}
+
+/* AI에게 질문하기 스타일 */
+.ai-question-content-wrap {
+    position: absolute;
+    right: 60px;
+    bottom: 100px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ai-button-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        .img-box {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 6px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .title-box {
+            display: flex;
+            border: 1px solid $color-light-gray;
+            padding: 12px 24px;
+            border-radius: 300px;
+            background: #fff;
+            span {
+                font-family: $font-kr;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 1;
+                letter-spacing: -.25px;
+                color: $color-dark-gray;
+            }
+        }
+    }
+    .ai-content-box {
+        width: 700px;
+        position: absolute;
+        right: calc(100% + 24px);
+        bottom: 0;
+        border: 1px solid $color-dark-gray;
+        background: #fff;
+        padding: 80px 40px 40px;
+        border-radius: 12px;
+        .message-text-box {
+            width: 100%;
+            height: 240px;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            // justify-content: flex-end;
+            padding-right: 20px;
+            margin-bottom: 80px;
+            p.text-box {
+                padding: 20px 0;
+                span.message {
+                    display: flex;
+                    font-size: 26px;
+                    line-height: 1.5;
+                    color: $color-dark-gray;
+                    word-break: keep-all;
+                }
+                span.message.kr {
+                    font-family: $font-kr;
+                    font-weight: 500;
+                    letter-spacing: -.25px;
+                }
+                span.message.en {
+                    font-family: $font-en;
+                    font-weight: 400;
+                    letter-spacing: 0px;
+                }
+            }
+            p.text-box:not(:last-child) {
+                margin-bottom: 4px;
+            }
+            p.text-box.trans {
+                background: #f8f8f8;
+                border-radius: 12px;
+                padding: 20px 20px;
+            }
+            p.text-box.current {
+                span.message {
+                    color: $color-black;
+                }
+            }
+        }
+
+        .question-box {
+            width: 100%;
+            display: flex;
+            padding-right: 20px;
+            .border {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                // padding: 20px 20px;
+                // border: 1px solid $color-light-gray;
+                border-radius: 300px;
+                .input-box {
+                    flex: 2;
+                    margin-right: 30px;
+                    // border: 1px solid red;
+                    input {
+                        outline: none;
+                        border: none;
+                        display: flex;
+                        width: 100%;
+                        font-family: $font-kr;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 1.5;
+                        letter-spacing: -.25px;
+                        color: $color-black;
+                    }
+                    input::placeholder {
+                        font-family: $font-kr;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 1.5;
+                        letter-spacing: -.8px;
+                        color: $color-light-gray;
+                    }
+                }
+
+                .button-box {
+                    width: 36px;
+                    height: 36px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $color-dark-gray;
+                    border-radius: 300px;
+                    cursor: pointer;
+                    transition: background .4s ease;
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .button-box:hover {
+                    background: rgba(42, 42, 42, .8);
                 }
             }
         }
@@ -375,7 +517,7 @@ section.paging-button-content-wrap.learning {
                     .message-text-box {
                         width: 100%;
                         height: 260px;
-                        overflow: scroll;
+                        overflow-y: scroll;
                         display: flex;
                         flex-direction: column;
                         // justify-content: flex-end;

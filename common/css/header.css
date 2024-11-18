@@ -28,6 +28,23 @@ header .container .logo-box a {
 header .container .logo-box a img {
   width: 100%;
 }
+header .container .location-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 40px;
+  border: 1px solid #ddd;
+  border-radius: 300px;
+  pointer-events: none;
+}
+header .container .location-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.25px;
+  color: #aeaeae;
+}
 header .container .login-info-box {
   min-width: 200px;
   display: flex;

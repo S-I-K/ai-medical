@@ -42,6 +42,24 @@ header {
             }
         }
 
+        .location-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 40px;
+            border: 1px solid $color-light-gray;
+            border-radius: 300px;
+            pointer-events: none;
+            span {
+                font-family: $font-kr;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 1.5;
+                letter-spacing: -.25px;
+                color: $color-dark-gray;
+            }
+        }
+
         .login-info-box {
             min-width: 200px;
             display: flex;
