@@ -86,6 +86,7 @@
 }
 .guide .guide-border {
   opacity: 1;
+  display: flex;
 }
 .speak-text-box .border .button-box::before {
   content: "";
@@ -107,7 +108,6 @@
 }
 
 .guide-border {
-  opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: inherit;
   display: flex;
@@ -121,6 +121,8 @@
   bottom: -30px;
   left: -30px;
   background: #fff;
+  opacity: 0;
+  display: none;
 }
 .guide-border .guide-text-box {
   position: absolute;
@@ -132,7 +134,7 @@
   padding: 20px 70px;
   width: 100%;
   background: #fff;
-  translate: 0 calc(100% + 20px);
+  top: calc(100% + 20px);
 }
 .guide-border .guide-text-box p {
   width: 100%;
@@ -186,6 +188,10 @@
   border-radius: 300px;
   animation: scale 1.4s linear infinite;
 }
+.guide-border .guide-text-box.top {
+  top: auto;
+  bottom: calc(100% + 20px);
+}
 
 .guide.free-talk .guide-border,
 .guide.docter .guide-border,
@@ -205,7 +211,6 @@ section.paging-button-content-wrap.learning .container .paging-button-box .butto
 #wrap {
   position: relative;
   padding-top: 180px;
-  padding-bottom: 100px;
   /* .bg-area */
   /*
       section.paging-button-content-wrap
@@ -250,12 +255,13 @@ section.paging-button-content-wrap.learning .container .paging-button-box .butto
   /* 통역 메세지 박스 */
   /* AI에게 질문하기 */
   /* AI 해설 */
+  /* 학습 종료 버튼 */
 }
 #wrap section.learning-content-wrap .container .message-content-wrap {
   display: flex;
   width: calc(50% - 24px);
   height: auto;
-  margin: 20px 12px;
+  margin: 14px 12px;
   /* message-content-box */
 }
 #wrap section.learning-content-wrap .container .message-content-wrap .message-content-box {
@@ -307,7 +313,7 @@ section.paging-button-content-wrap.learning .container .paging-button-box .butto
 #wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-kind-box span {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1;
   letter-spacing: -0.25px;
   color: #aeaeae;
@@ -318,7 +324,7 @@ section.paging-button-content-wrap.learning .container .paging-button-box .butto
 }
 #wrap section.learning-content-wrap .container .message-content-wrap .message-content-box .message-text-box {
   width: 100%;
-  height: 300px;
+  height: 260px;
   overflow: scroll;
   display: flex;
   flex-direction: column;
@@ -364,11 +370,8 @@ section.paging-button-content-wrap.learning .container .paging-button-box .butto
 #wrap section.learning-content-wrap .container .message-content-wrap.patient .message-content-box {
   padding-top: 60px;
 }
-#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box {
-  border: 1px solid #E60000;
-}
-#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .message-kind-box span.kind {
-  color: #E60000;
+#wrap section.learning-content-wrap .container .message-content-wrap.trans {
+  width: 100%;
 }
 #wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .message-text-box {
   height: 260px;
@@ -384,9 +387,14 @@ section.paging-button-content-wrap.learning .container .paging-button-box .butto
   align-items: flex-end;
   justify-content: center;
   width: 100%;
-  padding: 20px 20px;
-  border: 1px solid #ddd;
-  border-radius: 300px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-list-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-list-box .button-box:not(:last-child) {
+  margin-right: 14px;
 }
 #wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box {
   width: 36px;
@@ -431,25 +439,45 @@ section.paging-button-content-wrap.learning .container .paging-button-box .butto
   scale: 1;
   transition: scale 0.4s ease;
 }
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box.next-text {
+  pointer-events: none;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box.next-text svg {
+  background: #ddd;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box.next-text.active {
+  pointer-events: inherit;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box.next-text.active svg {
+  background: #aeaeae;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border .button-box.next-text.active:hover svg {
+  background: rgba(42, 42, 42, 0.8);
+}
 #wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box {
   flex: 2;
   margin: 0 20px;
 }
-#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box span.message {
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box span {
   font-size: 24px;
   line-height: 1.5;
-  color: #2a2a2a;
   text-align: left;
 }
-#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box span.message.kr {
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box span.kr {
   font-family: "SUIT Variable", sans-serif;
   font-weight: 500;
   letter-spacing: -0.8px;
 }
-#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box span.message.en {
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box span.en {
   font-family: "Archivo", sans-serif;
   font-weight: 400;
   letter-spacing: 0px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box span.placeholder {
+  color: #ddd;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.trans .message-content-box .speak-text-box .border p.text-box span.message {
+  color: #2a2a2a;
 }
 #wrap section.learning-content-wrap .container .message-content-wrap.ai-question .message-content-box {
   transition: border 0.4s ease;
@@ -534,13 +562,48 @@ section.paging-button-content-wrap.learning .container .paging-button-box .butto
 }
 #wrap section.learning-content-wrap .container .message-content-wrap.ai-script {
   width: 100%;
+  flex: 2;
 }
 #wrap section.learning-content-wrap .container .message-content-wrap.ai-script .message-content-box .message-kind-box span.kind {
   transition: color 0.4s ease;
 }
 #wrap section.learning-content-wrap .container .message-content-wrap.ai-script .message-content-box .message-text-box {
-  height: auto;
+  height: 82px;
+}
+#wrap section.learning-content-wrap .container .message-content-wrap.ai-script .message-content-box .message-text-box p.text-box {
+  padding: 0;
 }
 #wrap section.learning-content-wrap .container .message-content-wrap.ai-script .message-content-box .message-text-box p.text-box span.message {
   font-size: 24px;
+  white-space: pre-line;
+}
+#wrap section.learning-content-wrap .container .button-wrap {
+  margin: 14px 12px;
+  height: auto;
+}
+#wrap section.learning-content-wrap .container .button-wrap .button-box {
+  width: 220px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.4s ease;
+}
+#wrap section.learning-content-wrap .container .button-wrap .button-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.25px;
+  color: #aeaeae;
+  transition: color 0.4s ease;
+}
+#wrap section.learning-content-wrap .container .button-wrap .button-box:hover {
+  border: 1px solid #2a2a2a;
+}
+#wrap section.learning-content-wrap .container .button-wrap .button-box:hover span {
+  color: #2a2a2a;
 }

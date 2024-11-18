@@ -242,18 +242,34 @@
                                         </div>
                                     </div>
                                     <p class="text-box">
+                                        <span class="placeholder kr">
+                                            마이크 버튼을 눌러 의사의 대화내용을 환자에게 통역해주세요.
+                                        </span>
                                         <span class="message kr">
-                                            하복부에서 쥐어짜는 듯한 통증이 있습니다.
                                         </span>
                                     </p>
-                                    <div class="button-box send tooltip">
-                                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.7584 12.0668C21.214 11.5337 21.9527 11.5337 22.4083 12.0668L28.825 19.5736C29.2806 20.1066 29.2806 20.9708 28.825 21.5038C28.3693 22.0368 27.6307 22.0368 27.175 21.5038L22.75 16.327V30.1354C22.75 30.8892 22.2277 31.5003 21.5833 31.5003C20.939 31.5003 20.4167 30.8892 20.4167 30.1354V16.327L15.9916 21.5038C15.536 22.0368 14.7973 22.0368 14.3417 21.5038C13.8861 20.9708 13.8861 20.1066 14.3417 19.5736L20.7584 12.0668Z" fill="white"/>
-                                        </svg>
-                                        <div class="tooltip-box">
-                                            <span>
-                                                전송하기
-                                            </span>
+                                    <div class="button-list-box">
+                                        <div class="button-box send tooltip">
+                                            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.7584 12.0668C21.214 11.5337 21.9527 11.5337 22.4083 12.0668L28.825 19.5736C29.2806 20.1066 29.2806 20.9708 28.825 21.5038C28.3693 22.0368 27.6307 22.0368 27.175 21.5038L22.75 16.327V30.1354C22.75 30.8892 22.2277 31.5003 21.5833 31.5003C20.939 31.5003 20.4167 30.8892 20.4167 30.1354V16.327L15.9916 21.5038C15.536 22.0368 14.7973 22.0368 14.3417 21.5038C13.8861 20.9708 13.8861 20.1066 14.3417 19.5736L20.7584 12.0668Z" fill="white"/>
+                                            </svg>
+                                            <div class="tooltip-box">
+                                                <span>
+                                                    전송하기
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="button-box next-text tooltip">
+                                            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="28" cy="20" r="2" fill="white"/>
+                                                <circle cx="20" cy="20" r="2" fill="white"/>
+                                                <circle cx="12" cy="20" r="2" fill="white"/>
+                                            </svg>
+                                            <div class="tooltip-box">
+                                                <span>
+                                                    다음 문장 생성
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -303,16 +319,22 @@
                                 <!-- text-box -->
                                 <p class="text-box">
                                     <!-- message -->
-                                    <span class="message kr">
-                                        잘하셨어요, "What brings you here today?"는 환자에게 현재의 문제나 이유를 묻는 적합한 문장입니다.
-                                        Brings에 악센트를 살려서 발음하면 좀 더 좋을것 같아요.
+                                    <span class="message kr">모범 답안: 네, 수술도 간단하게 끝나고 통증도 좋아져서 아주 만족합니다.
+
+                                        1. 유사도 평가: "수술이 순조롭게 진행되었고 통증도 호전되어 매우 만족합니다."는 모법 답안과 비슷한 의미를 잘 전달하고 있습니다. 어휘 선택과 문장 구조가 유사하며, 의미 전달에 큰 차이가 없습니다.
+
+                                        2. 문법적 오류: 문법적 오류는 없습니다. 관례적으로 사용되는 문장으로는 "수술이 잘 끝나고 통증이 줄어들어 매우 만족합니다."가 있습니다.
+
+                                        3. 의학 용어 적절성: "수술"과 "통증"은 적절한 의학 용어로 사용되었습니다. 더 적절한 표현은 필요하지 않습니다.
+
+                                        4. 전체적 평가: 두 문장은 유사도가 높으며, 의미 전달에 있어서 큰 차이가 없습니다. 문장 구조와 어휘 선택 모두 적절하게 사용되었습니다.
                                     </span>
                                 </p>
                             </div>
                         </div>
 
                         <div class="guide-border">
-                            <div class="guide-text-box">
+                            <div class="guide-text-box top">
                                 <p>
                                     발화한 답안을 AI가 분석하여 적절한 답안이었는지 해설을 제공해줍니다.
                                 </p>
@@ -329,6 +351,15 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- 학습 종료 버튼 -->
+                    <div class="button-wrap">
+                        <div class="button-box">
+                            <span>
+                                학습 종료
+                            </span>
                         </div>
                     </div>
                 </div>
