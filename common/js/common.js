@@ -160,6 +160,20 @@ $(()=>{
         }
     });
 
+    /* AI 의료용어 사전 클릭 */
+    $('.ai-button-box').click(function(e){
+        if(!$('.ai-content-box').hasClass('active')) {
+            $('.ai-content-box').addClass('active');
+        } else {
+            $('.ai-content-box').removeClass('active');
+        }
+    });
+    
+    /* 의료용어 사전 닫기 버튼 */
+    $('.ai-content-box .close-button-box').click(function(){
+        $('.ai-content-box').removeClass('active');
+    });
+
 });
 
 
