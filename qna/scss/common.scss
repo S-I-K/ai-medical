@@ -11,6 +11,104 @@ $color-light-gray: #ddd;
 $font-kr: 'SUIT Variable', sans-serif;;
 $font-en: "Archivo", sans-serif;
 
+.desc-tooltip {
+    position: relative;
+    .tooltip-box {
+        position: absolute;
+        // border: 1px solid red;
+        top: 10px;
+        right: 10px;
+        .icon-box {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: .4;
+            transition: opacity .4s ease;
+            svg {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                background: #b25927;
+                border-radius: 300px;
+                path {
+
+                }
+            }
+        }
+
+        .desc-box {
+            width: 400px;
+            height: auto;
+            padding: 24px 24px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background: #b25927;
+            position: absolute;
+            top: calc(100% + 20px);
+            right: calc(0% - 20px);
+            translate: 0px -10px;
+            opacity: 0;
+            transition: all .4s ease;
+            pointer-events: none;
+            span.title {
+                font-family: $font-kr;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 1.5;
+                letter-spacing: -.25px;
+                color: #fff;
+                display: flex;
+                margin-bottom: 14px;
+            }
+            p {
+                white-space: pre-line;
+                word-break: keep-all;
+                font-family: $font-kr;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: -.25px;
+                color: #eee;
+                span.light {
+                    font-weight: 300;
+                }
+            }
+            p.notice {
+                color: $color-03;
+            }
+            p:not(:last-child) {
+                margin-bottom: 14px;
+            }
+        }
+        .desc-box::before {
+            content: '';
+            display: flex;
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            background: #b25927;
+            // border: 1px solid red;
+            position: absolute;
+            top: -6px;
+            right: 24px;
+            rotate: 45deg;
+        }
+    }
+    .tooltip-box:hover {
+        .icon-box {
+            opacity: 1;
+        }
+        .desc-box {
+            opacity: 1;
+            translate: 0px 0px;
+        }
+    }
+}
+
 #wrap {
     /* bg-area */
     .bg-area {
@@ -169,7 +267,6 @@ $font-en: "Archivo", sans-serif;
                         border-radius: 12px;
                         padding: 30px 0;
                         background: #fff;
-                        margin-bottom: 24px;
                         transition: all .4s ease;
                         .list-title {
                             span {
@@ -217,21 +314,6 @@ $font-en: "Archivo", sans-serif;
                         box-shadow: 0px 4px 8px rgba(39, 5, 6, .4);
                         translate: 0px -10px;
                     }
-
-                    .desc-box {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        p {
-                            text-align: center;
-                            font-family: $font-kr;
-                            font-weight: 500;
-                            font-size: 20px;
-                            line-height: 1.5;
-                            letter-spacing: -.8px;
-                            color: $color-black;
-                        }
-                    }
                 }
             }
 
@@ -249,6 +331,7 @@ $font-en: "Archivo", sans-serif;
                     align-items: center;
                     width: calc(100% / 4 - 24px);
                     margin: 12px 12px;
+                    position: relative;
                     a.button-box {
                         display: flex;
                         align-items: center;
@@ -350,21 +433,6 @@ $font-en: "Archivo", sans-serif;
                         background: $color-06;
                         box-shadow: 0px 4px 8px rgba(39, 5, 6, .4);
                         translate: 0px -10px;
-                    }
-
-                    .desc-box {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        p {
-                            text-align: center;
-                            font-family: $font-kr;
-                            font-weight: 500;
-                            font-size: 20px;
-                            line-height: 1.5;
-                            letter-spacing: -.8px;
-                            color: $color-black;
-                        }
                     }
                 }
             }

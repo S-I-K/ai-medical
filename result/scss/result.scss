@@ -52,16 +52,109 @@ $font-en: "Archivo", sans-serif;
     }
 }
 
+.desc-tooltip {
+    position: relative;
+    z-index: 2;
+    .tooltip-box {
+        position: absolute;
+        // border: 1px solid red;
+        top: 10px;
+        right: 10px;
+        .icon-box {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: .4;
+            transition: opacity .4s ease;
+            svg {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                background: $color-dark-gray;
+                border-radius: 300px;
+                path {
 
+                }
+            }
+        }
+
+        .desc-box {
+            width: 614px;
+            height: auto;
+            padding: 24px 24px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background: $color-dark-gray;
+            position: absolute;
+            top: calc(100% + 20px);
+            right: calc(0% - 20px);
+            translate: 0px -10px;
+            opacity: 0;
+            transition: all .4s ease;
+            pointer-events: none;
+            span.title {
+                font-family: $font-kr;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 1.5;
+                letter-spacing: -.25px;
+                color: #fff;
+                display: flex;
+                margin-bottom: 14px;
+            }
+            p {
+                white-space: pre-line;
+                word-break: keep-all;
+                font-family: $font-kr;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: -.25px;
+                color: #eee;
+                span.light {
+                    font-weight: 300;
+                }
+            }
+            p.notice {
+                color: $color-03;
+            }
+            p:not(:last-child) {
+                margin-bottom: 14px;
+            }
+        }
+        .desc-box::before {
+            content: '';
+            display: flex;
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            background: $color-dark-gray;
+            // border: 1px solid red;
+            position: absolute;
+            top: -6px;
+            right: 24px;
+            rotate: 45deg;
+        }
+    }
+    .tooltip-box:hover {
+        .icon-box {
+            opacity: 1;
+        }
+        .desc-box {
+            opacity: 1;
+            translate: 0px 0px;
+        }
+    }
+}
 
 
 
 #wrap {
     position: relative;
-    min-height: 100vh;
-    padding-top: 180px;
-    padding-bottom: 100px;
-    
     section.result-content-wrap {
         /* .container */
         .container {
@@ -70,7 +163,7 @@ $font-en: "Archivo", sans-serif;
             .result-content-box {
                 // border: 1px solid red;
                 width: calc(100% / 2 - 24px);
-                margin: 20px 12px;
+                margin: 12px 12px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -90,7 +183,7 @@ $font-en: "Archivo", sans-serif;
                     span {
                         font-family: $font-kr;
                         font-weight: 500;
-                        font-size: 16px;
+                        font-size: 20px;
                         line-height: 1;
                         letter-spacing: -.25px;
                         color: $color-dark-gray;
@@ -125,7 +218,7 @@ $font-en: "Archivo", sans-serif;
                         span {
                             font-family: $font-kr;
                             font-weight: 500;
-                            font-size: 16px;
+                            font-size: 20px;
                             line-height: 1;
                             letter-spacing: -.25px;
                             color: $color-dark-gray;
@@ -187,14 +280,18 @@ $font-en: "Archivo", sans-serif;
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
+                            padding: 20px 20px;
+                            border-radius: 12px;
+                            transition: background .4s ease;
                             .name {
-                                min-width: 125px;
+                                // min-width: 125px;
                                 display: flex;
                                 justify-content: flex-start;
+                                flex: 1;
                                 span {
                                     font-family: $font-kr;
                                     font-weight: 500;
-                                    font-size: 28px;
+                                    font-size: 26px;
                                     line-height: 1;
                                     letter-spacing: -.8px;
                                     color: #999;
@@ -202,6 +299,8 @@ $font-en: "Archivo", sans-serif;
                             }
                             .percent {
                                 display: flex;
+                                flex: 1;
+                                justify-content: center;
                                 span {
                                     font-family: $font-en;
                                     font-weight: 500;
@@ -210,34 +309,114 @@ $font-en: "Archivo", sans-serif;
                                     color: $color-black;
                                 }
                             }
-                            .more-btn-box {
-                                min-width: 125px;
+                            .detail-btn-box {
+                                // min-width: 125px;
                                 display: flex;
                                 justify-content: flex-end;
-                                .icon-box {
-                                    width: 28px;
-                                    height: 28px;
+                                flex: 1;
+                                .tooltip-box {
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
-                                    border-radius: 300px;
-                                    background: $color-dark-gray;
+                                    position: relative;
                                     cursor: pointer;
-                                    transition: background .4s ease;
-                                    img {
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: contain;
+                                    .icon-box {
+                                        width: 26px;
+                                        height: 26px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        opacity: .4;
+                                        transition: opacity .4s ease;
+                                        svg {
+                                            width: 100%;
+                                            height: 100%;
+                                            display: flex;
+                                            background: $color-dark-gray;
+                                            border-radius: 300px;
+                                            path {
+    
+                                            }
+                                        }
+                                    }
+                                    .desc-box {
+                                        width: 614px;
+                                        height: auto;
+                                        padding: 24px 24px;
+                                        border-radius: 8px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                        background: $color-dark-gray;
+                                        position: absolute;
+                                        top: calc(100% + 20px);
+                                        right: calc(0% - 20px);
+                                        translate: 0px -10px;
+                                        opacity: 0;
+                                        transition: all .4s ease;
+                                        pointer-events: none;
+                                        span.title {
+                                            font-family: $font-kr;
+                                            font-weight: 500;
+                                            font-size: 18px;
+                                            line-height: 1.5;
+                                            letter-spacing: -.25px;
+                                            color: #fff;
+                                            display: flex;
+                                            margin-bottom: 14px;
+                                        }
+                                        p {
+                                            white-space: pre-line;
+                                            word-break: keep-all;
+                                            font-family: $font-kr;
+                                            font-weight: 500;
+                                            font-size: 16px;
+                                            line-height: 1.5;
+                                            letter-spacing: -.25px;
+                                            color: #eee;
+                                            span.light {
+                                                font-weight: 300;
+                                            }
+                                        }
+                                        p.notice {
+                                            color: $color-03;
+                                        }
+                                        p:not(:last-child) {
+                                            margin-bottom: 14px;
+                                        }
+                                    }
+                                    .desc-box::before {
+                                        content: '';
+                                        display: flex;
+                                        width: 20px;
+                                        height: 20px;
+                                        border-radius: 3px;
+                                        background: $color-dark-gray;
+                                        // border: 1px solid red;
+                                        position: absolute;
+                                        top: -6px;
+                                        right: 24px;
+                                        rotate: 45deg;
                                     }
                                 }
-                                .icon-box:hover {
-                                    background: rgba(42, 42, 42, .8);
+                                .tooltip-box:hover {
+                                    z-index: 2;
+                                    .icon-box {
+                                        opacity: 1;
+                                    }
+                                    .desc-box {
+                                        opacity: 1;
+                                        translate: 0px 0px;
+                                    }
                                 }
                             }
                         }
+                        .detail-data-box:hover {
+                            background: #f8f8f8;
+                        }
                     }
                     .detail-box:not(:last-child) {
-                        margin-bottom: 42px;
+                        margin-bottom: 4px;
                     }
                 }
             }
@@ -249,9 +428,12 @@ $font-en: "Archivo", sans-serif;
 
             /* AI 종합 평가 */
             .result-content-box.ai {
-                width: 100%;
+                padding-right: 20px;
                 .ai-text-box {
                     width: 100%;
+                    height: 82px;
+                    overflow-y: scroll;
+                    padding-right: 20px;
                     p {
                         width: 100%;
                         span {
@@ -262,6 +444,48 @@ $font-en: "Archivo", sans-serif;
                             line-height: 1.5;
                             letter-spacing: -.25px;
                             color: $color-dark-gray;
+                            word-break: keep-all;
+                            white-space: pre-line;
+                        }
+                    }
+                }
+            }
+
+            .result-content-box.button-content-box {
+                flex-direction: row;
+                padding: 0;
+                border: none;
+                .button-box {
+                    height: 100%;
+                    display: flex;
+                    flex: 1;
+                    border: 1px solid $color-light-gray;
+                    border-radius: 12px;
+                    transition: border-color .4s ease;
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        span {
+                            font-family: $font-kr;
+                            font-size: 20px;
+                            line-height: 1;
+                            letter-spacing: 0px;
+                            color: $color-dark-gray;
+                            transition: color .4s ease;
+                        }
+                    }
+                }
+                .button-box:not(:last-child) {
+                    margin-right: 24px;
+                }
+                .button-box:hover {
+                    border-color: $color-black;
+                    a {
+                        span {
+                            color: $color-black;
                         }
                     }
                 }

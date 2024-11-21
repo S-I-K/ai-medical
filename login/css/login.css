@@ -2,9 +2,6 @@
 #wrap {
   /* section.login-content-section */
 }
-#wrap section.login-content-section {
-  padding-top: 180px;
-}
 #wrap section.login-content-section .container {
   flex-direction: column;
   justify-content: center;

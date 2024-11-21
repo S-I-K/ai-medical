@@ -63,7 +63,7 @@
                 <!-- 전체 정답률 및 통계값 -->
                 <div class="result-content-box value">
                     <!--list-box -->
-                    <div class="list-box progress">
+                    <div class="list-box progress desc-tooltip">
                         <!-- kind-box -->
                         <div class="kind-box">
                             <span>
@@ -81,7 +81,23 @@
                         </div>
                         <!-- progress-box -->
                         <div class="progress-box">
-                            <div class="bar" data-target="0"></div>
+                            <div class="bar" data-target="40"></div>
+                        </div>
+
+                        <div class="tooltip-box">
+                            <div class="icon-box">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 9.088V7H15.196V9.088H13ZM13 20.014V10.546H15.196V20.014H13Z" fill="white"/>
+                                </svg>
+                            </div>
+
+                            <div class="desc-box">
+                                <span class="title">
+                                    전체 정답률
+                                </span>
+                                <p>통역을 했을 때 입력한 내용의 의미가 답안과 유사한 경우 정답 처리가 됩니다.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -100,16 +116,23 @@
                                         91.7%
                                     </span>
                                 </div>
-                                <div class="more-btn-box">
-                                    <div class="icon-box">
-                                        <img src="../common/img/icon-arrow-down.svg" alt="">
+                                <div class="detail-btn-box">
+                                    <div class="tooltip-box">
+                                        <div class="icon-box">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 9.088V7H15.196V9.088H13ZM13 20.014V10.546H15.196V20.014H13Z" fill="white"/>
+                                            </svg>
+                                        </div>
+                                        <div class="desc-box">
+                                            <span class="title">
+                                                통역 정확도
+                                            </span>
+                                            <p>사용자가 통역한 내용이 모범 답안과 의미가 얼마나 유사한지 표기합니다.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <!--
-                            <div class="detail-text-box">
-                            </div>
-                            -->
                         </div>
                         <!-- 02: 유창성 -->
                         <div class="detail-box">
@@ -124,57 +147,88 @@
                                         88.7%
                                     </span>
                                 </div>
-                                <div class="more-btn-box">
-                                    <div class="icon-box">
-                                        <img src="../common/img/icon-arrow-down.svg" alt="">
+                                <div class="detail-btn-box">
+                                    <div class="tooltip-box">
+                                        <div class="icon-box">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 9.088V7H15.196V9.088H13ZM13 20.014V10.546H15.196V20.014H13Z" fill="white"/>
+                                            </svg>
+                                        </div>
+                                        <div class="desc-box">
+                                            <span class="title">
+                                                유창성
+                                            </span>
+                                            <p>사용자의 발음을 ChatGPT로 분석하여 발음 휴지기 <span class="light">(발음을 적절한곳에서 쉬었는지)</span>,
+                                                문장의 발화 시작부터 종료까지 적절한 속도로 발화했는지 2가지 데이터를 분석하여 유창성 평가지표를 제공합니다.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <!--
-                            <div class="detail-text-box">
-                            </div>
-                            -->
                         </div>
                         <!-- 03: 유창성 -->
                         <div class="detail-box">
                             <div class="detail-data-box">
                                 <div class="name">
                                     <span>
-                                        유창성
+                                        의학용어 적절성
                                     </span>
                                 </div>
                                 <div class="percent">
                                     <span>
-                                        88.7%
+                                        B
                                     </span>
                                 </div>
-                                <div class="more-btn-box">
-                                    <div class="icon-box">
-                                        <img src="../common/img/icon-arrow-down.svg" alt="">
+                                <div class="detail-btn-box">
+                                    <div class="tooltip-box">
+                                        <div class="icon-box">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 9.088V7H15.196V9.088H13ZM13 20.014V10.546H15.196V20.014H13Z" fill="white"/>
+                                            </svg>
+                                        </div>
+                                        <div class="desc-box">
+                                            <span class="title">
+                                                의학용어 적절성
+                                            </span>
+                                            <p>상황에 맞추어 통역을 할 때 의학적 용어가 적절한 곳에 사용되었는지를 체크합니다.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <!--
-                            <div class="detail-text-box">
-                            </div>
-                            -->
                         </div>
                     </div>
                 </div>
 
 
                 <!-- 문제별 유사도 -->
-                <div class="result-content-box chart">
+                <div class="result-content-box chart desc-tooltip">
                     <div class="kind-box">
                         <span class="kind">
                             문제별 유사도
                         </span>
                     </div>
+
+                    <div class="tooltip-box">
+                        <div class="icon-box">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 9.088V7H15.196V9.088H13ZM13 20.014V10.546H15.196V20.014H13Z" fill="white"/>
+                            </svg>
+                        </div>
+
+                        <div class="desc-box">
+                            <span class="title">
+                                문제별 유사도
+                            </span>
+                            <p>한 개의 문장별로 통역한 문장의 유사도를 수치로 나타내고 있습니다.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
 
                 <!-- AI 종합 평가 -->
-                <div class="result-content-box ai">
+                <div class="result-content-box ai desc-tooltip">
                     <div class="kind-box">
                         <span class="kind">
                             AI 종합 평가
@@ -183,43 +237,53 @@
 
                     <div class="ai-text-box">
                         <p>
-                            <span>
-                                guestid002님은 통역 능력이 매우 탁월하지만 발음 정확도가 통역 정확도에 비해 부족합니다.
+                            <span>guestid002님은 통역 능력이 매우 탁월하지만 발음 정확도가 통역 정확도에 비해 부족합니다.
+
                                 의학 용어에 대해서는 적절히 구사하였습니다.
                             </span>
                         </p>
                     </div>
+
+                    <div class="tooltip-box">
+                        <div class="icon-box">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 9.088V7H15.196V9.088H13ZM13 20.014V10.546H15.196V20.014H13Z" fill="white"/>
+                            </svg>
+                        </div>
+
+                        <div class="desc-box">
+                            <span class="title">
+                                AI 종합 평가
+                            </span>
+                            <p>전체 정답률, 문제별 유사도, 통역 정확도, 유창성을 종합적으로 분석하여
+                                코이/하이 AI가 해설 및 격려를 합니다.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
 
-
-
-
-            </div>
-        </section>
-
-        <!-- paging-button-content-wrap -->
-        <section class="paging-button-content-wrap learning">
-            <div class="container">
-                <!-- paging-button-box -->
-                <div class="paging-button-box">
-                    <!-- prev -->
-                    <div class="button-area prev">
-                        <a href="#">
+                <!-- 버튼 컨텐츠 박스 -->
+                <div class="result-content-box button-content-box">
+                    <!-- 다운로드 -->
+                    <div class="button-box">
+                        <a href="javascript:void('0')">
                             <span>
                                 다운로드
                             </span>
                         </a>
                     </div>
-
-                    <!-- next -->
-                    <div class="button-area next">
-                        <a href="#">
+                    <!-- 추가 학습 -->
+                    <div class="button-box">
+                        <a href="javascript:void('0')">
                             <span>
                                 추가 학습
                             </span>
                         </a>
-                        <a href="#">
+                    </div>
+                    <!-- 메인 화면 -->
+                    <div class="button-box">
+                        <a href="javascript:void('0')">
                             <span>
                                 메인 화면
                             </span>

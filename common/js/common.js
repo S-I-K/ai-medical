@@ -130,8 +130,8 @@ $(()=>{
         duration: .6,
         delay: 2,
         onComplete: () => {
-            $('.message-content-wrap.trans').addClass("guide");
-            $('.message-content-wrap.trans .button-box.sst').addClass("focus");
+            $('.message-content-wrap.docter').addClass("guide");
+            $('.message-content-wrap.docter .button-box.sst').addClass("focus");
         }
     }); */
 
@@ -140,12 +140,6 @@ $(()=>{
             'opacity': '0',
         })
     }, 4000); */
-
-
-
-    /* ============================
-        LEARNING.js
-    ============================ */
 
     /* 녹음버튼 클릭 시 툴팁 메세지 변경 */
     $('.button-box.sst').click(function(e){
