@@ -170,7 +170,7 @@ $font-en: "Archivo", sans-serif;
                 justify-content: center;
                 padding: 40px 40px;
                 background: #fff;
-                border: 1px solid $color-light-gray;
+                border: 1px solid #9a9a9a;
                 border-radius: 12px;
                 position: relative;
                 > .kind-box {
@@ -186,7 +186,7 @@ $font-en: "Archivo", sans-serif;
                         font-size: 20px;
                         line-height: 1;
                         letter-spacing: -.25px;
-                        color: $color-dark-gray;
+                        color: #9a9a9a;
                     }
                 }
             }
@@ -203,7 +203,7 @@ $font-en: "Archivo", sans-serif;
                     justify-content: center;
                     padding: 40px 40px;
                     background: #fff;
-                    border: 1px solid $color-light-gray;
+                    border: 1px solid #9a9a9a;
                     border-radius: 12px;
                     position: relative;
                 }
@@ -221,7 +221,7 @@ $font-en: "Archivo", sans-serif;
                             font-size: 20px;
                             line-height: 1;
                             letter-spacing: -.25px;
-                            color: $color-dark-gray;
+                            color: #9a9a9a;
                         }
                     }
                     .numb-box {
@@ -400,7 +400,7 @@ $font-en: "Archivo", sans-serif;
                                     }
                                 }
                                 .tooltip-box:hover {
-                                    z-index: 2;
+                                    z-index: 4;
                                     .icon-box {
                                         opacity: 1;
                                     }

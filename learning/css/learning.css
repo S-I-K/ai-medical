@@ -200,7 +200,7 @@ section.paging-button-content-wrap.learning .container .paging-button-box .butto
 /* AI에게 질문하기 스타일 */
 .ai-question-content-wrap {
   position: absolute;
-  right: 60px;
+  right: 46px;
   bottom: 100px;
   z-index: 9;
   display: flex;
@@ -214,6 +214,39 @@ section.paging-button-content-wrap.learning .container .paging-button-box .butto
   justify-content: center;
   transition: scale 0.4s ease;
   cursor: pointer;
+}
+.ai-question-content-wrap .ai-button-box .text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  padding: 14px 24px;
+  border-radius: 14px;
+  position: relative;
+  margin-bottom: 24px;
+}
+.ai-question-content-wrap .ai-button-box .text-box span {
+  font-family: "SUIT Variable", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: -0.25px;
+  color: #aeaeae;
+  white-space: pre-line;
+  word-break: keep-all;
+  text-align: center;
+  transition: color 0.4s ease;
+}
+.ai-question-content-wrap .ai-button-box .text-box::after {
+  content: "";
+  display: flex;
+  width: 14px;
+  height: 14px;
+  background: #f8f8f8;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -6px;
+  rotate: 45deg;
 }
 .ai-question-content-wrap .ai-button-box .img-box {
   width: 100px;
@@ -246,6 +279,9 @@ section.paging-button-content-wrap.learning .container .paging-button-box .butto
 }
 .ai-question-content-wrap .ai-button-box:hover {
   scale: 0.94;
+}
+.ai-question-content-wrap .ai-button-box:hover .text-box span {
+  color: #2a2a2a;
 }
 .ai-question-content-wrap .ai-button-box:hover .title-box {
   border-color: #aeaeae;

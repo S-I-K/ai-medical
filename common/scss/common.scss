@@ -85,6 +85,7 @@ section {
         position: fixed;
         overflow: hidden;
         pointer-events: none;
+        z-index: 98;
         .ob-box {
             position: absolute;
             display: flex;
@@ -173,140 +174,6 @@ section {
             line-height: 1;
             letter-spacing: -.25px;
             color: #fff;
-        }
-    }
-}
-
-
-section.paging-button-content-wrap.qna {
-    display: none;
-    .container {
-        .paging-button-box {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            /* 기본 */
-            .button-area {
-                a {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 32px 43px;
-                    border-radius: 300px;
-                    background: $color-02;
-                    span {
-                        font-family: $font-kr;
-                        font-weight: 600;
-                        font-size: 18px;
-                        line-height: 1;
-                        letter-spacing: -.8px;
-                        color: #fff;
-                    }
-                    .icon-box {
-                        width: 24px;
-                        height: 24px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        transition: all .4s ease;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: contain;
-                        }
-                    }
-                }
-                a:hover {
-                    span {
-                    }
-                    .icon-box {
-                        img {
-
-                        }
-                    }
-                }
-            }
-
-            /* 이전 버튼 */
-            .button-area.prev {
-                a {
-                    span {
-                    }
-                    .icon-box {
-                        margin-right: 8px;
-                        img {
-
-                        }
-                    }
-                }
-                a:hover {
-                    span {
-                    }
-                    .icon-box {
-                        translate: -10px 0;
-                        opacity: 0;
-                        img {
-
-                        }
-                    }
-                }
-            }
-
-            /* 다음 버튼 */
-            .button-area.next {
-                a {
-                    span {
-                    }
-                    .icon-box {
-                        margin-left: 8px;
-                        rotate: 180deg;
-                        img {
-
-                        }
-                    }
-                }
-                a:hover {
-                    span {
-                    }
-                    .icon-box {
-                        translate: 10px 0;
-                        opacity: 0;
-                        img {
-
-                        }
-                    }
-                }
-            }
-
-            /* 학습시작 버튼 */
-            .button-area.next.start {
-                a {
-                    span {
-                    }
-                    .icon-box {
-                        img {
-                        }
-                    }
-                }
-                a:hover {
-                    span {
-                    }
-                    .icon-box {
-                        rotate: 135deg;
-                        translate: unset;
-                        opacity: unset;
-                        img {
-                        }
-                    }
-                }
-            }
-
-            /* 버튼 숨기기 클래스 */
-            .button-area.hidden {
-                visibility: hidden;
-                opacity: 0;
-                pointer-events: none;
-            }
         }
     }
 }

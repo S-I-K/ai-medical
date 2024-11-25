@@ -8,7 +8,7 @@ $(()=>{
 
     /* Q&A: 리스트 선택 */
     $('.question-list-area .list-box a.button-box').click(function(e){
-        e.preventDefault();
+        // e.preventDefault();
 
         if(!$(this).hasClass('active')){
             /* 클릭한 요소에 active가 없으면 */
