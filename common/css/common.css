@@ -151,6 +151,7 @@ section {
   padding: 14px 24px;
   border-radius: 4px;
   top: calc(100% + 8px);
+  bottom: auto;
   background: rgba(42, 42, 42, 0.8);
   opacity: 0;
   translate: 0 -4px;
@@ -163,6 +164,17 @@ section {
   line-height: 1;
   letter-spacing: -0.25px;
   color: #fff;
+}
+
+.tooltip.top .tooltip-box {
+  top: auto;
+  bottom: calc(100% + 8px);
+  translate: 0 4px;
+  transition: all 0.4s ease;
+}
+
+.tooltip.top:hover .tooltip-box {
+  translate: 0;
 }
 
 section.paging-button-content-wrap.learning {

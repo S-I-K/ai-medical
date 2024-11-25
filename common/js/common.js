@@ -168,6 +168,22 @@ $(()=>{
         $('.ai-content-box').removeClass('active');
     });
 
+    /* AI 해설 모달창 */
+    $('.message-content-wrap.ai-script .more-button-box .icon-box').click(function(e){
+        if(!$('.ai-script-modal-content-wrap').hasClass('active')) {
+            $('.ai-script-modal-content-wrap').addClass('active');
+        } else {
+            
+        }
+    });
+    $('.ai-script-modal-content-wrap > .close-button-box').click(function(e){
+        if ($('.ai-script-modal-content-wrap').hasClass('active')) {
+            $('.ai-script-modal-content-wrap').removeClass('active');
+        }
+        
+    });
+
+
 });
 
 

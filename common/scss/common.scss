@@ -163,6 +163,7 @@ section {
         // border: 1px solid red;
         border-radius: 4px;
         top: calc(100% + 8px);
+        bottom: auto;
         background: rgba(42, 42, 42, .8);
         opacity: 0;
         translate: 0 -4px;
@@ -175,6 +176,19 @@ section {
             letter-spacing: -.25px;
             color: #fff;
         }
+    }
+}
+.tooltip.top {
+    .tooltip-box {
+        top: auto;
+        bottom: calc(100% + 8px);
+        translate: 0 4px;
+        transition: all .4s ease;
+    }
+}
+.tooltip.top:hover {
+    .tooltip-box {
+        translate: 0;
     }
 }
 
