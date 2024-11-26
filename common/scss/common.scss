@@ -85,7 +85,7 @@ section {
         position: fixed;
         overflow: hidden;
         pointer-events: none;
-        z-index: 98;
+        // z-index: 1;
         .ob-box {
             position: absolute;
             display: flex;
